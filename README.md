@@ -26,9 +26,14 @@ Steps in connecting GitHub to Eclipse :)
 11. Tpos kung wlng error, good :) Pwde na tau magcode sa Java EE view :)
 
 12. Kung my error, haha call me ayusin ntn yn :)) 
-
-OUR PRACTICE FROM NOW ON UNTIL WE FINISH CODING THIS PROJECT: 
-1. When edit something.. kahit gaano pa kaliit yng edit na yn (COMMIT 
+------------------------------------------------------------------------------------------------------------------------------
+How to COMMIT? (After you edit and you want to push your newly made code in the main project )
+1. In Java EE view, Right Click on your project > Team > Commit... > [put your commit message, kung ano ang binago nyo sa code aa] > Check all the check box sa files > Click COMMIT AND PUSH
+2. input your username and password ng github > click OK
+3. kapag may lumitaw na new window, at wlang error na nakasulat, click OK :)
+------------------------------------------------------------------------------------------------------------------------------
+How to PULL? (when somebody that isnt you made a change in a code, and you want to integrate it your code)
+1. In Java EE view, Right Click on your project > Team > Pull 
 
 
 
