@@ -1,8 +1,11 @@
-# Asset_Management_System
+Asset_Management_System
+
+
 PRINCIPLE IN DOING THIS PROJECT THRU GIT
-1. Commit and Push (kahit masakit ang salitang commitment :( )
-2. Pull and pull 
-3. Warn others first when you are going to commit or pull something. :) Mahirap na kapag nagsabay .
+<br>1. Commit and Push (kahit masakit ang salitang commitment :( )   
+<br>2. Pull and pull until you die haha (jowk lng xD)  
+<br>3. Warn others first when you are going to commit or pull something. :) Mahirap na kapag nagsabay.  
+
 ----------------------------------------------------------------------------------------------------
 Steps in connecting GitHub to Eclipse :)
 1. Make a GitHub account
