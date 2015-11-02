@@ -7,13 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-<!-- Insert header here -->
-	<form action="homepage.jsp" method="post">
-		<center><h2>Asset is overdue.</h2>
-		<br>
-		<p>Please return it in the given<b>due date.</b></p>
-		<br>
-		<input type="submit" value="Home"></center>
+	<form action="inventory.jsp" method="post">
+		<center>
+			<h2>Item has been added successfully!</h2>
+			<br>
+			<p>Item ID: __________ </p>
+			<p>Item Name: ___________ </p>
+			<br>
+			<input type="submit" value="Home">
+		</center>
 	</form>
 </body>
 </html>

@@ -1,4 +1,3 @@
-<!-- #4 Return Form -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -8,18 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<!-- Insert header here -->
-	<h2>Return Form: </h2>
-	<br>
-	<br>
-	<form action="processreturnform.html" method="post">
-		<p>ID Number: <input type="text" name="idNum" size="10" required="required"></p>
-		
-		<br>
-		<input type="submit" value="Next">
+	<h2>Add New Item</h2>
+	<form action="addprocess.html" method="post">
+		<p>Item ID <input type="text" name="itemId" size="25" required="required"></p>
+		<p>Item Name: <input type="text" name="itemName" size="25" required="required"></p>
+		<!--  <input type="hidden" name="action" value="insert">  -->
+		<input type="submit" value="Add">
 	</form>
 	
-	<form action="inventory.jsp" method="post">
+	<form>
 		<input type="submit" value="Cancel">
 	</form>
 </body>

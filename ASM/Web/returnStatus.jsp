@@ -7,10 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="homepage.jsp" method="post">
-		<center><h2>Asset has been returned successfully!</h2>
+	<form action="inventory.jsp" method="post">
+		<center><h2>Item has been returned successfully!</h2>
 		<br>
-		<p><b>Thank you!</b></p>
+		<p>Date returned: _________</p>
+		<br>
+		<p><b>Thank You!</b></p>
+
 		<br>
 		<input type="submit" value="Home"></center>
 	</form>
