@@ -8,22 +8,53 @@
 </head>
 <body>
 	<!-- Insert header here -->
-	<form action="homepage.jsp" method="post">
-		<center><table border="1" width="100%" cellpadding="3" cellspacing="3">
+
+	<!-- Display Inventory table  -->
+	<center><table border="1" width="100%" cellpadding="3" cellspacing="3">
 		<tr>
-			<th align="center">ID</th>
 			<th align="center">Item ID</th>
 			<th align="center">Item Name</th>
-			<th align="center">Category</th>
-			<th align="center">Date Borrowed</th>
-			<th align="center">Date Returned</th>
+			<th align="center">Status</th>
 		</tr>
 	</table>
-	
 	<br>
 	<br>
-	
-	<input type="submit" value="Home"></center>
+</center>
+
+	<!-- Add New Item button -->
+	<form action="maintenanceprocess.html" method="post">
+		<input type="submit" value="Add New Item">
 	</form>
+	<br> 
+	
+	<!-- Borrow Item Button -->
+	<form action="processborrow.html" method="post">
+		<input type="submit" value="Borrow Item">
+	</form>
+	<br>
+	
+	<!-- Return Item button -->
+	<form action="processreturn.html" method="post">
+		<input type="submit" value="Return Item">
+	</form>
+	<br>
+	
+	<!-- Delete Item button -->
+	<form action="maintenanceprocess.html" method="post">
+		<input type="submit" value="Delete Item">
+	</form>
+	<br> 
+	
+	<!-- Settings button -->
+	<form action="settings.html" method="post">
+		<input type="submit" value="Settings">
+	</form>
+	<br> 
+	
+	<!-- Logout button -->
+	<form action="index.html" method="post">
+		<input type="submit" value="Logout">
+	</form>
+	<br> 
 </body>
 </html>

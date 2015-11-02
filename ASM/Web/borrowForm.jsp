@@ -13,11 +13,15 @@
 	<br>
 	<br>
 	<form action="processborrowform.html" method="post">
-		<p>Name: <input type="text" name="borrowersName" size="25" required="required"></p>
-		<p>Item Name: <input type="text" name="itemName" size="25" required="required"></p>
-		<p>Date Borrowed: <input type="text" name="borrowedDate" size="10" required="required"></p>			
+		<p>ID Number: <input type="text" name="idNum" size="10" required="required"></p>
+		<p>Last Name: <input type="text" name="firstName" size="25" required="required"></p>
+		<p>First Name: <input type="text" name="itemName" size="25" required="required"></p>
 		<br>
 		<input type="submit" value="Submit">
+	</form>
+	
+	<form action = "inventory.html" method="post">
+		<input type = "submit" value="cancel">
 	</form>
 </body>
 </html>
