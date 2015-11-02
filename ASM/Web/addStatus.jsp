@@ -11,8 +11,8 @@
 		<center>
 			<h2>Item has been added successfully!</h2>
 			<br>
-			<p>Item ID: __________ </p>
-			<p>Item Name: ___________ </p>
+			<p>Item ID: __________ </p> <!-- itemId -->
+			<p>Item Name: ___________ </p> <!-- itemName -->
 			<br>
 			<input type="submit" value="Home">
 		</center>

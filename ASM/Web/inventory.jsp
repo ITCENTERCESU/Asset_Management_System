@@ -22,25 +22,25 @@
 </center>
 
 	<!-- Add New Item button -->
-	<form action="maintenanceprocess.html" method="post">
+	<form action="addprocess.html" method="post">
 		<input type="submit" value="Add New Item">
 	</form>
 	<br> 
 	
 	<!-- Borrow Item Button -->
-	<form action="processborrow.html" method="post">
+	<form action="borrowprocess.html" method="post">
 		<input type="submit" value="Borrow Item">
 	</form>
 	<br>
 	
 	<!-- Return Item button -->
-	<form action="processreturn.html" method="post">
+	<form action="returnprocess.html" method="post">
 		<input type="submit" value="Return Item">
 	</form>
 	<br>
 	
 	<!-- Delete Item button -->
-	<form action="maintenanceprocess.html" method="post">
+	<form action="deleteprocess.html" method="post">
 		<input type="submit" value="Delete Item">
 	</form>
 	<br> 
@@ -52,7 +52,7 @@
 	<br> 
 	
 	<!-- Logout button -->
-	<form action="index.html" method="post">
+	<form action="index.jsp" method="post">
 		<input type="submit" value="Logout">
 	</form>
 	<br> 

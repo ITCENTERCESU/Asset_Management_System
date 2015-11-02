@@ -10,7 +10,7 @@
 	<form action="inventory.jsp" method="post">
 		<center><h2>Item has been returned successfully!</h2>
 		<br>
-		<p>Date returned: _________</p>
+		<p>Date returned: _________</p> <!-- returnDate //variable to be used -->
 		<br>
 		<p><b>Thank You!</b></p>
 

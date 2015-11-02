@@ -9,7 +9,7 @@
 <body>
 	<!-- Insert header here -->
 	
-	<form action="homepage.jsp" method="post">
+	<form action="inventory.jsp" method="post">
 		<center><table border="1" style="width:100%">
 	  	<tr>
 	    <tr>

@@ -15,7 +15,7 @@
 		<input type="submit" value="Add">
 	</form>
 	
-	<form>
+	<form action="inventory.jsp" method="post">
 		<input type="submit" value="Cancel">
 	</form>
 </body>
