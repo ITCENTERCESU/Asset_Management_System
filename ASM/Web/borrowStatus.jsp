@@ -8,12 +8,25 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="homepage.jsp" method="post">
-		<center><h2>Thank you for borrowing!</h2>
+	<form action="inventory.jsp" method="post">
+		<h2>Borrowing successful!</h2>
 		<br>
-		<p><b>The item is due on ________</b></p>
+		<p><b>Here is the list of all the things you had borrowed. 
+		Please return them on time. </b></p>
 		<br>
-		<input type="submit" value="Home"></center>
+		<center>
+			<table border="1" style="width:100%">
+			    <tr>
+			    	<td align="center">Item ID</th>
+						<td align="center">Item Name</th>
+						<td align="center">Date Borrowed</th>
+						<td align="center">Due Date</th>
+			    </tr>
+		    </table>
+			<br> 
+			<br>
+			<input type="submit" value="Home">
+		</center>
 	</form>
 </body>
 </html>
