@@ -8,10 +8,10 @@
 </head>
 <body>
 <!-- Insert header here -->
-	<form action="homepage.jsp" method="post">
-		<center><h2>Asset is overdue.</h2>
+<form action="homepage.jsp" method="post">
+		<center><h2>Asset is <b>Not Available.</b></h2>
 		<br>
-		<p>Please return it in the given<b>due date.</b></p>
+		<p>Please wait until it is returned.</p>
 		<br>
 		<input type="submit" value="Home"></center>
 	</form>
