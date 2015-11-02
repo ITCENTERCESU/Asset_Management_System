@@ -8,7 +8,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+	
 	<h1>Information Systems Asset Management System</h1>
+	<!-- Dapat hiwalay header natin noh? -->
 	<br>
 	<h2>Welcome IS Faculty Member!</h2>
 	<form action="processlogin.html" method="post">
