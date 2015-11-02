@@ -28,8 +28,7 @@ How to COMMIT? (After you edit and you want to push your newly made code in the 
 2. input your username and password ng github > click OK  
 
 3. kapag may lumitaw na new window, at wlang error na nakasulat, click OK :)  
-
-NOTE: When commiting, make sure to commit on the "master" branch only :) 
+NOTE: When commiting, make sure to commit on the "master" branch only :)  
 -----------------------------------------------------------------------------------------------------------
 How to PULL? (when somebody that isnt you made a change in a code, and you want to integrate it your code)  
 1. In Java EE view, Right Click on your project > Team > Pull > click OK   
