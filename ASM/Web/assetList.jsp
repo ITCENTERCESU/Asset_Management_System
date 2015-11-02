@@ -17,8 +17,6 @@
     	<th align="center">ID</th>
 			<th align="center">Item ID</th>
 			<th align="center">Asset Name</th>
-			<th align="center">Date Borrowed</th>
-			<th align="center">Date Returned</th>
     </tr>
     <tr><td><ol><li>Books</li></ol></td></tr>
     </table>
