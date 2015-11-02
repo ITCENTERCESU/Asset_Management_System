@@ -45,8 +45,8 @@
 	<br> 
 	
 	<!-- Settings button -->
-	<form action="settings.html" method="post">
-		<input type="submit" value="Settings">
+	<form action="addaccount.html" method="post">
+		<input type="submit" value="New Account">
 	</form>
 	<br> 
 	
