@@ -25,8 +25,7 @@ public class trialServlet extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//ggfghhgfnbgvvnbvbnmarius
-		//jjhjhjh
+		//nagttry mag-commit si marius
 	}
 
 }
