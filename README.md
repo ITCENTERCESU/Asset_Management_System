@@ -1,8 +1,8 @@
 Asset_Management_System
 How to's:
 
-OUR GROUP'S PRINCIPLE IN DOING THIS PROJECT THRU GIT
-1. Commit and Push (kahit masakit ang salitang commitment :( )   
+OUR GROUP'S PRINCIPLE IN DOING THIS PROJECT THRU GIT  
+1. PULL then Commit and Push (kahit masakit ang salitang commitment :( )   
 2. Pull and pull until you die haha (jowk lng xD pero seriously we PULL :) )  
 3. Warn others first when you are going to commit or pull something. :) Mahirap na kapag nagsabay.  
 
@@ -15,11 +15,10 @@ Steps in connecting GitHub to Eclipse :)
 5. Choose Git.  
 6. Click File > Import > Git > Projects from Git > NEXT > Clone URI > NEXT.  
 7. Copy paste this https://github.com/natsukihanamura/Asset_Management_System.git to the URI textbox (mag-aautofill up n ung the rest)  
-8. Fill up the authentication part> user and password mo sa github to.. then check mo ung Store in Secure Store > NEXT > Check mo ung "master" > NEXT > choose your destination sa computer mo > NEXT > Select Use the New Project Wizard > Type the Project Title (sa akin is  ASM haha) > NEXT > NEXT> change webcontent to web and check the checkbox.. > FINISH  
-9. Right Click ung Asset_Management_System (sa Git view) then Click "Pull"  
-10. Check nyo lng lahat ng checkbox  
-11. Tpos kung wlng error, good :) Pwde na tau magcode sa Java EE view :)  
-12. Kung my error, haha call me ayusin ntn yn :))   
+8. Fill up the authentication part> user and password mo sa github to.. then check mo ung Store in Secure Store > NEXT > Check mo ung "master" > NEXT > choose your destination sa computer mo > NEXT > SELECT Import Existing Project > Tpos select nyo kung ano man ung nakita nyo dyn :)   
+9. Kung pagkatingin nyo sa loob ng src folder (in java ee view) make sure merong "TrialServlet" dun :)  
+10. Tpos meron, yehey!! :) Pwde na tau magcode sa Java EE view :)  
+11. Kung my error, haha call me ayusin ntn yn :))   
 
 -----------------------------------------------------------------------------------------------------------
 How to COMMIT? (After you edit and you want to push your newly made code in the main project )  
