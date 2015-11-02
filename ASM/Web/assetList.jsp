@@ -7,12 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-<!-- Insert header here -->
+	<!-- Insert header here -->
 	<form action="homepage.jsp" method="post">
-		<center><h2>Asset is overdue.</h2>
-		<br>
-		<p>Please return it in the given<b>due date.</b></p>
-		<br>
+		<center><table border="1" style="width:100%">
+  	<tr>
+    <td><b>Assets in the Faculty of Information Systems :</b></td>
+    </tr>
+    <tr><td><ol><li>Books</li></ol></td></tr>
+    <tr><td><ol><li>Books</li></ol></td></tr>
+    </table>
+    <p></p>
 		<input type="submit" value="Home"></center>
 	</form>
 </body>
