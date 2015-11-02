@@ -1,10 +1,10 @@
 Asset_Management_System
 
 
-PRINCIPLE IN DOING THIS PROJECT THRU GIT
-<br>1. Commit and Push (kahit masakit ang salitang commitment :( )   
-<br>2. Pull and pull until you die haha (jowk lng xD)  
-<br>3. Warn others first when you are going to commit or pull something. :) Mahirap na kapag nagsabay.  
+OUR GROUP'S PRINCIPLE IN DOING THIS PROJECT THRU GIT
+1. Commit and Push (kahit masakit ang salitang commitment :( )   
+2. Pull and pull until you die haha (jowk lng xD pero seriously we PULL :) )  
+3. Warn others first when you are going to commit or pull something. :) Mahirap na kapag nagsabay.  
 
 ----------------------------------------------------------------------------------------------------
 Steps in connecting GitHub to Eclipse :)  
@@ -29,6 +29,7 @@ How to COMMIT? (After you edit and you want to push your newly made code in the 
 
 3. kapag may lumitaw na new window, at wlang error na nakasulat, click OK :)  
 
+NOTE: When commiting, make sure to commit on the "master" branch only :) 
 -----------------------------------------------------------------------------------------------------------
 How to PULL? (when somebody that isnt you made a change in a code, and you want to integrate it your code)  
 1. In Java EE view, Right Click on your project > Team > Pull > click OK   
