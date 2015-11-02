@@ -15,7 +15,7 @@ Steps in connecting GitHub to Eclipse :)
 5. Choose Git.  
 6. Click File > Import > Git > Projects from Git > NEXT > Clone URI > NEXT.  
 7. Copy paste this https://github.com/natsukihanamura/Asset_Management_System.git to the URI textbox (mag-aautofill up n ung the rest)  
-8. Fill up the authentication part> user and password mo sa github to.. then check mo ung Store in Secure Store > NEXT > Check mo ung "master" > NEXT > choose your destination sa computer mo > NEXT > SELECT Import Existing Project > Tpos select nyo kung ano man ung nakita nyo dyn :) 
+8. Fill up the authentication part> user and password mo sa github to.. then check mo ung Store in Secure Store > NEXT > Check mo ung "master" > NEXT > choose your destination sa computer mo > NEXT > SELECT Import Existing Project > Tpos select nyo kung ano man ung nakita nyo dyn :)   
 9. Kung pagkatingin nyo sa loob ng src folder (in java ee view) make sure merong "TrialServlet" dun :)  
 11. Tpos meron, yehey!! :) Pwde na tau magcode sa Java EE view :)  
 12. Kung my error, haha call me ayusin ntn yn :))   
