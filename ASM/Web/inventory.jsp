@@ -13,7 +13,8 @@
 		<tr>
 			<th align="center">ID</th>
 			<th align="center">Item ID</th>
-			<th align="center">Asset Name</th>
+			<th align="center">Item Name</th>
+			<th align="center">Category</th>
 			<th align="center">Date Borrowed</th>
 			<th align="center">Date Returned</th>
 		</tr>

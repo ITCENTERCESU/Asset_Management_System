@@ -14,7 +14,7 @@
 	<br>
 	<form action="processborrowform.html" method="post">
 		<p>Name: <input type="text" name="borrowersName" size="25" required="required"></p>
-		<p>Asset Name: <input type="text" name="assetName" size="25" required="required"></p>
+		<p>Item Name: <input type="text" name="itemName" size="25" required="required"></p>
 		<p>Date Borrowed: <input type="text" name="borrowedDate" size="10" required="required"></p>			
 		<br>
 		<input type="submit" value="Submit">

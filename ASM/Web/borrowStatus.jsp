@@ -11,7 +11,7 @@
 	<form action="homepage.jsp" method="post">
 		<center><h2>Thank you for borrowing!</h2>
 		<br>
-		<p><b>The asset is due on ________</b></p>
+		<p><b>The item is due on ________</b></p>
 		<br>
 		<input type="submit" value="Home"></center>
 	</form>
