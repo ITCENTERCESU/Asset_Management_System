@@ -37,5 +37,5 @@ How to PULL? (when somebody that isnt you made a change in a code, and you want 
 
 -----------------------------------------------------------------------------------------------------------
 
-
+NOTE: Try nyo mag-commit dito sa README.md :) kahit ano itype nyo ok lng hahah pra sure na natry nyo n :) 
 
