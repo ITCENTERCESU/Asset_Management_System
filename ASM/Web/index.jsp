@@ -11,6 +11,8 @@
 	
 	<h1>Information Systems Asset Management System</h1>
 	<!-- Dapat hiwalay header natin noh? -->
+	<!-- Lalagyan ba natin ng logo? :) -->
+	<!-- Orange ba color ng IS? -->
 	<br>
 	<h2>Welcome IS Faculty Member!</h2>
 	<form action="processlogin.html" method="post">
