@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -10,7 +10,7 @@
 	<!-- Insert header here -->
 
 	<!-- Display Inventory table  -->
-	<center><table border="1" width="100%" cellpadding="3" cellspacing="3">
+	<table>
 		<tr>
 			<th align="center">Item ID</th>
 			<th align="center">Item Name</th>
@@ -19,7 +19,6 @@
 	</table>
 	<br>
 	<br>
-</center>
 
 	<!-- Add New Item button -->
 	<form action="addprocess.html" method="post">
