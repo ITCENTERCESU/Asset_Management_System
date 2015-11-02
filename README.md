@@ -1,5 +1,5 @@
 Asset_Management_System
-
+How to's:
 
 OUR GROUP'S PRINCIPLE IN DOING THIS PROJECT THRU GIT
 1. Commit and Push (kahit masakit ang salitang commitment :( )   
