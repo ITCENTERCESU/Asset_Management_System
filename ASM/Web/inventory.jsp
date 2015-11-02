@@ -9,21 +9,20 @@
 <body>
 	<!-- Insert header here -->
 	<form action="homepage.jsp" method="post">
-		<center><table border="1" style="width:100%">
-  	<tr>
-    <td><b>Assets in the Faculty of Information Systems :</b></td>
-    </tr>
-    <tr>
-    	<th align="center">ID</th>
+		<center><table border="1" width="100%" cellpadding="3" cellspacing="3">
+		<tr>
+			<th align="center">ID</th>
 			<th align="center">Item ID</th>
 			<th align="center">Asset Name</th>
 			<th align="center">Date Borrowed</th>
 			<th align="center">Date Returned</th>
-    </tr>
-    <tr><td><ol><li>Books</li></ol></td></tr>
-    </table>
-    <p></p>
-		<input type="submit" value="Home"></center>
+		</tr>
+	</table>
+	
+	<br>
+	<br>
+	
+	<input type="submit" value="Home"></center>
 	</form>
 </body>
 </html>
