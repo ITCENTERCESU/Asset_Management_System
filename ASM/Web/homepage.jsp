@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<!-- Insert Header here -->
 	<h2>Welcome ______! </h2>
 	<br>
 	<p>Choose an action:</p>
