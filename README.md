@@ -2,7 +2,7 @@ Asset_Management_System
 How to's:
 
 OUR GROUP'S PRINCIPLE IN DOING THIS PROJECT THRU GIT  
-1. Commit and Push (kahit masakit ang salitang commitment :( )   
+1. PULL then Commit and Push (kahit masakit ang salitang commitment :( )   
 2. Pull and pull until you die haha (jowk lng xD pero seriously we PULL :) )  
 3. Warn others first when you are going to commit or pull something. :) Mahirap na kapag nagsabay.  
 
