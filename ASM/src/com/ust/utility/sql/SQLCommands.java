@@ -2,8 +2,10 @@ package com.ust.utility.sql;
 
 public interface SQLCommands {
 
-	String INSERT_ASSET = "insert into Inventory(itemId, itemName, status) values(?,?,?)";
-	String GET_ALL_EMPLOYEES = "select * from employees";
+	String INSERT_ASSET = "INSERT INTO Inventory(itemId, itemName, status) VALUES(?,?,?)";
+	String GET_ALL_ASSET = "SELECT * FROM Inventory";
+	
+	
 	
 	String SEARCH_EMPLOYEE = "select * from employees where id=?";
 	String UPDATE_EMPLOYEE = "update Employees set lastname = ?, "

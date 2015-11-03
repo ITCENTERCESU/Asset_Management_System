@@ -28,9 +28,4 @@ public class AssetBean {
 		return status;
 	}
 
-	
-	
-
-	
-	
 }

@@ -53,5 +53,17 @@ public class SQLOperations implements SQLCommands {
 		return true;
 	}
 	
+	public static ResultSet getAllAssets(Connection connection) {
+		ResultSet rs = null;
+		try {
+			Statement stmt = connection.createStatement();
+			rs = stmt.executeQuery(GET_ALL_ASSET);  
+		} catch (SQLException sqle) {
+			System.out.println("SQLException - getALLEmployees: " 
+			  + sqle.getMessage());
+			return rs; 
+		}	
+		return rs;
+	}
 	
 }
