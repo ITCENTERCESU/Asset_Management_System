@@ -10,7 +10,6 @@ import com.ust.model.AssetBean;
 import com.ust.model.BorrowedBean;
 import com.ust.utility.sql.SQLCommands;
 
-import edu.ust.erdbms.model.EmployeeBean;
 
 public class SQLOperations implements SQLCommands {
 
@@ -99,7 +98,7 @@ public class SQLOperations implements SQLCommands {
 		        	asset.setStatus(rs.getString("status"));
 		        }
 			} catch (SQLException sqle) {
-				System.out.println("SQLException - searchEmployee: " 
+				System.out.println("SQLException - searchAsset: " 
 						+ sqle.getMessage());
 				return asset; 
 			}	
@@ -131,22 +130,18 @@ public class SQLOperations implements SQLCommands {
 
 	
 	
-	public static int updateStatus(AssetBean employee,  
+	public static int updateStatus(BorrowedBean borrowed,  
 			String itemId, Connection connection) {
 			int updated = 0;
 			try {
 				connection.setAutoCommit(false);
 		        PreparedStatement pstmt = 
 		        	connection.prepareStatement(UPDATE_STATUS);
-		        pstmt.setString(1, employee.getLastName()); 
-		        pstmt.setString(2, employee.getFirstName());
-		        pstmt.setString(3, employee.getPosition());
-		        pstmt.setString(4, employee.getDepartment()); 
-		        pstmt.setInt(5, id); 
+		        pstmt.setString(1, borrowed.getStatus());
 		        updated = pstmt.executeUpdate();   
 		        connection.commit();
 			} catch (SQLException sqle) {
-				System.out.println("SQLException - updateEmployee: " 
+				System.out.println("SQLException - updateStatus: " 
 					+ sqle.getMessage());
 				
 				try {
