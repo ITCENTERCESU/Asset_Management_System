@@ -6,7 +6,7 @@ import javax.sql.*;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-import com.ust.model.EmployeeBean;
+import com.ust.model.AssetBean;
 import com.ust.utility.sql.SQLCommands;
 
 public class SQLOperations implements SQLCommands {
@@ -37,7 +37,7 @@ public class SQLOperations implements SQLCommands {
 		return (connection!=null)?connection:getDBConnection();
 	}
 	
-	public static boolean addEmployee(EmployeeBean employee, 
+	public static boolean addEmployee(AssetBean employee, 
 		Connection connection) {
 		
 		try {
@@ -54,10 +54,10 @@ public class SQLOperations implements SQLCommands {
 		return true;
 	}
 	
-	public static EmployeeBean searchEmployee(int id, 
+	public static AssetBean searchEmployee(int id, 
 		Connection connection) {
 		
-		EmployeeBean employee = new EmployeeBean();
+		AssetBean employee = new AssetBean();
 		 
 		try {
 	        PreparedStatement pstmt = 
@@ -92,7 +92,7 @@ public class SQLOperations implements SQLCommands {
 		return rs;
 	}
 	
-	public static int updateEmployee(EmployeeBean employee, 
+	public static int updateEmployee(AssetBean employee, 
 		int id, Connection connection) {
 		int updated = 0;
 		try {

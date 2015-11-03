@@ -1,6 +1,6 @@
 package com.ust.model;
 
-public class EmployeeBean {
+public class AssetBean {
 	private String lastName;
 	private String firstName;
 	private String position;

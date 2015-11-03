@@ -1,18 +1,15 @@
 package com.ust.utility;
 
-import com.ust.model.EmployeeBean;
+import com.ust.model.AssetBean;
 
 public class BeanFactory {
 	
-	public static EmployeeBean getFactoryBean(String lastName, 
-		String firstName, String position, 
-		String department) {
+	public static AssetBean getFactoryBean(String itemId, String itemName) {
 		
-		EmployeeBean employee = new EmployeeBean();
-		employee.setLastName(lastName);
-		employee.setFirstName(firstName);
-		employee.setPosition(position);
-		employee.setDepartment(department);
-		return employee;
+		AssetBean asset = new AssetBean();
+		asset.setLastName(itemId);
+		asset.setFirstName(itemName);
+		
+		return asset;
 	}
 }

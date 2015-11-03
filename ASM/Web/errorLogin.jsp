@@ -7,8 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<!-- Header -->
 	<h2>The username and password is incorrect. Please try again</h2>
-	<form action="index.html">
+	<form action="index.jsp">
 		<input type="submit" value="GO BACK">
 	</form>
 </body>
