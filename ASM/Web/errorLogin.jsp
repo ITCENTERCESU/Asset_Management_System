@@ -9,8 +9,8 @@
 	<title>Asset Management System</title>
 	<style type="text/css">
 		img{width:5em;height:5em;margin:auto;}
-		header{text-align:center;margin:3em 1em;}
-		form{padding:3em;background:#fddfbd;}
+		header{text-align:center;margin:2em 1em;}
+		
 	</style>
 </head>
 <body>
