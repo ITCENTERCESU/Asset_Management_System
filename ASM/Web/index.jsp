@@ -8,7 +8,7 @@
 	<link rel="icon" type="image/png" href="./images/information-systems-logo.png"/>
 	<title>Asset Management System</title>
 	<style type="text/css">
-		img{width:5em;height:5em;margin:auto;}
+		img{width:6em;height:6em;padding:auto;margin-bottom:1em;}
 		header{text-align:center;margin:3em 1em;}
 		form{padding:3em;background:#fddfbd;}
 	</style>
