@@ -53,7 +53,7 @@ public class ProcessLoginServlet extends HttpServlet {
 		
 		if(username.equals("admin") && password.equals("1234"))
 		{
-			RequestDispatcher rd = request.getRequestDispatcher("inventory.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/maintenance.html");
 			rd.forward(request,  response);
 		}
 		else

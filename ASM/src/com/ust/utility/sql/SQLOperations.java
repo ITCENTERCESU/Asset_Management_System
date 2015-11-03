@@ -59,7 +59,7 @@ public class SQLOperations implements SQLCommands {
 			Statement stmt = connection.createStatement();
 			rs = stmt.executeQuery(GET_ALL_ASSET);  
 		} catch (SQLException sqle) {
-			System.out.println("SQLException - getALLEmployees: " 
+			System.out.println("SQLException - getALLAssets: " 
 			  + sqle.getMessage());
 			return rs; 
 		}	

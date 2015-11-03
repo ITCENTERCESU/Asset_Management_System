@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+
+<jsp:useBean id="inventory" type="java.sql.ResultSet" scope="request"/>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,6 +19,14 @@
 			<th align="center">Item Name</th>
 			<th align="center">Status</th>
 		</tr>
+		
+		<% while(inventory.next()) {	%>
+				<tr>
+					<td><%=inventory.getString("itemId")%></td>
+					<td><%=inventory.getString("itemName")%></td>
+					<td><%=inventory.getString("status")%></td>
+				</tr>			
+		<% } %>
 	</table>
 	<br>
 	<br>

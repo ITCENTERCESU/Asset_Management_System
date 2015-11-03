@@ -4,9 +4,9 @@
 
   <Resource name="jdbc/UST-3CSC-DS" auth="Container"
 
-            type="javax.sql.DataSource" username="penequito" password="penequito"
+            type="javax.sql.DataSource" username="ics114-user3csc" password="ics114-user3csc"
             driverClassName="net.sourceforge.jtds.jdbc.Driver" 
-            url="jdbc:jtds:sqlserver://localhost:1433;DatabaseName=Penequito_ics114_3csc_dev;SelectMethod=cursor;"
+            url="jdbc:jtds:sqlserver://localhost:1433;DatabaseName=AMS;SelectMethod=cursor;"
             maxTotal="50" validationQuery="Select 1"
 
             />
