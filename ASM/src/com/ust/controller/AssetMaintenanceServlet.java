@@ -38,8 +38,7 @@ public class AssetMaintenanceServlet extends HttpServlet {
 				String itemId = request.getParameter("itemId");
 				AssetBean asset = SQLOperations.searchAsset(itemId, connection);
 				request.setAttribute("borrowForm", asset);
-				dispatcher = 
-				 getServletContext().getRequestDispatcher("/borrowForm.jsp");
+				dispatcher = getServletContext().getRequestDispatcher("/borrowForm.jsp");
 			}
 			dispatcher.forward(request, response);		
 		} catch (Exception e) {

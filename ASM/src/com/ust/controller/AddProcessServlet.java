@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.ust.utility.sql.SQLOperations;
 
 import com.ust.model.AssetBean;
-import com.ust.utility.BeanFactory;
+import com.ust.utility.AssetBeanFactory;
 
 
 @WebServlet("/addprocess.html")
@@ -43,7 +43,7 @@ public class AddProcessServlet extends HttpServlet {
 
 		
 		AssetBean asset = 
-				BeanFactory.getFactoryBean(itemId, itemName);
+				AssetBeanFactory.getFactoryBean(itemId, itemName);
 		
 		if (connection != null) {
 			if (SQLOperations.addAsset(asset, connection)){

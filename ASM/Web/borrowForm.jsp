@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
-<jsp:useBean id="borrowed" type="java.sql.ResultSet" scope="request"/>
+
 
 <!DOCTYPE html>
 <html>
@@ -21,9 +21,10 @@
 		<p>First Name: <input type="text" name="itemName" size="25" required="required"></p>
 		<br>
 		<br> 
-		<p>Item Id: <%=borrowed.getString("itemId")%></p> 
-		<p>Item Name: <%=borrowed.getString("itemName")%></p>
-		<p>Status: <%=borrowed.getString("status")%>
+		<p>Item Id: <input type="text" size="10" name="itemId" value="${borrowForm.itemId}" readonly> </p>
+		<p>Item Name:<input type="text" size="50" name="ItemName" value="${borrowForm.itemName}" readonly> </p>
+		<p>Status: <input type="text" size="20" name="status" value="${borrowForm.status}" readonly> </p>
+		
 		<input type="submit" value="Submit">
 	</form>
 	
