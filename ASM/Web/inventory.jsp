@@ -38,7 +38,7 @@
 	<br> 
 	
 	<!-- Borrow Item Button -->
-	<form action="borrowList.jsp" method="post">
+	<form action="borrowprocess.html" method="post">
 		<input type="submit" value="Borrow Item">
 	</form>
 	<br>

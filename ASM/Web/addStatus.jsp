@@ -19,7 +19,7 @@
 	<% } %> 
 	
 	<br/>
-	<p><a href="inventory.jsp">HOME.</a></p>
+	<p><a href="maintenance.html">HOME.</a></p>
 
 </body>
 </html>

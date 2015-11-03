@@ -66,4 +66,17 @@ public class SQLOperations implements SQLCommands {
 		return rs;
 	}
 	
+	public static ResultSet getBorrowedList(Connection connection) {
+		ResultSet rs = null;
+		try {
+			Statement stmt = connection.createStatement();
+			rs = stmt.executeQuery(BORROWED_LIST);  
+		} catch (SQLException sqle) {
+			System.out.println("SQLException - getBorrowedList: " 
+			  + sqle.getMessage());
+			return rs; 
+		}	
+		return rs;
+	}
+	
 }
