@@ -137,7 +137,7 @@ public class SQLOperations implements SQLCommands {
 				connection.setAutoCommit(false);
 		        PreparedStatement pstmt = 
 		        	connection.prepareStatement(UPDATE_STATUS);
-		        pstmt.setString(1, borrowed.getStatus());
+		        pstmt.setString(8, borrowed.getStatus());
 		        updated = pstmt.executeUpdate();   
 		        connection.commit();
 			} catch (SQLException sqle) {
