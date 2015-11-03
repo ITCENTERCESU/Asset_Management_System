@@ -1,4 +1,4 @@
-<!-- #3 Borrower's Form -->
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
@@ -16,7 +16,7 @@
 </head>
 
 <body>
-	<!-- Insert header here -->
+
 	<h2>Borrower's Form: </h2>
 	<br>
 	<br>
@@ -32,9 +32,17 @@
 		<br>
 		<%
 			Date borrowedDate = new Date();
-			SimpleDateFormat ft = new SimpleDateFormat ("MM/dd/yyyy (E)");
+			SimpleDateFormat ft = new SimpleDateFormat ("yyyy-MM-dd");
+			
+			Calendar calendar = Calendar.getInstance();
+			calendar.setTime(borrowedDate);
+			calendar.add(Calendar.DATE, 2);
+			String dueDate = ft.format(calendar.getTime());
 		%>
-		<p>Date Borrowed: <input type="text" size="20" name="borrowedDate" value="<%out.println(ft.format(borrowedDate)); %>" ></p>
+		
+		<p>Date Borrowed: <input type="text" size="20" name="borrowedDate" value="<%out.println(ft.format(borrowedDate)); %>" readonly></p>
+		
+		<p>Due Date: <input type="text" size="20" name="dueDate" value="<%out.println(dueDate); %>"  readonly></p>
 		
 		<input type="submit" value="Submit">
 	</form>

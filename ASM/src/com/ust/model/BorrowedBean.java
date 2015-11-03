@@ -1,5 +1,5 @@
 package com.ust.model;
-import java.util.Date;
+
 
 public class BorrowedBean {
 	private int idNum;
@@ -7,8 +7,8 @@ public class BorrowedBean {
 	private String firstName;
 	private String itemId;
 	private String itemName;
-	private Date borrowedDate;
-	private Date dueDate;
+	private String borrowedDate;
+	private String dueDate;
 	private String status;
 	
 	public int getIdNum() {
@@ -41,16 +41,16 @@ public class BorrowedBean {
 	public void setItemName(String itemName) {
 		this.itemName = itemName;
 	}
-	public Date getBorrowedDate() {
+	public String getBorrowedDate() {
 		return borrowedDate;
 	}
-	public void setBorrowedDate(Date borrowedDate) {
+	public void setBorrowedDate(String borrowedDate) {
 		this.borrowedDate = borrowedDate;
 	}
-	public Date getDueDate() {
+	public String getDueDate() {
 		return dueDate;
 	}
-	public void setDueDate(Date dueDate) {
+	public void setDueDate(String dueDate) {
 		this.dueDate = dueDate;
 	}
 	public String getStatus() {

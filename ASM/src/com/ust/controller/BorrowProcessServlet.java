@@ -2,6 +2,8 @@ package com.ust.controller;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -36,21 +38,27 @@ public class BorrowProcessServlet extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String idNum = request.getParameter("idNum");
+		int idNum = Integer.parseInt(request.getParameter("idNum"));
 		String lastName = request.getParameter("lastName");
 		String firstName = request.getParameter("firstName");
 		String itemId = request.getParameter("itemId");
-		String borrowedDate = request.getParameter("borrowedDate");
+		String itemName = request.getParameter("itemName");
+		String borrowedDateString = request.getParameter("borrowedDate");
+		String dueDateString = request.getParameter("dueDate");
+		String status = request.getParameter("status");
 
+		SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd");
+		Date borrowedDate = ft.parse(borrowedDateString);
+		Date dueDate = ft.parse(dueDateString);
 		
 		BorrowedBean borrowed = 
-				BorrowedBeanFactory.getFactoryBean(itemId, itemName, idNum, lastName,
-						firstName, borrowedDate, dueDate);
+				BorrowedBeanFactory.getFactoryBean(itemId, itemName,idNum, 
+						lastName, firstName, borrowedDate,dueDate, status));
 		
 		if (connection != null) {
-			if (SQLOperations.addAsset(asset, connection)){
+			if (SQLOperations.addBorrowed(borrowed, connection)){
 				System.out.println("successful insert");
-				request.setAttribute("asset", asset);
+				request.setAttribute("borrowed", borrowed);
 				getServletContext().getRequestDispatcher("/addStatus.jsp?success=true").forward(request, response);
 			} else {
 				System.out.println("failed insert");
