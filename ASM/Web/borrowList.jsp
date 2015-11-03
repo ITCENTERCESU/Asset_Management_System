@@ -19,7 +19,7 @@
 <body>
 	<!-- Insert header here -->
 	<div class="container">
-	<header> <h2>Availabe Items</h2>
+	<header> <h2>Available Items</h2>
 	</header>
 	
       <div class="row">
