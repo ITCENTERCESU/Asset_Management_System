@@ -8,7 +8,7 @@
 <title>ASM</title>
 </head>
 <body>
-	
+	<!-- comment ito -->
 	<h1>Information Systems Asset Management System</h1>
 	<!-- Dapat hiwalay header natin noh? Mas ok kpg gnun pra reusable-->
 	<!-- Lalagyan ba natin ng logo? :) yuuh..IICS logo :)--> 
