@@ -3,8 +3,6 @@ package com.ust.controller;
 import java.io.IOException;
 import java.sql.Connection;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,12 +11,16 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.ust.utility.sql.SQLOperations;
 
+import com.ust.model.AssetBean;
+import com.ust.utility.BeanFactory;
 
-@WebServlet("/processlogin.html")
-public class ProcessLoginServlet extends HttpServlet {
+
+@WebServlet("/addprocess.html")
+public class AddProcessServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private Connection connection;
+	
+private Connection connection;
 	
 	public void init() throws ServletException {
 		connection = SQLOperations.getConnection();
@@ -32,36 +34,29 @@ public class ProcessLoginServlet extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doPost(request, response);
+		doGet(request, response);
 	}
 
-	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String username="";
-		String password="";
+		String itemId = request.getParameter("itemId");
+		String itemName = request.getParameter("itemName");
+
 		
-		if(request.getParameter("username") != null)
-		{
-			username= request.getParameter("username");
-		}
-		if(request.getParameter("password")!= null)
-		{
-			password= request.getParameter("password");
-		}
-		System.out.println("Request Param:" + username);
-		System.out.println("Request Param:" + password);
+		AssetBean asset = 
+				BeanFactory.getFactoryBean(itemId, itemName);
 		
-		if(username.equals("admin") && password.equals("1234"))
-		{
-			RequestDispatcher rd = request.getRequestDispatcher("inventory.jsp");
-			rd.forward(request,  response);
+		if (connection != null) {
+			if (SQLOperations.addAsset(asset, connection)){
+				System.out.println("successful insert");
+				request.setAttribute("asset", asset);
+				getServletContext().getRequestDispatcher("/addStatus.jsp?success=true").forward(request, response);
+			} else {
+				System.out.println("failed insert");
+				getServletContext().getRequestDispatcher("/addStatus.jsp?success=false").forward(request, response);
+			}
+		} else {
+			System.out.println("invalid connection");
 		}
-		else
-		{
-			RequestDispatcher rd = request.getRequestDispatcher("errorLogin.jsp");
-			rd.forward(request,  response);
-		}
-		
 	}
 
 }
