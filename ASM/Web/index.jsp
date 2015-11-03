@@ -15,7 +15,7 @@
 	<!-- Orange ba color ng IS? YES :)-->
 	<br>
 	<h2>Welcome IS Faculty Member!</h2>
-	<form action="processlogin.html" method="get">
+	<form action="processlogin.html" method="post">
 		<p>Username: <input type="text" name="username" size="25" required="required"></p>
 		<p>Password: <input type="password" name="password" size="25" required="required"></p>
 					
