@@ -38,7 +38,7 @@
 	<br>
 	<br>
 
-	<!-- Add New Item button -->
+	<!-- Add New Item button may something sa button -->
 	<form action="addItem.jsp" method="post">
 		<input type="submit" value="Add New Item" class="btn btn-default">
 	</form>
