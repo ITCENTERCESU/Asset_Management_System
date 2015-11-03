@@ -30,6 +30,6 @@
 			</form>		
 		</div>
 	</div>
->>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
+
 </body>
 </html>
