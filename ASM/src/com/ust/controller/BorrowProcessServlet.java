@@ -56,6 +56,7 @@ public class BorrowProcessServlet extends HttpServlet {
 		if (connection != null) {
 			if (SQLOperations.addBorrowed(borrowed, connection)){
 				System.out.println("successful insert");
+				SQLOperation.updateStatus(borrowed, connection);
 				request.setAttribute("borrowed", borrowed);
 				getServletContext().getRequestDispatcher("/borrowStatus.jsp?success=true").forward(request, response);
 			} else {

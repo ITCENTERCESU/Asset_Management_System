@@ -10,6 +10,8 @@ import com.ust.model.AssetBean;
 import com.ust.model.BorrowedBean;
 import com.ust.utility.sql.SQLCommands;
 
+import edu.ust.erdbms.model.EmployeeBean;
+
 public class SQLOperations implements SQLCommands {
 
 	private static Connection connection;
@@ -125,5 +127,39 @@ public class SQLOperations implements SQLCommands {
 				return false; 
 			}	
 			return true;
+	}
+
+	
+	
+	public static int updateStatus(AssetBean employee,  
+			String itemId, Connection connection) {
+			int updated = 0;
+			try {
+				connection.setAutoCommit(false);
+		        PreparedStatement pstmt = 
+		        	connection.prepareStatement(UPDATE_STATUS);
+		        pstmt.setString(1, employee.getLastName()); 
+		        pstmt.setString(2, employee.getFirstName());
+		        pstmt.setString(3, employee.getPosition());
+		        pstmt.setString(4, employee.getDepartment()); 
+		        pstmt.setInt(5, id); 
+		        updated = pstmt.executeUpdate();   
+		        connection.commit();
+			} catch (SQLException sqle) {
+				System.out.println("SQLException - updateEmployee: " 
+					+ sqle.getMessage());
+				
+				try {
+					connection.rollback();
+				} catch (SQLException sql) {
+					System.err.println("Error on Update Connection Rollback - " 
+						+ sql.getMessage());
+				}
+				return updated; 
+			}	
+			return updated;
 		}
 }
+
+
+	
