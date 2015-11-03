@@ -22,6 +22,7 @@
 		<p>ID Number: ${borrowed.idNum}</p>
 		<p>Last Name: ${borrowed.lastName}</p>
 		<p>First Name: ${borrowed.firstName}</p>
+		<p>Status: $(borrowed.status)</p>
 		
 		<form action="inventoryprocess.html" method="post">
 			<h2>Borrowing successful!</h2>

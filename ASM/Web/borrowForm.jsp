@@ -40,7 +40,7 @@
 			String dueDate = ft.format(calendar.getTime());
 		%>
 		
-		<p>Date Borrowed: <input type="text" size="20" name="borrowedDate" value="<%ft.format(borrowedDate); %>" readonly></p>
+		<p>Date Borrowed: <input type="text" size="20" name="borrowedDate" value="<% out.println(ft.format(borrowedDate)); %>" readonly></p>
 		
 		<p>Due Date: <input type="text" size="20" name="dueDate" value="<%out.println(dueDate); %>"  readonly></p>
 		
