@@ -63,7 +63,7 @@
 	</div>
 	
 	<br/>
-	<p><a href="inventoryprocess.html">HOME.</a></p>
+	
 	<form role="form" action="inventoryprocess.html"class="col-sm-offset-1 col-sm-11">
 		<input type="submit" value="HOME"class="btn btn-default">	
 	</form>
