@@ -41,10 +41,10 @@ public class SQLOperations implements SQLCommands {
 		Connection connection) {
 		
 		try {
-	        PreparedStatement pstmt = connection.prepareStatement(INSERT_EMPLOYEE);
+	        PreparedStatement pstmt = connection.prepareStatement(INSERT_ASSET);
 	        pstmt.setString(1, asset.getItemId()); 
 	        pstmt.setString(2, asset.getItemName());
-	        pstmt.setString(3, AssetBean.getStatus());           
+	        pstmt.setString(3, asset.getStatus());           
 	        pstmt.executeUpdate(); // execute insert statement  
 		} catch (SQLException sqle) {
 			System.out.println("SQLException - addAsset: " + sqle.getMessage());

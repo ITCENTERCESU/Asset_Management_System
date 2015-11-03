@@ -3,7 +3,7 @@ package com.ust.model;
 public class AssetBean {
 	private String itemId;
 	private String itemName;
-	static String status;
+	private String status;
 	
 	public String getItemId() {
 		return itemId;
@@ -18,9 +18,13 @@ public class AssetBean {
 	public void setItemName(String itemName) {
 		this.itemName = itemName;
 		
-		status = "available";
+		setStatus("available");
 	}
-	public static String getStatus() {
+	
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public String getStatus() {
 		return status;
 	}
 

@@ -27,13 +27,13 @@
 	<br> 
 	
 	<!-- Borrow Item Button -->
-	<form action="borrowprocess.html" method="post">
+	<form action="borrowList.jsp" method="post">
 		<input type="submit" value="Borrow Item">
 	</form>
 	<br>
 	
 	<!-- Return Item button -->
-	<form action="returnprocess.html" method="post">
+	<form action="returnForm.jsp" method="post">
 		<input type="submit" value="Return Item">
 	</form>
 	<br>
