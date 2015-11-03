@@ -5,22 +5,35 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<link rel="stylesheet" href="./styles/bootstrap.min.css"/>
+	<link rel="icon" type="image/png" href="./images/information-systems-logo.png"/>
+	<title>Asset Management System</title>
+	<style type="text/css">
+		img{width:5em;height:5em;margin:auto;}
+		header{text-align:center;margin:3em 1em;}
+		form{padding:3em;background:#fddfbd;}
+	</style>
 </head>
 <body>
 	<!-- Insert header here -->
+	<div class="container">
+		<header>
 	<h2>Return Form: </h2>
 	<br>
 	<br>
-	<form action="processreturnform.html" method="post">
-		<p>ID Number: <input type="text" name="idNum" size="10" required="required"></p>
+	</header>
+	<div class="row">
+	<form role="form" action="processreturnform.html" method="post" class="col-sm-offset-4 col-sm-4">
+		<p>ID Number: <input type="text" name="idNum" size="10" required="required" placeholder="ID Number"></p>
 		
 		<br>
-		<input type="submit" value="Next">
+		<input type="submit" value="Next"class="btn btn-default">
 	</form>
 	
-	<form action="inventoryprocess.html" method="post">
-		<input type="submit" value="Cancel">
+	<form action="inventoryprocess.html" method="post"class="col-sm-offset-4 col-sm-4">
+		<input type="submit" value="Cancel"class="btn btn-default">
 	</form>
+	</div>
+	</div>
 </body>
 </html>
