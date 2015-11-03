@@ -24,11 +24,16 @@
 					<td><%=borrowed.getString("itemId")%></td>
 					<td><%=borrowed.getString("itemName")%></td>
 					<td><%=borrowed.getString("status")%></td>
+					<td align="center">
+					  <a href="employeemaintenance.html?id=<%=borrowed.getString("itemId")%>&action=edit">
+					  	<img src="images/Editor.ico"/>
+					  </a>
+					</td>
 				</tr>			
 		<% } %>
 	</table>
 	
-	<form action="inventory.jsp">
+	<form action="inventoryprocess.html">
 		<input type="submit" value="Home">	
 	</form>
 </body>

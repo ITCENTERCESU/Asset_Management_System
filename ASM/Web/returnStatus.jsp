@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="inventory.jsp" method="post">
+	<form action="inventoryprocess.html" method="post">
 		<h2>Item has been returned successfully!</h2>
 		<br>
 		<p>Date returned: _________</p> <!-- returnDate //variable to be used -->

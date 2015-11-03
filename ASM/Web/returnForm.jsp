@@ -19,7 +19,7 @@
 		<input type="submit" value="Next">
 	</form>
 	
-	<form action="inventory.jsp" method="post">
+	<form action="inventoryprocess.html" method="post">
 		<input type="submit" value="Cancel">
 	</form>
 </body>

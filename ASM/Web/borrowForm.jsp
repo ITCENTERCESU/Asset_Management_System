@@ -20,7 +20,7 @@
 		<input type="submit" value="Submit">
 	</form>
 	
-	<form action = "inventory.html" method="post">
+	<form action = "inventoryprocess.html" method="post">
 		<input type = "submit" value="cancel">
 	</form>
 </body>

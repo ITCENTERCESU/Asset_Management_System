@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.ust.utility.sql.SQLOperations;
 
-@WebServlet("/maintenance.html")
-public class MaintenanceServlet extends HttpServlet {
+@WebServlet("/inventoryprocess.html")
+public class InventoryProcessServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private Connection connection;
