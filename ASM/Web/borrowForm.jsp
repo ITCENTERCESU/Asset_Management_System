@@ -11,6 +11,7 @@
 	<title>Insert title here</title>
 
 	<%@ page import="java.util.*" %>
+	<%@ page import = "java.text.*" %>
 
 </head>
 
@@ -29,8 +30,11 @@
 		<p>Item Name:<input type="text" size="50" name="ItemName" value="${borrowForm.itemName}" readonly> </p>
 		<p>Status: <input type="text" size="20" name="status" value="${borrowForm.status}" readonly> </p>
 		<br>
-		
-		<p>Date Borrowed: <input type="text" size="20" name="borrowedDate" value="$
+		<%
+			Date borrowedDate = new Date();
+			SimpleDateFormat ft = new SimpleDateFormat ("MM/dd/yyyy (E)");
+		%>
+		<p>Date Borrowed: <input type="text" size="20" name="borrowedDate" value="<%out.println(ft.format(borrowedDate)); %>" ></p>
 		
 		<input type="submit" value="Submit">
 	</form>
