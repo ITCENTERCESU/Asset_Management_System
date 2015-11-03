@@ -7,11 +7,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<link rel="stylesheet" href="./styles/bootstrap.min.css"/>
+<link rel="icon" type="image/png" href="./images/information-systems-logo.png"/>
+<title>Asset Management System</title>
+<style type="text/css">
+		img{width:5em;height:5em;margin:auto;}
+		header{text-align:center;margin:2em 1em;}
+		
+	</style>
 </head>
 <body>
 	<!-- Insert header here -->
+	<div class="container">
+	<header> <h2>Availabe Items</h2>
+	</header>
 	
+      <div class="row">
 	<table>
 		<tr>
 			<th align="center">Item ID</th>
@@ -34,8 +45,10 @@
 		<% } %>
 	</table>
 	
-	<form action="inventoryprocess.html">
+	<form role="form" action="inventoryprocess.html"class="col-sm-offset-1 col-sm-11">
 		<input type="submit" value="Home"class="btn btn-default">	
 	</form>
+	</div>
+	</div>
 </body>
 </html>

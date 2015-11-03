@@ -12,15 +12,16 @@
 <title>Asset Management System</title>
 <style type="text/css">
 		img{width:5em;height:5em;margin:auto;}
-		header{text-align:center;margin:3em 1em;}
-		form{padding:0.5em;background:#fddfbd;}
+		header{text-align:center;margin:2em 10em;}
 	</style>
 </head>
 <body>
 	<!-- Insert header here -->
-	<header>Available Items</header>
+	<header><h2>Inventory</h2></header>
 	<!-- Display Inventory table  -->
-	<table>
+	
+	<table border="1" width="50%" style="margin:0em 2em;">
+	
 		<tr>
 			<th align="center">Item ID</th>
 			<th align="center">Item Name</th>
@@ -38,45 +39,47 @@
 	<br>
 	<br>
 	
-<div class="container" style="float:right">
-<div class="row">
+<div class="container">
+	<div class="row">
+
 	<!-- Add New Item button may something sa button -->
-	<form action="addItem.jsp" method="post"class="col-sm-offset-4 col-sm-4">
+	<form action="addItem.jsp" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-180px 450px;">
 		<input type="submit" value="Add New Item" class="btn btn-default">
 	</form>
 	<br> 
 	
 	<!-- Borrow Item Button -->
-	<form action="listborrowprocess.html" method="post"class="col-sm-offset-4 col-sm-4">
+	<form action="listborrowprocess.html" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-150px 450px;">
 		<input type="submit" value="Borrow Item" class="btn btn-default">
 	</form>
 	<br>
 	
 	<!-- Return Item button -->
-	<form action="returnForm.jsp" method="post"class="col-sm-offset-4 col-sm-4">
+	<form action="returnForm.jsp" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-120px 450px;">
 		<input type="submit" value="Return Item"class="btn btn-default">
 	</form>
 	<br>
 	
 	<!-- Delete Item button -->
-	<form action="deleteprocess.html" method="post"class="col-sm-offset-4 col-sm-4">
+	<form action="deleteprocess.html" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-90px 450px;">
 		<input type="submit" value="Delete Item"class="btn btn-default">
 	</form>
 	<br> 
 	
 	<!-- Settings button -->
-	<form action="addaccount.html" method="post"class="col-sm-offset-4 col-sm-4">
+	<form action="addaccount.html" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-60px 450px;">
 		<input type="submit" value="New Account"class="btn btn-default">
 	</form>
 	<br> 
 	
 	<!-- Logout button -->
-	<form action="index.jsp" method="post"class="col-sm-offset-4 col-sm-4">
+	<form action="index.jsp" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-30px 450px;">
 		<input type="submit" value="Logout"class="btn btn-default">
 	</form>
-	<br> 
+	<br>
+	</div> 
 	</div>
-	</div>
+
 	
 </body>
 </html>
