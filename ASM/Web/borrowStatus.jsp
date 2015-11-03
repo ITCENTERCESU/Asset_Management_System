@@ -5,11 +5,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<link rel="stylesheet" href="./styles/bootstrap.min.css"/>
+	<link rel="icon" type="image/png" href="./images/information-systems-logo.png"/>
+	<title>Asset Management System</title>
+	<style type="text/css">
+		img{width:5em;height:5em;margin:auto;}
+		header{text-align:center;margin:2em 1em;}
+		
+	</style>
 </head>
 <body>
 
 	<%if (request.getParameter("success").equals("true")) { %>
+		<div class="container">
+		<header>
 		<h2>Borrowing Successful!</h2>
 		<br/>
 		<p>ITEM DETAILS: </p>
@@ -22,9 +31,14 @@
 		<p>ID Number: ${borrowed.idNum}</p>
 		<p>Last Name: ${borrowed.lastName}</p>
 		<p>First Name: ${borrowed.firstName}</p>
+<<<<<<< HEAD
 		<p>Status: $(borrowed.status)</p>
 		
 		<form action="inventoryprocess.html" method="post">
+=======
+		<div class="row">
+		<form role="form"action="inventoryprocess.html" method="post"class="col-sm-offset-4 col-sm-4">
+>>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
 			<h2>Borrowing successful!</h2>
 			<br>
 			<p><b>Here is the list of all the things you had borrowed. 
@@ -40,15 +54,19 @@
 			    </table>
 				<br> 
 				<br>
-				<input type="submit" value="Home">
+				<input type="submit" value="Home"class="btn btn-default">
 		</form>
-
+	</div>
 	<% } else { %>
-		<h1>Adding failed</h1>		
+		<h1>Adding failed</h1></header>	
 	<% } %> 
+	</div>
 	
 	<br/>
 	<p><a href="inventoryprocess.html">HOME.</a></p>
+	<form role="form" action="inventoryprocess.html"class="col-sm-offset-1 col-sm-11">
+		<input type="submit" value="HOME"class="btn btn-default">	
+	</form>
 	
 	
 	
