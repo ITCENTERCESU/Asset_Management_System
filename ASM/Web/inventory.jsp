@@ -38,7 +38,7 @@
 	<br> 
 	
 	<!-- Borrow Item Button -->
-	<form action="borrowprocess.html" method="post">
+	<form action="listborrowprocess.html" method="post">
 		<input type="submit" value="Borrow Item">
 	</form>
 	<br>

@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.ust.utility.sql.SQLOperations;
 
-@WebServlet("/borrowprocess.html")
-public class BorrowProcessServlet extends HttpServlet {
+@WebServlet("/listborrowprocess.html")
+public class ListBorrowProcessServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	private Connection connection;

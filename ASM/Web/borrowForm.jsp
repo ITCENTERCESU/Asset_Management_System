@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
-<jsp:useBean id="borrowForm" type="java.sql.ResultSet" scope="request"/>
+<jsp:useBean id="borrowed" type="java.sql.ResultSet" scope="request"/>
 
 <!DOCTYPE html>
 <html>
@@ -21,13 +21,13 @@
 		<p>First Name: <input type="text" name="itemName" size="25" required="required"></p>
 		<br>
 		<br> 
-		<p>Item Id: <%=borrowForm.getString("itemId")%></p> 
-		<p>Item Name: <%=borrowForm.getString("itemName")%></p>
-		<p>Status: <%=borrowForm.getString("status")%>
+		<p>Item Id: <%=borrowed.getString("itemId")%></p> 
+		<p>Item Name: <%=borrowed.getString("itemName")%></p>
+		<p>Status: <%=borrowed.getString("status")%>
 		<input type="submit" value="Submit">
 	</form>
 	
-	<form action = "inventoryprocess.html" method="post">
+	<form action = "listborrowprocess.html" method="post">
 		<input type = "submit" value="cancel">
 	</form>
 </body>

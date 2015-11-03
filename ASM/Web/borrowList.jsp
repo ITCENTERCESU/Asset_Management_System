@@ -26,7 +26,7 @@
 					<td><%=borrowed.getString("itemName")%></td>
 					<td><%=borrowed.getString("status")%></td>
 					<td align="center">
-					  <a href="borrowForm.jsp?id=<%=borrowed.getString("itemId")%>&action=borrow">
+					  <a href="assetmaintenance.html?id=<%=borrowed.getString("itemId")%>&action=borrow">
 					  	<img src="images/Editor.ico"/>
 					  </a>
 					</td>
