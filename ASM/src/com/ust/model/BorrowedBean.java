@@ -2,15 +2,29 @@ package com.ust.model;
 
 
 public class BorrowedBean {
+	//itemId, itemName,idNum, lastName, firstName, borrowedDate,dueDate, status
+	
+	private String itemId;
+	private String itemName;
 	private int idNum;
 	private String lastName;
 	private String firstName;
-	private String itemId;
-	private String itemName;
 	private String borrowedDate;
 	private String dueDate;
 	private String status;
 	
+	public String getItemId() {
+		return itemId;
+	}
+	public void setItemId(String itemId) {
+		this.itemId = itemId;
+	}
+	public String getItemName() {
+		return itemName;
+	}
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+	}
 	public int getIdNum() {
 		return idNum;
 	}
@@ -29,18 +43,6 @@ public class BorrowedBean {
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-	public String getItemId() {
-		return itemId;
-	}
-	public void setItemId(String itemId) {
-		this.itemId = itemId;
-	}
-	public String getItemName() {
-		return itemName;
-	}
-	public void setItemName(String itemName) {
-		this.itemName = itemName;
-	}
 	public String getBorrowedDate() {
 		return borrowedDate;
 	}
@@ -57,8 +59,9 @@ public class BorrowedBean {
 		return status;
 	}
 	public void setStatus(String status) {
-		this.status = status;
+		this.status = "unavailable";
 	}
+	
 	
 	
 	

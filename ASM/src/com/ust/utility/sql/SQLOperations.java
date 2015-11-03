@@ -109,7 +109,7 @@ public class SQLOperations implements SQLCommands {
 			Connection connection) {
 			//itemId, itemName,idNum, lastName, firstName, borrowedDate,dueDate, status
 			try {
-		        PreparedStatement pstmt = connection.prepareStatement(INSERT_ASSET);
+		        PreparedStatement pstmt = connection.prepareStatement(INSERT_BORROWED);
 		        pstmt.setString(1, borrowed.getItemId()); 
 		        pstmt.setString(2, borrowed.getItemName());
 		        pstmt.setInt(3, borrowed.getIdNum()); 
@@ -121,7 +121,7 @@ public class SQLOperations implements SQLCommands {
 		        
 		        pstmt.executeUpdate(); // execute insert statement  
 			} catch (SQLException sqle) {
-				System.out.println("SQLException - addAsset: " + sqle.getMessage());
+				System.out.println("SQLException - addBorrowed: " + sqle.getMessage());
 				return false; 
 			}	
 			return true;

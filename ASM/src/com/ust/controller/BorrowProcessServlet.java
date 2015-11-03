@@ -38,36 +38,33 @@ public class BorrowProcessServlet extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//itemId, itemName,idNum, lastName, firstName, borrowedDate,dueDate, status
+		String itemId = request.getParameter("itemId");
+		String itemName = request.getParameter("itemName");
 		int idNum = Integer.parseInt(request.getParameter("idNum"));
 		String lastName = request.getParameter("lastName");
 		String firstName = request.getParameter("firstName");
-		String itemId = request.getParameter("itemId");
-		String itemName = request.getParameter("itemName");
-		String borrowedDateString = request.getParameter("borrowedDate");
-		String dueDateString = request.getParameter("dueDate");
+		String borrowedDate = request.getParameter("borrowedDate");
+		String dueDate = request.getParameter("dueDate");
 		String status = request.getParameter("status");
-
-		SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd");
-		Date borrowedDate = ft.parse(borrowedDateString);
-		Date dueDate = ft.parse(dueDateString);
+;
 		
 		BorrowedBean borrowed = 
 				BorrowedBeanFactory.getFactoryBean(itemId, itemName,idNum, 
-						lastName, firstName, borrowedDate,dueDate, status));
+						lastName, firstName, borrowedDate,dueDate, status);
 		
 		if (connection != null) {
 			if (SQLOperations.addBorrowed(borrowed, connection)){
 				System.out.println("successful insert");
 				request.setAttribute("borrowed", borrowed);
-				getServletContext().getRequestDispatcher("/addStatus.jsp?success=true").forward(request, response);
+				getServletContext().getRequestDispatcher("/borrowStatus.jsp?success=true").forward(request, response);
 			} else {
 				System.out.println("failed insert");
-				getServletContext().getRequestDispatcher("/addStatus.jsp?success=false").forward(request, response);
+				getServletContext().getRequestDispatcher("/borrowStatus.jsp?success=false").forward(request, response);
 			}
 		} else {
 			System.out.println("invalid connection");
 		}
-	}
 	}
 
 }

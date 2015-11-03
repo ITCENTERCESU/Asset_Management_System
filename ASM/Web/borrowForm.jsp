@@ -22,12 +22,12 @@
 	<br>
 	<form action="processborrowform.html" method="post">
 		<p>ID Number: <input type="text" name="idNum" size="10" required="required"></p>
-		<p>Last Name: <input type="text" name="firstName" size="25" required="required"></p>
-		<p>First Name: <input type="text" name="itemName" size="25" required="required"></p>
+		<p>Last Name: <input type="text" name="lastName" size="25" required="required"></p>
+		<p>First Name: <input type="text" name="firstName" size="25" required="required"></p>
 		<br>
 		<br> 
 		<p>Item Id: <input type="text" size="10" name="itemId" value="${borrowForm.itemId}" readonly> </p>
-		<p>Item Name:<input type="text" size="50" name="ItemName" value="${borrowForm.itemName}" readonly> </p>
+		<p>Item Name:<input type="text" size="50" name="itemName" value="${borrowForm.itemName}" readonly> </p>
 		<p>Status: <input type="text" size="20" name="status" value="${borrowForm.status}" readonly> </p>
 		<br>
 		<%
@@ -40,7 +40,7 @@
 			String dueDate = ft.format(calendar.getTime());
 		%>
 		
-		<p>Date Borrowed: <input type="text" size="20" name="borrowedDate" value="<%out.println(ft.format(borrowedDate)); %>" readonly></p>
+		<p>Date Borrowed: <input type="text" size="20" name="borrowedDate" value="<%ft.format(borrowedDate); %>" readonly></p>
 		
 		<p>Due Date: <input type="text" size="20" name="dueDate" value="<%out.println(dueDate); %>"  readonly></p>
 		
