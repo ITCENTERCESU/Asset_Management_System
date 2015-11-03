@@ -21,7 +21,7 @@
 	<br>
 
 	<!-- Add New Item button -->
-	<form action="addprocess.html" method="post">
+	<form action="addItem.jsp" method="post">
 		<input type="submit" value="Add New Item">
 	</form>
 	<br> 

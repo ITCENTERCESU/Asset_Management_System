@@ -2,7 +2,7 @@ package com.ust.utility.sql;
 
 public interface SQLCommands {
 
-	String INSERT_EMPLOYEE = "insert into Employees(lastname, firstname, position, department) values(?,?,?,?)";
+	String INSERT_EMPLOYEE = "insert into Inventory(itemId, itemName, status) values(?,?,?)";
 	String GET_ALL_EMPLOYEES = "select * from employees";
 	
 	String SEARCH_EMPLOYEE = "select * from employees where id=?";

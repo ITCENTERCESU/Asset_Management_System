@@ -1,33 +1,32 @@
 package com.ust.model;
 
 public class AssetBean {
-	private String lastName;
-	private String firstName;
-	private String position;
-	private String department;
+	private String itemId;
+	private String itemName;
+	static String status;
 	
-	public String getLastName() {
-		return lastName;
+	public String getItemId() {
+		return itemId;
 	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setItemId(String itemId) {
+		this.itemId = itemId;
 	}
-	public String getFirstName() {
-		return firstName;
+	
+	public String getItemName() {
+		return itemName;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+		
+		status = "available";
 	}
-	public String getPosition() {
-		return position;
+	public static String getStatus() {
+		return status;
 	}
-	public void setPosition(String position) {
-		this.position = position;
-	}
-	public String getDepartment() {
-		return department;
-	}
-	public void setDepartment(String department) {
-		this.department = department;
-	}			
+
+	
+	
+
+	
+	
 }

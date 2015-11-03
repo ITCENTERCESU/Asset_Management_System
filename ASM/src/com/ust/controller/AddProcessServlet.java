@@ -46,13 +46,13 @@ private Connection connection;
 				BeanFactory.getFactoryBean(itemId, itemName);
 		
 		if (connection != null) {
-			if (SQLOperations.addEmployee(asset, connection)){
+			if (SQLOperations.addAsset(asset, connection)){
 				System.out.println("successful insert");
 				request.setAttribute("asset", asset);
-				getServletContext().getRequestDispatcher("/actionstatus.jsp?success=true").forward(request, response);
+				getServletContext().getRequestDispatcher("/addStatus.jsp?success=true").forward(request, response);
 			} else {
 				System.out.println("failed insert");
-				getServletContext().getRequestDispatcher("/actionstatus.jsp?success=false").forward(request, response);
+				getServletContext().getRequestDispatcher("/addStatus.jsp?success=false").forward(request, response);
 			}
 		} else {
 			System.out.println("invalid connection");

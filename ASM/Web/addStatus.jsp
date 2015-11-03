@@ -7,13 +7,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="inventory.jsp" method="post">
-			<h2>Item has been added successfully!</h2>
-			<br>
-			<p>Item ID: __________ </p> <!-- itemId -->
-			<p>Item Name: ___________ </p> <!-- itemName -->
-			<br>
-			<input type="submit" value="Home">
-	</form>
+	<%if (request.getParameter("success").equals("true")) { %>
+		<h2>The item has been added successfully</h2>
+		<br/>
+		<p>Item ID: ${asset.itemId}</p>
+		<p>Item Name: ${asset.itemName}</p>
+		<p>Status: ${asset.status}</p>
+
+	<% } else { %>
+		<h1>Adding failed</h1>		
+	<% } %> 
+	
+	<br/>
+	<p><a href="inventory.jsp">HOME.</a></p>
+
 </body>
 </html>

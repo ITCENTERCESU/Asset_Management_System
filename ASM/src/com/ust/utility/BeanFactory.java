@@ -7,8 +7,8 @@ public class BeanFactory {
 	public static AssetBean getFactoryBean(String itemId, String itemName) {
 		
 		AssetBean asset = new AssetBean();
-		asset.setLastName(itemId);
-		asset.setFirstName(itemName);
+		asset.setItemId(itemId);
+		asset.setItemName(itemName);
 		
 		return asset;
 	}
