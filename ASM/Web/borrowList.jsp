@@ -17,6 +17,7 @@
 			<th align="center">Item ID</th>
 			<th align="center">Item Name</th>
 			<th align="center">Status</th>
+			<th align="center">Action-Borrow </th>
 		</tr>
 		
 		<% while(borrowed.next()) {	%>
@@ -25,7 +26,7 @@
 					<td><%=borrowed.getString("itemName")%></td>
 					<td><%=borrowed.getString("status")%></td>
 					<td align="center">
-					  <a href="employeemaintenance.html?id=<%=borrowed.getString("itemId")%>&action=edit">
+					  <a href="borrowForm.jsp?id=<%=borrowed.getString("itemId")%>&action=borrow">
 					  	<img src="images/Editor.ico"/>
 					  </a>
 					</td>
