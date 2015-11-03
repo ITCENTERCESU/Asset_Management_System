@@ -13,27 +13,26 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.ust.utility.sql.SQLOperations;
 
-@WebServlet("/maintenance.html")
-public class MaintenanceServlet extends HttpServlet {
+@WebServlet("/listborrowprocess.html")
+public class ListBorrowProcessServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	
 	private Connection connection;
 	
 	public void init() throws ServletException {
 		connection = (Connection) 
 			getServletContext().getAttribute("dbConnection");
 	}
-	
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
 	}
 
-	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher dispatcher = null; 
-		ResultSet rs = SQLOperations.getAllAssets(connection);
-		request.setAttribute("inventory", rs);
-		dispatcher = getServletContext().getRequestDispatcher("/inventory.jsp");	
+		ResultSet rs = SQLOperations.getBorrowedList(connection);
+		request.setAttribute("borrowed", rs);
+		dispatcher = getServletContext().getRequestDispatcher("/borrowList.jsp");	
 		dispatcher.forward(request, response);
 	}
 

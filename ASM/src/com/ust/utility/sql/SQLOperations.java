@@ -70,7 +70,7 @@ public class SQLOperations implements SQLCommands {
 		ResultSet rs = null;
 		try {
 			Statement stmt = connection.createStatement();
-			rs = stmt.executeQuery(BORROWED_LIST);  
+			rs = stmt.executeQuery(GET_BORROWED_LIST);  
 		} catch (SQLException sqle) {
 			System.out.println("SQLException - getBorrowedList: " 
 			  + sqle.getMessage());
@@ -78,5 +78,29 @@ public class SQLOperations implements SQLCommands {
 		}	
 		return rs;
 	}
+	
+	public static AssetBean searchAsset(String itemId, 
+			Connection connection) {
+			
+			AssetBean asset = new AssetBean();
+			 
+			try {
+		        PreparedStatement pstmt = 
+		        	connection.prepareStatement(SEARCH_ASSET);
+		        pstmt.setString(1, itemId);             
+		        ResultSet rs  = pstmt.executeQuery();
+		        
+		        while (rs.next()) { 
+		        	asset.setItemId(rs.getString("itemId"));
+		        	asset.setItemName(rs.getString("itemName"));
+		        	asset.setStatus(rs.getString("status"));
+		        }
+			} catch (SQLException sqle) {
+				System.out.println("SQLException - searchEmployee: " 
+						+ sqle.getMessage());
+				return asset; 
+			}	
+			return asset;
+		}
 	
 }

@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="inventory.jsp" method="post">
+	<form action="inventoryprocess.html" method="post">
 		<h2>Borrowing successful!</h2>
 		<br>
 		<p><b>Here is the list of all the things you had borrowed. 

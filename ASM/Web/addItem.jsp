@@ -15,7 +15,7 @@
 		<input type="submit" value="Add">
 	</form>
 	
-	<form action="maintenance.html" method="post">
+	<form action="inventoryprocess.html" method="post">
 		<input type="submit" value="Cancel">
 	</form>
 </body>

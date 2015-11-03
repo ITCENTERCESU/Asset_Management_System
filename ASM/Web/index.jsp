@@ -14,6 +14,7 @@
 	</style>
 </head>
 <body>
+
 	<div class="container">
 		<header>
 			<h1>Information Systems</h1>
@@ -29,5 +30,6 @@
 			</form>		
 		</div>
 	</div>
+>>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
 </body>
 </html>

@@ -11,36 +11,40 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.ust.model.AssetBean;
 import com.ust.utility.sql.SQLOperations;
 
 
-@WebServlet("/borrowprocess.html")
-public class BorrowProcessServlet extends HttpServlet {
+@WebServlet("/assetmaintenance.html")
+public class AssetMaintenanceServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+
 	private Connection connection;
 	
 	public void init() throws ServletException {
-		connection = SQLOperations.getConnection();
-		
-		if (connection != null) {
-			getServletContext().setAttribute("dbConnection", connection);
-			System.out.println("connection is READY.");
-		} else {
-			System.err.println("connection is NULL.");
-		}
+		connection = (Connection) 
+			getServletContext().getAttribute("dbConnection");
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
-	}
+	}	
+
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dispatcher = null; 
-		ResultSet rs = SQLOperations.getBorrowedList(connection);
-		request.setAttribute("borrowed", rs);
-		dispatcher = getServletContext().getRequestDispatcher("/borrowList.jsp");	
-		dispatcher.forward(request, response);
+		try {
+			RequestDispatcher dispatcher = null; 
+			if (request.getParameter("action").equals("borrow")) {
+				String itemId = request.getParameter("itemId");
+				AssetBean asset = SQLOperations.searchAsset(itemId, connection);
+				request.setAttribute("borrowForm", asset);
+				dispatcher = getServletContext().getRequestDispatcher("/borrowForm.jsp");
+			}
+			dispatcher.forward(request, response);		
+		} catch (Exception e) {
+			System.err.println("Exception e - " + e.getMessage());
+			e.printStackTrace();
+		} 
 	}
 
 }
