@@ -70,7 +70,7 @@ public class SQLOperations implements SQLCommands {
 		ResultSet rs = null;
 		try {
 			Statement stmt = connection.createStatement();
-			rs = stmt.executeQuery(BORROWED_LIST);  
+			rs = stmt.executeQuery(GET_BORROWED_LIST);  
 		} catch (SQLException sqle) {
 			System.out.println("SQLException - getBorrowedList: " 
 			  + sqle.getMessage());

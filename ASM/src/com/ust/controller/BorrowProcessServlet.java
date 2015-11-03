@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.ust.utility.sql.SQLOperations;
 
-
 @WebServlet("/borrowprocess.html")
 public class BorrowProcessServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -21,14 +20,8 @@ public class BorrowProcessServlet extends HttpServlet {
 	private Connection connection;
 	
 	public void init() throws ServletException {
-		connection = SQLOperations.getConnection();
-		
-		if (connection != null) {
-			getServletContext().setAttribute("dbConnection", connection);
-			System.out.println("connection is READY.");
-		} else {
-			System.err.println("connection is NULL.");
-		}
+		connection = (Connection) 
+			getServletContext().getAttribute("dbConnection");
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
