@@ -1,4 +1,4 @@
-package com.ust;
+package com.ust.controller;
 
 import java.io.IOException;
 
