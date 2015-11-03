@@ -13,12 +13,12 @@
 <style type="text/css">
 		img{width:5em;height:5em;margin:auto;}
 		header{text-align:center;margin:3em 1em;}
-		form{padding:3em;background:#fddfbd;}
+		form{padding:0.5em;background:#fddfbd;}
 	</style>
 </head>
 <body>
 	<!-- Insert header here -->
-
+	<header>Available Items</header>
 	<!-- Display Inventory table  -->
 	<table>
 		<tr>
@@ -37,41 +37,46 @@
 	</table>
 	<br>
 	<br>
-
+	
+<div class="container" style="float:right">
+<div class="row">
 	<!-- Add New Item button may something sa button -->
-	<form action="addItem.jsp" method="post">
+	<form action="addItem.jsp" method="post"class="col-sm-offset-4 col-sm-4">
 		<input type="submit" value="Add New Item" class="btn btn-default">
 	</form>
 	<br> 
 	
 	<!-- Borrow Item Button -->
-	<form action="listborrowprocess.html" method="post">
+	<form action="listborrowprocess.html" method="post"class="col-sm-offset-4 col-sm-4">
 		<input type="submit" value="Borrow Item" class="btn btn-default">
 	</form>
 	<br>
 	
 	<!-- Return Item button -->
-	<form action="returnForm.jsp" method="post">
+	<form action="returnForm.jsp" method="post"class="col-sm-offset-4 col-sm-4">
 		<input type="submit" value="Return Item"class="btn btn-default">
 	</form>
 	<br>
 	
 	<!-- Delete Item button -->
-	<form action="deleteprocess.html" method="post">
+	<form action="deleteprocess.html" method="post"class="col-sm-offset-4 col-sm-4">
 		<input type="submit" value="Delete Item"class="btn btn-default">
 	</form>
 	<br> 
 	
 	<!-- Settings button -->
-	<form action="addaccount.html" method="post">
+	<form action="addaccount.html" method="post"class="col-sm-offset-4 col-sm-4">
 		<input type="submit" value="New Account"class="btn btn-default">
 	</form>
 	<br> 
 	
 	<!-- Logout button -->
-	<form action="index.jsp" method="post">
+	<form action="index.jsp" method="post"class="col-sm-offset-4 col-sm-4">
 		<input type="submit" value="Logout"class="btn btn-default">
 	</form>
 	<br> 
+	</div>
+	</div>
+	
 </body>
 </html>

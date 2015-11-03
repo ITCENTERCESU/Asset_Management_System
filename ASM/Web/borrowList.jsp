@@ -35,7 +35,7 @@
 	</table>
 	
 	<form action="inventoryprocess.html">
-		<input type="submit" value="Home">	
+		<input type="submit" value="Home"class="btn btn-default">	
 	</form>
 </body>
 </html>
