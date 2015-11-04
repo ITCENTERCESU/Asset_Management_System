@@ -35,7 +35,7 @@ public interface SQLCommands {
 	
 	String DELETE_EMPLOYEE = "delete from employees where id=?";
 	
-	
+	String SELECT_USERPW = "SELECT password FROM Users WHERE username=?";
 	
 	//SELECT Inventory.itemId, Inventory.itemName, "
 	//+ "Borrowed.idNum,	Borrowed.lastName,	Borrowed.firstName,	Borrowed.borrowedDate,"

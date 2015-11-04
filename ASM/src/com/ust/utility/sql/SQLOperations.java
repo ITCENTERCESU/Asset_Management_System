@@ -127,24 +127,29 @@ public class SQLOperations implements SQLCommands {
 			}	
 			return true;
 	}
-
 	
-	
-	public static boolean returnBorrowed(BorrowedBean returned, 
-			Connection connection) {
-			//itemId, itemName,idNum, lastName, firstName, borrowedDate,dueDate, status
-			try {
-		        PreparedStatement pstmt = connection.prepareStatement(RETURN_BORROWED);
-		        pstmt.setString(1, returned.getItemId()); 
-		        pstmt.setInt(3, returned.getIdNum()); 
-		       
-		        pstmt.executeUpdate(); // execute insert statement  
-			} catch (SQLException sqle) {
-				System.out.println("SQLException - addBorrowed: " + sqle.getMessage());
-				return false; 
-			}	
-			return true;
+	public static String selectUserPassword(String username, Connection connection) {
+		
+		String pw="";
+		
+		try {
+			PreparedStatement pstmt = connection.prepareStatement(SELECT_USERPW);
+	        pstmt.setString(1, username);
+	        ResultSet rs  = pstmt.executeQuery();
+	        
+	        if (rs.next() ) { 
+	        	pw = rs.getString("password");
+	        }
+	        
+	        return pw;
+	        
+		} catch (SQLException sqle) {
+			System.out.println("SQLException - selectEarning: " + sqle.getMessage() );
+			return pw; 
+		}
+		
 	}
+	
 }
 
 

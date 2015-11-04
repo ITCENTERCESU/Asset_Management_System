@@ -13,6 +13,8 @@
 <style type="text/css">
 		img{width:5em;height:5em;margin:auto;}
 		header{text-align:center;margin:2em 10em;}
+		.lalagyan{margin:-60px 230px;}
+		.lalagyan2{margin:10px 70px 0px 30px;}
 	</style>
 </head>
 <body>
@@ -41,7 +43,7 @@
 	
 <div class="container">
 	<div class="row">
-
+	<div class="lalagyan">
 	<!-- Add New Item button may something sa button -->
 	<form action="addItem.jsp" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-180px 450px;">
 		<input type="submit" value="Add New Item" class="btn btn-default">
@@ -61,24 +63,33 @@
 	<br>
 	
 	<!-- Delete Item button -->
-	<form action="deleteprocess.html" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-90px 450px;">
+	<form action="deleteprocess.html" method="post"class="col-sm-offset-2 col-sm-4"style="margin:-90px 450px;">
 		<input type="submit" value="Delete Item"class="btn btn-default">
 	</form>
 	<br> 
-	
+	</div>
+	<div class="lalagyan2">
 	<!-- Settings button -->
-	<form action="addaccount.html" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-60px 450px;">
+	<form action="addaccount.html" method="post"class="col-sm-offset-2 col-sm-4"style="margin:-20px 130px;">
 		<input type="submit" value="New Account"class="btn btn-default">
 	</form>
 	<br> 
 	
 	<!-- Logout button -->
+
 	<form action="index.jsp" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-30px 450px;">
+	<%
+		session=request.getSession();
+		session.invalidate();
+	%>
 		<input type="submit" value="Logout"class="btn btn-default">
 	</form>
 	<br>
-	</div> 
 	</div>
+	</div>
+	</div>
+	
+	
 
 	
 </body>
