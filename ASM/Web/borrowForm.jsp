@@ -13,8 +13,9 @@
 <title>Asset Management System</title>
 <style type="text/css">
 		img{width:5em;height:5em;margin:auto;}
-		header{text-align:center;margin:2em 1em;}
-		
+		header{text-align:center;margin:0em 1em;}
+		form{padding:2em;background:#FD8F14;}
+		body{background-color:#FDDFBD;}
 	</style>
 
 	<%@ page import="java.util.*" %>
@@ -30,14 +31,14 @@
 	<br>
 	 <div class="row">
 	<form role="form" action="processborrowform.html" method="post"class="col-sm-offset-4 col-sm-4">
-		<p>ID Number: <input type="text" name="idNum" size="10" required="required"placeholder="ID Number" class="form-control"></p>
-		<p>Last Name: <input type="text" name="lastName" size="25" required="required"placeholder="Last name" class="form-control"></p>
-		<p>First Name: <input type="text" name="firstName" size="25" required="required"placeholder="First name" class="form-control"></p>
+		<p><strong>ID Number:</strong> <input type="text" name="idNum" size="10" required="required"placeholder="ID Number" class="form-control"></p>
+		<p><strong>Last Name: </strong><input type="text" name="lastName" size="25" required="required"placeholder="Last name" class="form-control"></p>
+		<p><strong>First Name:</strong> <input type="text" name="firstName" size="25" required="required"placeholder="First name" class="form-control"></p>
 		<br>
 		<br> 
-		<p>Item Id: <input type="text" size="10" name="itemId" value="${borrowForm.itemId}" readonly class="form-control"> </p>
-		<p>Item Name:<input type="text" size="50" name="itemName" value="${borrowForm.itemName}" readonly class="form-control"> </p>
-		<p>Status: <input type="text" size="20" name="status" value="${borrowForm.status}" readonly class="form-control"> </p>
+		<p><strong>Item Id:</strong> <input type="text" size="10" name="itemId" value="${borrowForm.itemId}" readonly class="form-control"> </p>
+		<p><strong>Item Name:</strong><input type="text" size="50" name="itemName" value="${borrowForm.itemName}" readonly class="form-control"> </p>
+		<p><strong>Status:</strong> <input type="text" size="20" name="status" value="${borrowForm.status}" readonly class="form-control"> </p>
 		
 		<br>
 		<%
@@ -51,9 +52,9 @@
 			String borrowedDateD = ft.format(borrowedDateDD);
 		%>
 		
-		<p>Date Borrowed: <input type="text" size="20" name="borrowedDate" value="<%out.println(borrowedDateD);%>" readonly class="form-control"></p>
+		<p><strong>Date Borrowed:</strong> <input type="text" size="20" name="borrowedDate" value="<%out.println(borrowedDateD);%>" readonly class="form-control"></p>
 
-		<p>Due Date: <input type="text" size="20" name="dueDate" value="<%out.println(dueDateD); %>"  readonly class="form-control"></p>
+		<p><strong>Due Date:</strong> <input type="text" size="20" name="dueDate" value="<%out.println(dueDateD); %>"  readonly class="form-control"class="col-sm-offset-4 col-sm-4"></p>
 		
 		<input type="submit" value="Submit" class="btn btn-default">
 	</form>

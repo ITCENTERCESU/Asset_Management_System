@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="./styles/bootstrap.min.css"/>
-<link rel="icon" type="image/png" href="./images/information-systems-logo.png"/>
+
 <title>Asset Management System</title>
 <style type="text/css">
 		img{width:5em;height:5em;margin:auto;}
