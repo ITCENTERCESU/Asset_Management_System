@@ -22,7 +22,7 @@
 			<p>Welcome IS Faculty Member!</p>		
 		</header>
 		<div class="row">
-			<form role="form" action="processlogin.html" method="get" class="col-sm-offset-4 col-sm-4">
+			<form role="form" action="processlogin.html" method="post" class="col-sm-offset-4 col-sm-4">
 				<img alt="Information Systems Logo" src="./images/information-systems-logo.png">
 				<input type="text" name="username" required="required" placeholder="Username" class="form-control">
 				<input type="password" name="password" required="required" placeholder="Password" class="form-control">

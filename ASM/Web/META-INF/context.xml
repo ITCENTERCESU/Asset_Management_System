@@ -2,8 +2,11 @@
 <!DOCTYPE xml>
 <Context>
   <Resource name="jdbc/UST-3CSC-DS" auth="Container"
+
             type="javax.sql.DataSource" username="penequito" password="penequito"
+
+            
             driverClassName="net.sourceforge.jtds.jdbc.Driver" 
-            url="jdbc:jtds:sqlserver://localhost:1433;DatabaseName=AMS;SelectMethod=cursor;"
+            url="jdbc:jtds:sqlserver://localhost:1433;DatabaseName=ICS114_3CSC;SelectMethod=cursor;"
             maxTotal="50" validationQuery="Select 1"/>
 </Context>

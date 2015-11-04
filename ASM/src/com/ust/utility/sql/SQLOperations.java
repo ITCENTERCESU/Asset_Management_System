@@ -129,8 +129,13 @@ public class SQLOperations implements SQLCommands {
 	}
 
 	
+
+	/*
+	public static int updateStatus(AssetBean employee,  
+=======
 	
 	public static int updateStatus(BorrowedBean borrowed,  
+>>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System
 			String itemId, Connection connection) {
 			int updated = 0;
 			try {
@@ -154,6 +159,30 @@ public class SQLOperations implements SQLCommands {
 			}	
 			return updated;
 		}
+	
+	*/
+	public static String selectUserPassword(String username, Connection connection) {
+		
+		String pw="";
+		
+		try {
+			PreparedStatement pstmt = connection.prepareStatement(SELECT_USERPW);
+	        pstmt.setString(1, username);
+	        ResultSet rs  = pstmt.executeQuery();
+	        
+	        if (rs.next() ) { 
+	        	pw = rs.getString("password");
+	        }
+	        
+	        return pw;
+	        
+		} catch (SQLException sqle) {
+			System.out.println("SQLException - selectEarning: " + sqle.getMessage() );
+			return pw; 
+		}
+		
+	}
+	
 }
 
 
