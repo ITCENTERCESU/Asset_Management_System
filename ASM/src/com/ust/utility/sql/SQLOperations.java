@@ -130,30 +130,21 @@ public class SQLOperations implements SQLCommands {
 
 	
 	
-	public static int updateStatus(BorrowedBean borrowed,  
-			String itemId, Connection connection) {
-			int updated = 0;
+	public static boolean returnBorrowed(BorrowedBean returned, 
+			Connection connection) {
+			//itemId, itemName,idNum, lastName, firstName, borrowedDate,dueDate, status
 			try {
-				connection.setAutoCommit(false);
-		        PreparedStatement pstmt = 
-		        	connection.prepareStatement(UPDATE_STATUS);
-		        pstmt.setString(8,borrowed.getStatus());
-		        updated = pstmt.executeUpdate();   
-		        connection.commit();
+		        PreparedStatement pstmt = connection.prepareStatement(RETURN_BORROWED);
+		        pstmt.setString(1, returned.getItemId()); 
+		        pstmt.setInt(3, returned.getIdNum()); 
+		       
+		        pstmt.executeUpdate(); // execute insert statement  
 			} catch (SQLException sqle) {
-				System.out.println("SQLException - updateStatus: " 
-					+ sqle.getMessage());
-				
-				try {
-					connection.rollback();
-				} catch (SQLException sql) {
-					System.err.println("Error on Update Connection Rollback - " 
-						+ sql.getMessage());
-				}
-				return updated; 
+				System.out.println("SQLException - addBorrowed: " + sqle.getMessage());
+				return false; 
 			}	
-			return updated;
-		}
+			return true;
+	}
 }
 
 
