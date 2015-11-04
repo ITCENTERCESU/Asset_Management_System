@@ -13,8 +13,9 @@
 <style type="text/css">
 		img{width:5em;height:5em;margin:auto;}
 		header{text-align:center;margin:2em 1em;}
-		form{padding:3em;background:#FD8F14;}
-		body{background-color:#FDDFBD;}
+		
+		body{background-color:#FDDFBD;
+		}
 	</style>
 </head>
 <body>
@@ -23,7 +24,7 @@
 	<header> <h2>Available Items</h2>
 	</header>
 	
-      <div class="row">
+      <div class="row" style="align:center;">
 	<table>
 		<tr>
 			<th align="center">Item ID</th>

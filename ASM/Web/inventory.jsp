@@ -14,8 +14,8 @@
 		img{width:5em;height:5em;margin:auto;}
 		header{text-align:center;margin:2em 10em;}
 		.lalagyan{margin:-60px 230px;}
-		.lalagyan2{margin:10px 70px 0px 30px;}
-		form{padding:3em;background:#FD8F14;}
+		.lalagyan2{}
+		
 		body{background-color:#FDDFBD;}
 	</style>
 </head>
@@ -72,14 +72,14 @@
 	</div>
 	<div class="lalagyan2">
 	<!-- Settings button -->
-	<form action="addaccount.html" method="post"class="col-sm-offset-2 col-sm-4"style="margin:-20px 130px;">
+	<form action="addaccount.html" method="post"class="col-sm-offset-2 col-sm-4"style="margin:10px 80px;">
 		<input type="submit" value="New Account"class="btn btn-default">
 	</form>
 	<br> 
 	
 	<!-- Logout button -->
 
-	<form action="index.jsp" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-30px 450px;">
+	<form action="index.jsp" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-54px 220px;">
 	<%
 		session=request.getSession();
 		session.invalidate();
