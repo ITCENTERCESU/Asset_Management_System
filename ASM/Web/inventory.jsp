@@ -15,6 +15,8 @@
 		header{text-align:center;margin:2em 10em;}
 		.lalagyan{margin:-60px 230px;}
 		.lalagyan2{margin:10px 70px 0px 30px;}
+		form{padding:3em;background:#FD8F14;}
+		body{background-color:#FDDFBD;}
 	</style>
 </head>
 <body>
