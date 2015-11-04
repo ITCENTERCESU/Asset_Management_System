@@ -12,7 +12,7 @@
 <title>Asset Management System</title>
 <style type="text/css">
 		img{width:5em;height:5em;margin:auto;}
-		header{text-align:center;margin:2em 10em;}
+		header{text-align:center;margin:2em 10em; background:#FD8F14}
 		.lalagyan{margin:-60px 230px;}
 		.lalagyan2{}
 		
