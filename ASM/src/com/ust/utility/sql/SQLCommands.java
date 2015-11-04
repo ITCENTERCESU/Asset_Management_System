@@ -23,22 +23,8 @@ public interface SQLCommands {
 			+ ""
 			+ "DELETE FROM Borrowed WHERE itemId=? AND idNum=?";
 	
-	//"SELECT itemId, itemName, status FROM Inventory WHERE itemId IN(SELECT itemId FROM Inventory WHERE status='available' INTERSECT SELECT itemId FROM Borrowed)";	
-	
-	//itemId, itemName,idNum, lastName, firstName, borrowedDate,dueDate, status
-	
-	
-	
-	String UPDATE_STATUS = "UPDATE Inventory SET status='unavailable' "
-			+ "FROM Inventory, Borrowed "
-			+ "WHERE Inventory.itemId = Borrowed.itemId;";
-	
-	String DELETE_EMPLOYEE = "delete from employees where id=?";
-	
+
 	String SELECT_USERPW = "SELECT password FROM Users WHERE username=?";
 	
-	//SELECT Inventory.itemId, Inventory.itemName, "
-	//+ "Borrowed.idNum,	Borrowed.lastName,	Borrowed.firstName,	Borrowed.borrowedDate,"
-	//+ "Borrowed.dueDate, Inventory.status FROM Inventory, Borrowed WHERE"
-	//	+"Inventory.itemId = Borrowed.itemId;
+	
 }
