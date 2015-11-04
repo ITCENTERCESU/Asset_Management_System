@@ -76,15 +76,12 @@
 	<br> 
 	
 	<!-- Logout button -->
-<<<<<<< HEAD
-	<form action="index.jsp" method="post"class="col-sm-offset-2 col-sm-4"style="margin:-20px 150px;" style="inline">
-=======
+
 	<form action="index.jsp" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-30px 450px;">
 	<%
 		session=request.getSession();
 		session.invalidate();
 	%>
->>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
 		<input type="submit" value="Logout"class="btn btn-default">
 	</form>
 	<br>
