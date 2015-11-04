@@ -48,18 +48,21 @@ public class BorrowProcessServlet extends HttpServlet {
 		String borrowedDate = request.getParameter("borrowedDate");
 		String dueDate = request.getParameter("dueDate");
 		String status = request.getParameter("status");
-;
+
 		
 		BorrowedBean borrowed = 
 				BorrowedBeanFactory.getFactoryBean(itemId, itemName,idNum, 
 						lastName, firstName, borrowedDate,dueDate, status);
 		
+	
 		
 		if (connection != null) {
 			if (SQLOperations.addBorrowed(borrowed, connection)){
 				System.out.println("successful insert");
 				
 				request.setAttribute("borrowed", borrowed);
+				request.setAttribute("borrowedDate", borrowed.getBorrowedDate());
+				request.setAttribute("dueDate", borrowed.getDueDate());
 				getServletContext().getRequestDispatcher("/borrowStatus.jsp?success=true").forward(request, response);
 			} 
 			else 
