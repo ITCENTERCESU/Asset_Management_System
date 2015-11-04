@@ -10,7 +10,11 @@ public interface SQLCommands {
 	String SEARCH_ASSET = "SELECT * FROM Inventory WHERE itemId=? AND status='available'";
 	
 	String INSERT_BORROWED = "INSERT INTO Borrowed(itemId, itemName,idNum, lastName, firstName, borrowedDate,dueDate, status) "
-			+ "VALUES (?,?,?,?,?,?,?,?)";
+			+ "VALUES (?,?,?,?,?,?,?,?);"
+			+ ""
+			+ "UPDATE Inventory SET status='unavailable' "
+			+ "FROM Inventory, Borrowed "
+			+ "WHERE Inventory.itemId = Borrowed.itemId;";
 	
 	
 	//"SELECT itemId, itemName, status FROM Inventory WHERE itemId IN(SELECT itemId FROM Inventory WHERE status='available' INTERSECT SELECT itemId FROM Borrowed)";	

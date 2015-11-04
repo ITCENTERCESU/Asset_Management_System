@@ -31,15 +31,14 @@
 		<p>ID Number: ${borrowed.idNum}</p>
 		<p>Last Name: ${borrowed.lastName}</p>
 		<p>First Name: ${borrowed.firstName}</p>
-<<<<<<< HEAD
-		<p>Status: $(borrowed.status)</p>
+
 		
 		<form action="inventoryprocess.html" method="post">
-=======
+
 		<div class="row">
 		<form role="form"action="inventoryprocess.html" method="post"class="col-sm-offset-4 col-sm-4">
->>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
-			<h2>Borrowing successful!</h2>
+
+
 			<br>
 			<p><b>Here is the list of all the things you had borrowed. 
 			Please return them on time. </b></p>

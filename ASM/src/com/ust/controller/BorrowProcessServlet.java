@@ -54,23 +54,13 @@ public class BorrowProcessServlet extends HttpServlet {
 				BorrowedBeanFactory.getFactoryBean(itemId, itemName,idNum, 
 						lastName, firstName, borrowedDate,dueDate, status);
 		
-		RequestDispatcher dispatcher = null; 
 		
 		if (connection != null) {
 			if (SQLOperations.addBorrowed(borrowed, connection)){
 				System.out.println("successful insert");
 				
-				int recordsAffected = 
-						SQLOperations.updateStatus(borrowed, itemId, connection);
-					request.setAttribute("borrowed", borrowed);
-				if (recordsAffected > 0) {
-					dispatcher = getServletContext().getRequestDispatcher( "/borrowStatus.jsp?success=true");
-				} 
-				else 
-				{
-					dispatcher = getServletContext().getRequestDispatcher("/borrowStatus.jsp?success=false");
-				}
-					dispatcher.forward(request, response);		
+				request.setAttribute("borrowed", borrowed);
+				getServletContext().getRequestDispatcher("/borrowStatus.jsp?success=true").forward(request, response);
 			} 
 			else 
 			{
