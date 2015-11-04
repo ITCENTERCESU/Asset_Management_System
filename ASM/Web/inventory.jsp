@@ -74,6 +74,10 @@
 	
 	<!-- Logout button -->
 	<form action="index.jsp" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-30px 450px;">
+	<%
+		session=request.getSession();
+		session.invalidate();
+	%>
 		<input type="submit" value="Logout"class="btn btn-default">
 	</form>
 	<br>

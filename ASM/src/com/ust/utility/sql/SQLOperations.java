@@ -10,7 +10,7 @@ import com.ust.model.AssetBean;
 import com.ust.model.BorrowedBean;
 import com.ust.utility.sql.SQLCommands;
 
-import edu.ust.erdbms.model.EmployeeBean;
+//import edu.ust.erdbms.model.EmployeeBean;
 
 public class SQLOperations implements SQLCommands {
 
@@ -130,7 +130,7 @@ public class SQLOperations implements SQLCommands {
 	}
 
 	
-	
+	/*
 	public static int updateStatus(AssetBean employee,  
 			String itemId, Connection connection) {
 			int updated = 0;
@@ -159,6 +159,30 @@ public class SQLOperations implements SQLCommands {
 			}	
 			return updated;
 		}
+	
+	*/
+	public static String selectUserPassword(String username, Connection connection) {
+		
+		String pw="";
+		
+		try {
+			PreparedStatement pstmt = connection.prepareStatement(SELECT_USERPW);
+	        pstmt.setString(1, username);
+	        ResultSet rs  = pstmt.executeQuery();
+	        
+	        if (rs.next() ) { 
+	        	pw = rs.getString("password");
+	        }
+	        
+	        return pw;
+	        
+		} catch (SQLException sqle) {
+			System.out.println("SQLException - selectEarning: " + sqle.getMessage() );
+			return pw; 
+		}
+		
+	}
+	
 }
 
 
