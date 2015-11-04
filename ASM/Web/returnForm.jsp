@@ -28,10 +28,10 @@
 		<p>Item Code: <input type="text" name="itemId" size="10" required="required" placeholder="ex. 0000"></p>
 		
 		<br>
-		<input type="submit" value="Next"class="btn btn-default">
+		<input type="submit" value="Next" class="btn btn-default">
 	</form>
 	
-	<form action="processreturn.html" method="post"class="col-sm-offset-4 col-sm-4">
+	<form action="inventoryprocess.html" method="post"class="col-sm-offset-4 col-sm-4">
 		<input type="submit" value="Cancel"class="btn btn-default">
 	</form>
 	</div>
