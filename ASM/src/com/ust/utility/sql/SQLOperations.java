@@ -131,9 +131,9 @@ public class SQLOperations implements SQLCommands {
 	
 	public static boolean returnBorrowed(BorrowedBean returned, 
 			Connection connection) {
-			//itemId, itemName,idNum, lastName, firstName, borrowedDate,dueDate, status
+
 			try {
-		        PreparedStatement pstmt = connection.prepareStatement(INSERT_BORROWED);
+		        PreparedStatement pstmt = connection.prepareStatement(RETURN_BORROWED);
 		        pstmt.setString(1, returned.getItemId()); 
 		       
 		        pstmt.setInt(3, returned.getIdNum()); 
