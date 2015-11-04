@@ -171,6 +171,23 @@ public class SQLOperations implements SQLCommands {
 		
 	}
 	
+	public static ResultSet getCurrentlyBorrowing(int idNum, BorrowedBean currently, Connection connection) {
+		ResultSet rs = null;
+		try {
+
+			PreparedStatement pstmt = connection.prepareStatement(GET_CURRENTLY_BORROWING);
+			pstmt.setInt(1, idNum);
+			rs = pstmt.executeQuery();  
+			
+		    
+		} catch (SQLException sqle) {
+			System.out.println("SQLException - getCurrentlyBorrowing: " 
+			  + sqle.getMessage());
+			return rs; 
+		}	
+		return rs;
+	}
+
 }
 
 

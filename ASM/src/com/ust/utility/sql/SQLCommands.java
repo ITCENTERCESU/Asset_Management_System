@@ -24,5 +24,9 @@ public interface SQLCommands {
 
 	String SELECT_USERPW = "SELECT password FROM Users WHERE username=?";
 	
+	String GET_CURRENTLY_BORROWING ="SELECT itemId, itemName, borrowedDate, dueDate "
+			+ "FROM Borrowed "
+			+ "WHERE idNum=?";
+	
 	
 }
