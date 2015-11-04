@@ -61,10 +61,13 @@ public class BorrowProcessServlet extends HttpServlet {
 				System.out.println("successful insert");
 				
 				request.setAttribute("borrowed", borrowed);
+<<<<<<< HEAD
 				
 				request.setAttribute("borrowedDate", borrowed.getBorrowedDate());
 				request.setAttribute("dueDate", borrowed.getDueDate());
 				
+=======
+>>>>>>> refs/remotes/origin/master
 				getServletContext().getRequestDispatcher("/borrowStatus.jsp?success=true").forward(request, response);
 			} 
 			else 
