@@ -39,6 +39,14 @@ public class ProcessLoginServlet extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String username, password;
+		username = request.getParameter("username");
+		password = request.getParameter("password");
+		HttpSession session=request.getSession();
+		session.setAttribute("name",username); 
+		RequestDispatcher rd = request.getRequestDispatcher("/inventoryprocess.html");
+		rd.forward(request,  response);
+		
+		/*
 		try {
 			username = request.getParameter("username");
 			password = request.getParameter("password");
@@ -68,11 +76,11 @@ public class ProcessLoginServlet extends HttpServlet {
 				//yun yung mga magpprompt sa user kung bakit nagka-error
 				//pero pwede naman masettle yung prompting in a different way..
 					//nakakita ka na ng ganung code dati, i'm sure :)
-		catch(Exception e) {
+	/*	catch(Exception e) {
 			RequestDispatcher rd = request.getRequestDispatcher("errorLogin.jsp");
 			rd.forward(request, response);
 		}
 		
-	}
+	}*/
 		
 }
