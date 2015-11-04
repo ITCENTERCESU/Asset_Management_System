@@ -25,8 +25,8 @@
 		<p>ITEM DETAILS: </p>
 		<p>Item ID: ${borrowed.itemId}</p>
 		<p>Item Name: ${borrowed.itemName}</p>
-		<p>Borrowed Date: <%= borrowed.getBorrowedDate() %></p><!-- --d -->
-		<p>Due Date: $(borrowed.dueDate)</p>
+		<p>Borrowed Date: <%= borrowed.getBorrowedDate() %></p>
+		<p>Due Date: $(borrowed.getDueDate())</p>
 		<br>
 		<p>BORROWER'S DETAILS
 		<p>ID Number: ${borrowed.idNum}</p>
