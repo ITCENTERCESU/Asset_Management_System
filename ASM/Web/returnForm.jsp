@@ -23,7 +23,7 @@
 	<br>
 	</header>
 	<div class="row">
-	<form role="form" action="processreturnform.html" method="post" class="col-sm-offset-4 col-sm-4">
+	<form role="form" action="processreturn.html" method="post" class="col-sm-offset-4 col-sm-4">
 		<p>ID Number: <input type="text" name="idNum" size="10" required="required" placeholder="ex. 2015123456"></p>
 		<p>Item Code: <input type="text" name="itemId" size="10" required="required" placeholder="ex. 0000"></p>
 		
