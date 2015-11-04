@@ -10,7 +10,7 @@
 	<style type="text/css">
 		img{width:5em;height:5em;margin:auto;}
 		header{text-align:center;margin:2em 1em;}
-		
+		body{background-color:#FD8F14}
 	</style>
 </head>
 <body>

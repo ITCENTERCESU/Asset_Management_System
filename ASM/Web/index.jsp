@@ -10,7 +10,9 @@
 	<style type="text/css">
 		img{width:5em;height:5em;margin:auto;}
 		header{text-align:center;margin:3em 1em;}
-		form{padding:3em;background:#fddfbd;}
+		form{padding:3em;background:#FD8F14;}
+		body{background-color:#FDDFBD;}
+		
 	</style>
 </head>
 <body>
@@ -22,12 +24,16 @@
 			<p>Welcome IS Faculty Member!</p>		
 		</header>
 		<div class="row">
+		
 			<form role="form" action="processlogin.html" method="post" class="col-sm-offset-4 col-sm-4">
-				<img alt="Information Systems Logo" src="./images/information-systems-logo.png">
-				<input type="text" name="username" required="required" placeholder="Username" class="form-control">
-				<input type="password" name="password" required="required" placeholder="Password" class="form-control">
-				<input type="submit" value="Login" class="btn btn-default">
-			</form>		
+				<img alt="Information Systems Logo" src="./images/ust logo.png" style="position:relative; top:-210px; left:-140px; ">
+				<img alt="Information Systems Logo" src="./images/UST_IICS.png" style="position:relative; top:-218px; right:-280px;">
+				<input type="text" name="username" required="required" placeholder="Username" class="form-control" style="position:relative; top:-60px;">
+				<input type="password" name="password" required="required" placeholder="Password" class="form-control"style="position:relative; top:-30px;">
+		
+				<input type="submit" value="Login" class="btn btn-default"style="position:relative; right:-108px;">
+			</form>	
+		
 		</div>
 	</div>
 
