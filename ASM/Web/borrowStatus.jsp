@@ -1,6 +1,7 @@
 <!-- #5 Successful Borrowing -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <jsp:useBean id="borrowed" type="com.ust.model.BorrowedBean" scope="request" /> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +25,7 @@
 		<p>ITEM DETAILS: </p>
 		<p>Item ID: ${borrowed.itemId}</p>
 		<p>Item Name: ${borrowed.itemName}</p>
-		<p>Borrowed Date: $(borrowed.borrowedDate)</p>
+		<p>Borrowed Date: <%= borrowed.getBorrowedDate() %></p><!-- --d -->
 		<p>Due Date: $(borrowed.dueDate)</p>
 		<br>
 		<p>BORROWER'S DETAILS
