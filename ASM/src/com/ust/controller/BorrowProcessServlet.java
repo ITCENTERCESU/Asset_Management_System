@@ -48,7 +48,7 @@ public class BorrowProcessServlet extends HttpServlet {
 		String borrowedDate = request.getParameter("borrowedDate");
 		String dueDate = request.getParameter("dueDate");
 		String status = request.getParameter("status");
-;
+
 		
 		BorrowedBean borrowed = 
 				BorrowedBeanFactory.getFactoryBean(itemId, itemName,idNum, 

@@ -10,7 +10,8 @@ public class BorrowedBeanFactory {
 			String borrowedDate, String dueDate, String status) {
 		
 		BorrowedBean borrowed = new BorrowedBean();
-		//itemId, itemName,idNum, lastName, firstName, borrowedDate,dueDate, status
+	
+		
 		borrowed.setItemId(itemId);
 		borrowed.setItemName(itemName);
 		borrowed.setIdNum(idNum);

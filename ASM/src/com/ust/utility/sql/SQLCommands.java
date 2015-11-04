@@ -19,9 +19,7 @@ public interface SQLCommands {
 	
 	String RETURN_BORROWED = "UPDATE Inventory SET status='available' "
 			+ "FROM Inventory, Borrowed "
-			+ "WHERE Inventory.itemId = Borrowed.itemId AND Inventory.idNum = Borrowed.idNum;"
-			+ ""
-			+ "DELETE FROM Borrowed WHERE itemId=? AND idNum=?";
+			+ "WHERE itemId=? AND idNum=?";
 	
 
 	String SELECT_USERPW = "SELECT password FROM Users WHERE username=?";
