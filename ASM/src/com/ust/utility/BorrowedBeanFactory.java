@@ -7,7 +7,7 @@ public class BorrowedBeanFactory {
 	
 	public static BorrowedBean getFactoryBean(String itemId, String itemName,
 			int idNum, String lastName, String firstName,  
-			String borrowedDate,String dueDate, String status) {
+			String borrowedDate, String dueDate, String status) {
 		
 		BorrowedBean borrowed = new BorrowedBean();
 		//itemId, itemName,idNum, lastName, firstName, borrowedDate,dueDate, status

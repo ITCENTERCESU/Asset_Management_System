@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -53,17 +54,22 @@ public class BorrowProcessServlet extends HttpServlet {
 				BorrowedBeanFactory.getFactoryBean(itemId, itemName,idNum, 
 						lastName, firstName, borrowedDate,dueDate, status);
 		
+		
 		if (connection != null) {
 			if (SQLOperations.addBorrowed(borrowed, connection)){
 				System.out.println("successful insert");
-				SQLOperation.updateStatus(borrowed, connection);
+				
 				request.setAttribute("borrowed", borrowed);
 				getServletContext().getRequestDispatcher("/borrowStatus.jsp?success=true").forward(request, response);
-			} else {
+			} 
+			else 
+			{
 				System.out.println("failed insert");
 				getServletContext().getRequestDispatcher("/borrowStatus.jsp?success=false").forward(request, response);
 			}
-		} else {
+		} 
+		else 
+		{
 			System.out.println("invalid connection");
 		}
 	}
