@@ -9,15 +9,7 @@ import javax.naming.NamingException;
 import com.ust.model.AssetBean;
 import com.ust.model.BorrowedBean;
 import com.ust.utility.sql.SQLCommands;
-<<<<<<< HEAD
 
-=======
-
-//<<<<<<< HEAD
-//import edu.ust.erdbms.model.EmployeeBean;
-//=======
-//>>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System
->>>>>>> refs/remotes/origin/master
 
 public class SQLOperations implements SQLCommands {
 
@@ -135,13 +127,6 @@ public class SQLOperations implements SQLCommands {
 			}	
 			return true;
 	}
-
-	
-<<<<<<< HEAD
-
-=======
-//<<<<<<< HEAD
->>>>>>> refs/remotes/origin/master
 	/*
 	public static int updateStatus(AssetBean employee,  
 =======
