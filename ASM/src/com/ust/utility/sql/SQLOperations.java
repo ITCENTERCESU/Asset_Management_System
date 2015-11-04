@@ -129,19 +129,15 @@ public class SQLOperations implements SQLCommands {
 	}
 	
 	
-	public static boolean returnBorrowed(BorrowedBean record, 
+	public static boolean returnBorrowed(BorrowedBean returned, 
 			Connection connection) {
 			//itemId, itemName,idNum, lastName, firstName, borrowedDate,dueDate, status
 			try {
 		        PreparedStatement pstmt = connection.prepareStatement(INSERT_BORROWED);
-		        pstmt.setString(1, borrowed.getItemId()); 
-		        pstmt.setString(2, borrowed.getItemName());
-		        pstmt.setInt(3, borrowed.getIdNum()); 
-		        pstmt.setString(4, borrowed.getLastName()); 
-		        pstmt.setString(5, borrowed.getFirstName()); 
-		        pstmt.setString(6, borrowed.getBorrowedDate()); 
-		        pstmt.setString(7, borrowed.getDueDate()); 
-		        pstmt.setString(8, borrowed.getStatus()); 
+		        pstmt.setString(1, returned.getItemId()); 
+		       
+		        pstmt.setInt(3, returned.getIdNum()); 
+		      
 		        
 		        pstmt.executeUpdate(); // execute insert statement  
 			} catch (SQLException sqle) {
