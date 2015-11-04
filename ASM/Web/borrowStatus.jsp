@@ -33,14 +33,14 @@
 		<p>First Name: ${borrowed.firstName}</p>
 
 		
-		<form action="inventoryprocess.html" method="post">
+	
 
 		<div class="row">
 		<form role="form"action="inventoryprocess.html" method="post"class="col-sm-offset-4 col-sm-4">
 
 
 			<br>
-			<p><b>Here is the list of all the things you had borrowed. 
+			<p><b>Here is the list of all the things you are currently borrowing. 
 			Please return them on time. </b></p>
 			<br>
 				<table border="1" style="width:100%">

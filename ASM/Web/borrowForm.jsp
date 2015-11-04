@@ -38,20 +38,22 @@
 		<p>Item Id: <input type="text" size="10" name="itemId" value="${borrowForm.itemId}" readonly class="form-control"> </p>
 		<p>Item Name:<input type="text" size="50" name="itemName" value="${borrowForm.itemName}" readonly class="form-control"> </p>
 		<p>Status: <input type="text" size="20" name="status" value="${borrowForm.status}" readonly class="form-control"> </p>
+		
 		<br>
 		<%
-			Date borrowedDate = new Date();
+			Date borrowedDateDD = new Date();
 			SimpleDateFormat ft = new SimpleDateFormat ("yyyy-MM-dd");
 			
 			Calendar calendar = Calendar.getInstance();
-			calendar.setTime(borrowedDate);
+			calendar.setTime(borrowedDateDD);
 			calendar.add(Calendar.DATE, 2);
-			String dueDate = ft.format(calendar.getTime());
+			String dueDateD = ft.format(calendar.getTime());
+			String borrowedDateD = ft.format(borrowedDateDD);
 		%>
 		
-		<p>Date Borrowed: <input type="text" size="20" name="borrowedDate" value="<%out.println(ft.format(borrowedDate));%>" readonly class="form-control"></p>
+		<p>Date Borrowed: <input type="text" size="20" name="borrowedDate" value="<%out.println(borrowedDateD);%>" readonly class="form-control"></p>
 
-		<p>Due Date: <input type="text" size="20" name="dueDate" value="<%out.println(dueDate); %>"  readonly class="form-control"></p>
+		<p>Due Date: <input type="text" size="20" name="dueDate" value="<%out.println(dueDateD); %>"  readonly class="form-control"></p>
 		
 		<input type="submit" value="Submit" class="btn btn-default">
 	</form>
