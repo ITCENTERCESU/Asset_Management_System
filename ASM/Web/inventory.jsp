@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-
+<%@ page import="java.io.*,java.util.*" %>
 <jsp:useBean id="inventory" type="java.sql.ResultSet" scope="request"/>
 
 <!DOCTYPE html>
@@ -18,6 +18,8 @@
 	</style>
 </head>
 <body>
+<%        String name=(String)session.getAttribute("name"); %>
+<%= name %>
 	<!-- Insert header here -->
 	<header><h2>Inventory</h2></header>
 	<!-- Display Inventory table  -->
@@ -77,11 +79,10 @@
 	
 	<!-- Logout button -->
 
-	<form action="index.jsp" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-30px 450px;">
-	<%
-		session=request.getSession();
+	<form action="processlogout.html" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-30px 450px;">
+	<%--
 		session.invalidate();
-	%>
+	--%>
 		<input type="submit" value="Logout"class="btn btn-default">
 	</form>
 	<br>

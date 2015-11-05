@@ -8,9 +8,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.ust.utility.sql.SQLOperations;
-
 import com.ust.model.AssetBean;
 import com.ust.utility.AssetBeanFactory;
 
@@ -19,12 +19,12 @@ import com.ust.utility.AssetBeanFactory;
 public class AddProcessServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	
+
 	private Connection connection;
-	
+
 	public void init() throws ServletException {
 		connection = SQLOperations.getConnection();
-		
+
 		if (connection != null) {
 			getServletContext().setAttribute("dbConnection", connection);
 			System.out.println("connection is READY.");
@@ -38,24 +38,31 @@ public class AddProcessServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String itemId = request.getParameter("itemId");
-		String itemName = request.getParameter("itemName");
+		HttpSession session=request.getSession(false);
+		if(session!=null){
+			//String name=(String)session.getAttribute("name");
+			String itemId = request.getParameter("itemId");
+			String itemName = request.getParameter("itemName");
 
-		
-		AssetBean asset = 
-				AssetBeanFactory.getFactoryBean(itemId, itemName);
-		
-		if (connection != null) {
-			if (SQLOperations.addAsset(asset, connection)){
-				System.out.println("successful insert");
-				request.setAttribute("asset", asset);
-				getServletContext().getRequestDispatcher("/addStatus.jsp?success=true").forward(request, response);
+
+			AssetBean asset = 
+					AssetBeanFactory.getFactoryBean(itemId, itemName);
+
+			if (connection != null) {
+				if (SQLOperations.addAsset(asset, connection)){
+					System.out.println("successful insert");
+					request.setAttribute("asset", asset);
+					getServletContext().getRequestDispatcher("/addStatus.jsp?success=true").forward(request, response);
+				} else {
+					System.out.println("failed insert");
+					getServletContext().getRequestDispatcher("/addStatus.jsp?success=false").forward(request, response);
+				}
 			} else {
-				System.out.println("failed insert");
-				getServletContext().getRequestDispatcher("/addStatus.jsp?success=false").forward(request, response);
+				System.out.println("invalid connection");
 			}
-		} else {
-			System.out.println("invalid connection");
+		}
+		else {
+			request.getRequestDispatcher("invalidsession.jsp").forward(request, response);  
 		}
 	}
 

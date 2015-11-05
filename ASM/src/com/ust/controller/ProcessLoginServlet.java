@@ -43,6 +43,7 @@ public class ProcessLoginServlet extends HttpServlet {
 		password = request.getParameter("password");
 		HttpSession session=request.getSession();
 		session.setAttribute("name",username); 
+		//session.invalidate();
 		RequestDispatcher rd = request.getRequestDispatcher("/inventoryprocess.html");
 		rd.forward(request,  response);
 		
