@@ -60,8 +60,6 @@ public class BorrowProcessServlet extends HttpServlet {
 							lastName, firstName, borrowedDate,dueDate, status);
 
 
-
-					
 	
 		
 		if (connection != null) {
@@ -74,11 +72,8 @@ public class BorrowProcessServlet extends HttpServlet {
 				ResultSet rs = SQLOperations.getCurrentlyBorrowing(idNum, borrowed, connection);
 				request.setAttribute("currently", rs);
 				
-				/*dispatcher = getServletContext().getRequestDispatcher("/borrowList.jsp");	
-				dispatcher.forward(request, response);*/
 
-
-					getServletContext().getRequestDispatcher("/borrowStatus.jsp?success=true").forward(request, response);
+				getServletContext().getRequestDispatcher("/borrowStatus.jsp?success=true").forward(request, response);
 				} 
 				else 
 				{
@@ -95,5 +90,5 @@ public class BorrowProcessServlet extends HttpServlet {
 			request.getRequestDispatcher("invalidsession.jsp").forward(request, response);  
 		}
 	}
+		}
 
-}
