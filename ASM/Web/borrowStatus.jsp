@@ -3,6 +3,8 @@
     pageEncoding="ISO-8859-1"%>
 <%@ page session="false" %>
     <jsp:useBean id="borrowed" type="com.ust.model.BorrowedBean" scope="request" /> 
+    
+    <jsp:useBean id="currently" type="java.sql.ResultSet" scope="request"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +15,8 @@
 	<style type="text/css">
 		img{width:5em;height:5em;margin:auto;}
 		header{text-align:center;margin:2em 1em;}
-		
+		form{padding:3em;background:#FD8F14;}
+		body{background-color:#FDDFBD;}
 	</style>
 </head>
 <body>
@@ -27,7 +30,7 @@
 		<p>Item ID: ${borrowed.itemId}</p>
 		<p>Item Name: ${borrowed.itemName}</p>
 		<p>Borrowed Date: <%= borrowed.getBorrowedDate() %></p>
-		<p>Due Date: $(borrowed.getDueDate())</p>
+		<p>Due Date: <%= borrowed.getDueDate() %></p>
 		<br>
 		<p>BORROWER'S DETAILS
 		<p>ID Number: ${borrowed.idNum}</p>
@@ -39,8 +42,6 @@
 
 		<div class="row">
 		<form role="form"action="inventoryprocess.html" method="post"class="col-sm-offset-4 col-sm-4">
-
-
 			<br>
 			<p><b>Here is the list of all the things you are currently borrowing. 
 			Please return them on time. </b></p>
@@ -48,10 +49,20 @@
 				<table border="1" style="width:100%">
 				    <tr>
 				    	<td align="center">Item ID</td>
-							<td align="center">Item Name</td>
-							<td align="center">Date Borrowed</td>
-							<td align="center">Due Date</td>
+						<td align="center">Item Name</td>
+						<td align="center">Date Borrowed</td>
+						<td align="center">Due Date</td>
 				    </tr>
+				    
+				
+					<% while(currently.next()) { %>
+						<tr>
+							<td><%=currently.getString("itemId")%></td>
+							<td><%=currently.getString("itemName")%></td>
+							<td><%=currently.getString("borrowedDate")%></td>
+							<td><%=currently.getString("dueDate")%></td>
+						</tr>			
+					<% } %>
 			    </table>
 				<br> 
 				<br>

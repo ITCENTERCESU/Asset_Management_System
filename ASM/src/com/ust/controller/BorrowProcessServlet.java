@@ -2,6 +2,7 @@ package com.ust.controller;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -39,6 +40,7 @@ public class BorrowProcessServlet extends HttpServlet {
 	}
 
 
+<<<<<<< HEAD
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session=request.getSession(false);
 		if(session!=null){
@@ -64,6 +66,27 @@ public class BorrowProcessServlet extends HttpServlet {
 					System.out.println("successful insert");
 
 					request.setAttribute("borrowed", borrowed);
+=======
+		
+		BorrowedBean borrowed = 
+				BorrowedBeanFactory.getFactoryBean(itemId, itemName,idNum, 
+						lastName, firstName, borrowedDate,dueDate, status);
+		
+	
+		
+		if (connection != null) {
+			if (SQLOperations.addBorrowed(borrowed, connection)){
+				System.out.println("successful insert");
+				
+				request.setAttribute("borrowed", borrowed);
+				
+			
+				ResultSet rs = SQLOperations.getCurrentlyBorrowing(idNum, borrowed, connection);
+				request.setAttribute("currently", rs);
+				
+				/*dispatcher = getServletContext().getRequestDispatcher("/borrowList.jsp");	
+				dispatcher.forward(request, response);*/
+>>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System
 
 					getServletContext().getRequestDispatcher("/borrowStatus.jsp?success=true").forward(request, response);
 				} 

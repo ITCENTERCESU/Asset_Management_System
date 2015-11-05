@@ -12,9 +12,11 @@
 <title>Asset Management System</title>
 <style type="text/css">
 		img{width:5em;height:5em;margin:auto;}
-		header{text-align:center;margin:2em 10em;}
-		.lalagyan{margin:-60px 230px;}
-		.lalagyan2{margin:10px 70px 0px 30px;}
+		header{text-align:center;margin:2em 10em; background:#FD8F14;}
+		.lalagyan{margin:-270px 550px -200px;background:#FD8F14;width:40%;height:223px }
+		.lalagyan2{margin:220px 40px -270px;background:#FD8F14;width:40%;height:80px}
+		
+		body{background-color:#FDDFBD;}
 	</style>
 </head>
 <body>
@@ -47,43 +49,54 @@
 	<div class="row">
 	<div class="lalagyan">
 	<!-- Add New Item button may something sa button -->
-	<form action="addItem.jsp" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-180px 450px;">
-		<input type="submit" value="Add New Item" class="btn btn-default">
+	<form action="addItem.jsp" method="post"class="col-sm-offset-4 col-sm-4">
+		<input type="submit" value="Add New Item" class="btn btn-default" style="position:relative; top: 10px;">
 	</form>
 	<br> 
 	
 	<!-- Borrow Item Button -->
-	<form action="listborrowprocess.html" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-150px 450px;">
-		<input type="submit" value="Borrow Item" class="btn btn-default">
+	<form action="listborrowprocess.html" method="post"class="col-sm-offset-4 col-sm-4">
+		<input type="submit" value="Borrow Item" class="btn btn-default"style="position:relative; top: 20px;">
 	</form>
 	<br>
 	
 	<!-- Return Item button -->
-	<form action="returnForm.jsp" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-120px 450px;">
-		<input type="submit" value="Return Item"class="btn btn-default">
+	<form action="returnForm.jsp" method="post"class="col-sm-offset-4 col-sm-4">
+		<input type="submit" value="Return Item"class="btn btn-default"style="position:relative; top: 30px;">
 	</form>
 	<br>
 	
 	<!-- Delete Item button -->
-	<form action="deleteprocess.html" method="post"class="col-sm-offset-2 col-sm-4"style="margin:-90px 450px;">
-		<input type="submit" value="Delete Item"class="btn btn-default">
+	<form action="deleteprocess.html" method="post"class="col-sm-offset-4 col-sm-4">
+		<input type="submit" value="Delete Item"class="btn btn-default"style="position:relative; top: 40px;">
 	</form>
 	<br> 
 	</div>
 	<div class="lalagyan2">
 	<!-- Settings button -->
-	<form action="addaccount.html" method="post"class="col-sm-offset-2 col-sm-4"style="margin:-20px 130px;">
-		<input type="submit" value="New Account"class="btn btn-default">
+	<form action="addaccount.html" method="post"class="col-sm-offset-4 col-sm-4">
+		<input type="submit" value="New Account"class="btn btn-default"style="position:relative; top: 20px; right:70px;">
 	</form>
 	<br> 
 	
 	<!-- Logout button -->
 
+<<<<<<< HEAD
 	<form action="processlogout.html" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-30px 450px;">
 	<%--
+=======
+	<form action="index.jsp" method="post"class="col-sm-offset-4 col-sm-4">
+	<%
+		session=request.getSession();
+>>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System
 		session.invalidate();
+<<<<<<< HEAD
 	--%>
 		<input type="submit" value="Logout"class="btn btn-default">
+=======
+	%>
+		<input type="submit" value="Logout"class="btn btn-default"style="position:relative; top: -23px; right: -80px;">
+>>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System
 	</form>
 	<br>
 	</div>
