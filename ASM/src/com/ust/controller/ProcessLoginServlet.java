@@ -10,9 +10,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.ust.utility.sql.SQLOperations;
-
+import com.ust.utility.Security;
 
 @WebServlet("/processlogin.html")
 public class ProcessLoginServlet extends HttpServlet {
@@ -37,31 +38,49 @@ public class ProcessLoginServlet extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String username="";
-		String password="";
+		String username, password;
+		username = request.getParameter("username");
+		password = request.getParameter("password");
+		HttpSession session=request.getSession();
+		session.setAttribute("name",username); 
+		RequestDispatcher rd = request.getRequestDispatcher("/inventoryprocess.html");
+		rd.forward(request,  response);
 		
-		if(request.getParameter("username") != null)
-		{
-			username= request.getParameter("username");
+		/*
+		try {
+			username = request.getParameter("username");
+			password = request.getParameter("password");
+				
+				if( Security.decrypt(SQLOperations.selectUserPassword(username, connection)).equals(password) ) {
+					System.out.println("Request Param:" + username);
+					System.out.println("Request Param:" + password);
+					System.out.println("Encrypted password: " + Security.encrypt(password) );
+					
+					HttpSession session=request.getSession();
+					session.setAttribute("name",username); 
+					
+					RequestDispatcher rd = request.getRequestDispatcher("/inventoryprocess.html");
+					rd.forward(request,  response);
+				}
+			/*
+			System.out.println("Request Param:" + username);
+			System.out.println("Request Param:" + password);
+			
+			HttpSession session=request.getSession();
+			session.setAttribute("name",username);
+			*/
+				
 		}
-		if(request.getParameter("password")!= null)
-		{
-			password= request.getParameter("password");
-		}
-		System.out.println("Request Param:" + username);
-		System.out.println("Request Param:" + password);
-		
-		if(username.equals("admin") && password.equals("1234"))
-		{
-			RequestDispatcher rd = request.getRequestDispatcher("/inventoryprocess.html");
-			rd.forward(request,  response);
-		}
-		else
-		{
+		//generalized exception 'to. so, kulang pa ng catch blocks 'to.
+			//necessary yung mga kulang na catch block kasi
+				//yun yung mga magpprompt sa user kung bakit nagka-error
+				//pero pwede naman masettle yung prompting in a different way..
+					//nakakita ka na ng ganung code dati, i'm sure :)
+	/*	catch(Exception e) {
 			RequestDispatcher rd = request.getRequestDispatcher("errorLogin.jsp");
-			rd.forward(request,  response);
+			rd.forward(request, response);
 		}
 		
-	}
-
+	}*/
+		
 }

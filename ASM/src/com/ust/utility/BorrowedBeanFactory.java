@@ -1,6 +1,5 @@
 package com.ust.utility;
 
-import java.util.Date;
 
 import com.ust.model.BorrowedBean;
 
@@ -8,9 +7,10 @@ public class BorrowedBeanFactory {
 	
 	public static BorrowedBean getFactoryBean(String itemId, String itemName,
 			int idNum, String lastName, String firstName,  
-			Date borrowedDate,Date dueDate, String status) {
+			String borrowedDate, String dueDate, String status) {
 		
 		BorrowedBean borrowed = new BorrowedBean();
+	
 		
 		borrowed.setItemId(itemId);
 		borrowed.setItemName(itemName);
