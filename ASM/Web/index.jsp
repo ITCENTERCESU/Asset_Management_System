@@ -22,7 +22,7 @@
 		<header>
 			<div class="row">
 				<img alt="UST Logo" src="./images/ust-logo">
-				<img alt="UST IICS Logo" src="./images/ust-iics-logo">				
+				<img alt="UST IICS Logo" src="images/ust-iics-logo.png">				
 				<h1>Information Systems</h1>
 				<h2>Asset Management System</h2>
 				<p>Welcome IS Faculty Member!</p>		
