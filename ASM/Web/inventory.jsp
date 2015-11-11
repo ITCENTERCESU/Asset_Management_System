@@ -22,7 +22,7 @@
 	</style>
 </head>
 <body>
-<%-- guys ano toh?-eto ba ung s password? ksi kapag nag login ako may admin na word talaga
+<%-- guys ano toh?-eto ba ung s password?ksi kapag nag login ako may admin na word talaga
 <%        String name=(String)session.getAttribute("name"); %>
 <%= name %>--%>
 	<!-- Insert header here -->
