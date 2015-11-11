@@ -81,23 +81,12 @@
 	
 	<!-- Logout button -->
 
-<<<<<<< HEAD
+
 	<form action="processlogout.html" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-30px 450px;">
-	<%--
-=======
-	<form action="index.jsp" method="post"class="col-sm-offset-4 col-sm-4">
-	<%
-		session=request.getSession();
->>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System
-		session.invalidate();
-<<<<<<< HEAD
-	--%>
-		<input type="submit" value="Logout"class="btn btn-default">
-=======
-	%>
+	
+		
 		<input type="submit" value="Logout"class="btn btn-default"style="position:relative; top: -23px; right: -80px;">
->>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System
-	</form>
+</form>
 	<br>
 	</div>
 	</div>
