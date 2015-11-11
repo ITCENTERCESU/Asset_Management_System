@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="./styles/bootstrap.min.css"/>
 	<title>Asset Management System</title>
 	<style type="text/css">
-		body{background-color:#FDDFBD;}
+		body{background-color:#FDDFBD; }
 		.row,.form-control{margin:0;}
 		header{text-align:center;margin:3em 1em;}
 		img{height:6em;width:6em;margin:.5em;}
