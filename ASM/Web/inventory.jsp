@@ -13,7 +13,7 @@
 <style type="text/css">
 		img{width:5em;height:5em;margin:auto;}
 		header{text-align:center;margin:2em 10em;}
-		.lalagyan{margin:-500px 590px -150px;background:#FFD4AA;width:30%;height:273px; box-shadow:.5em .5em .1em;border-radius: 25px;position:fixed;}
+		.lalagyan{margin:-520px 590px -150px;background:#FFD4AA;width:30%;height:273px; box-shadow:.5em .5em .1em;border-radius: 25px;position:absolute}
 		.lalagyan2{margin:220px 40px -260px;width:40%;height:80px; position:absolute;}
 		.table{height:100%;width:513px;margin-right:auto;}
 		body{background-color:#FDDFBD;}
@@ -65,25 +65,25 @@
 	<div class="lalagyan">
 	<!-- Add New Item button may something sa button -->
 	<form action="addItem.jsp" method="post"class="col-sm-offset-4 col-sm-4">
-		<input type="submit" value="Add New Item" class="btn btn-default" style="position:fixed; top: 110px;right:180px;">
+		<input type="submit" value="Add New Item" class="btn btn-default" style="position:absolute; top: 20px;right:-20px;">
 	</form>
 	<br> 
 	
 	<!-- Borrow Item Button -->
 	<form action="listborrowprocess.html" method="post"class="col-sm-offset-4 col-sm-4">
-		<input type="submit" value="Borrow Item" class="btn btn-default"style="position:fixed; top: 170px;right:188px;">
+		<input type="submit" value="Borrow Item" class="btn btn-default"style="position:absolute; top: 50px;right:-15px;">
 	</form>
 	<br>
 	
 	<!-- Return Item button -->
 	<form action="returnForm.jsp" method="post"class="col-sm-offset-4 col-sm-4">
-		<input type="submit" value="Return Item"class="btn btn-default"style="position:fixed; top: 230px;right:188px;">
+		<input type="submit" value="Return Item"class="btn btn-default"style="position:absolute; top: 80px;right:-13px;">
 	</form>
 	<br>
 	
 	<!-- Delete Item button -->
 	<form action="deleteprocess.html" method="post"class="col-sm-offset-4 col-sm-4">
-		<input type="submit" value="Delete Item"class="btn btn-default"style="position:fixed; top: 290px;right:188px;">
+		<input type="submit" value="Delete Item"class="btn btn-default"style="position:absolute; top:110px;right:-13px;">
 	</form>
 	<br> 
 	</div>
