@@ -26,9 +26,7 @@
 <%        String name=(String)session.getAttribute("name"); %>
 <<<<<<< HEAD
 <%= name %>--%>
-=======
 
->>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
 	<!-- Insert header here -->
 	
 		<nav class="navbar navbar-inverse">
@@ -97,44 +95,18 @@
 	</form>
 	<br> 
 	
-<<<<<<< HEAD
+
 	<!-- Logout button -->
-<<<<<<< HEAD
-=======
 
 
-<<<<<<< HEAD
+
 	<form action="processlogout.html" method="post"class="col-sm-offset-4 col-sm-4">
-=======
->>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
-	<form action="processlogout.html" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-30px 450px;">
-<<<<<<< HEAD
-=======
->>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
-	
-		
-<<<<<<< HEAD
-		<input type="submit" value="Logout"class="btn btn-default"style="position:absolute; top: -1px; right:-50px;">
 
-=======
->>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
-		<input type="submit" value="Logout"class="btn btn-default"style="position:relative; top: -23px; right: -80px;">
-<<<<<<< HEAD
+	<input type="submit" value="Logout"class="btn btn-default"style="position:absolute; top: -1px; right:-50px;">
 
-=======
-	<!-- Logout button -->
-	<form action="processlogout.html" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-30px 450px;">
-		<input type="submit" value="Logout"class="btn btn-default"style="position:relative; top: -23px; right: -80px;">
->>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
 	</form>
-<<<<<<< HEAD
-=======
->>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
-</form>
->>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
-=======
 
->>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
+
 	<br>
 	</div>
 	</div>
