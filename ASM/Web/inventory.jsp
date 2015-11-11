@@ -80,10 +80,24 @@
 	<br> 
 	
 	<!-- Logout button -->
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
 	<form action="processlogout.html" method="post"class="col-sm-offset-4 col-sm-4"style="margin:-30px 450px;">
+<<<<<<< HEAD
+=======
+	
+		
+>>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
 		<input type="submit" value="Logout"class="btn btn-default"style="position:relative; top: -23px; right: -80px;">
+<<<<<<< HEAD
 
 	</form>
+=======
+</form>
+>>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
 	<br>
 	</div>
 	</div>

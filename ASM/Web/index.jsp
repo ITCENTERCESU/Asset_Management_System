@@ -8,34 +8,33 @@
 	<link rel="stylesheet" href="./styles/bootstrap.min.css"/>
 	<title>Asset Management System</title>
 	<style type="text/css">
-		img{width:6em;height:6em;padding:auto;margin-bottom:1em;}
+		body{background-color:#FDDFBD; }
+		.row,.form-control{margin:0;}
 		header{text-align:center;margin:3em 1em;}
-		form{padding:3em;background:#FD8F14;}
-		body{background-color:#FDDFBD;}
-		
+		img{height:6em;width:6em;margin:.5em;}
+		form{background:#fff;margin:0;padding:2em;box-shadow:.5em .5em .1em;}
+		#form-button{margin-top:2em;}
 	</style>
 </head>
 <body>
 
 	<div class="container">
 		<header>
-			<h1>Information Systems</h1>
-			<h2>Asset Management System</h2>
-			<p>Welcome IS Faculty Member!</p>		
+			<div class="row">
+				<img alt="UST Logo" src="./images/ust-logo">
+				<img alt="UST IICS Logo" src="./images/ust-iics-logo">				
+				<h1>Information Systems</h1>
+				<h2>Asset Management System</h2>
+				<p>Welcome IS Faculty Member!</p>		
+			</div>
 		</header>
 		<div class="row">
-		
 			<form role="form" action="processlogin.html" method="post" class="col-sm-offset-4 col-sm-4">
-				<img alt="Information Systems Logo" src="./images/ust logo.png" style="position:relative; top:-210px; left:-140px; ">
-				<img alt="Information Systems Logo" src="./images/UST_IICS.png" style="position:relative; top:-218px; right:-280px;">
-				<input type="text" name="username" required="required" placeholder="Username" class="form-control" style="position:relative; top:-60px;">
-				<input type="password" name="password" required="required" placeholder="Password" class="form-control"style="position:relative; top:-30px;">
-		
-				<input type="submit" value="Login" class="btn btn-default"style="position:relative; right:-108px;">
+				<input type="text" name="username" required="required" placeholder="Username" class="form-control">
+				<input type="password" name="password" required="required" placeholder="Password" class="form-control">
+				<input type="submit" value="Login" class="btn btn-info btn-block" id="form-button">
 			</form>	
-		
 		</div>
 	</div>
-
 </body>
 </html>
