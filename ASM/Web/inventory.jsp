@@ -58,13 +58,7 @@ body {
 </style>
 </head>
 <body>
-	<%-- guys ano toh?-eto ba ung s password?ksi kapag nag login ako may admin na word talaga
-<%        String name=(String)session.getAttribute("name"); %>
-<<<<<<< HEAD
-<%= name %>--%>
-
-	<!-- Insert header here -->
-
+	<!--  navigation bar -->
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -73,10 +67,11 @@ body {
 
 		</div>
 	</nav>
-	<!-- Display Inventory table  -->
+	
+	<!-- inventory table  -->
 	<div class="table">
 		<table border="2" width="100%" style="margin: 0em 2em;">
-
+			<caption>Inventory</caption>
 			<tr>
 				<th align="center">Item ID</th>
 				<th align="center">Item Name</th>
@@ -162,9 +157,5 @@ body {
 			</div>
 		</div>
 	</div>
-
-
-
-
 </body>
 </html>
