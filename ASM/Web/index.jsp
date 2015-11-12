@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="./styles/bootstrap.min.css"/>
 	<title>Asset Management System</title>
 	<style type="text/css">
-		body{background-color:#FDDFBD;}
+		body{background-color:#FDDFBD; }
 		.row,.form-control{margin:0;}
 		header{text-align:center;margin:3em 1em;}
 		img{height:6em;width:6em;margin:.5em;}
@@ -22,7 +22,7 @@
 		<header>
 			<div class="row">
 				<img alt="UST Logo" src="./images/ust-logo">
-				<img alt="UST IICS Logo" src="./images/ust-iics-logo">				
+				<img alt="UST IICS Logo" src="images/ust-iics-logo.png">				
 				<h1>Information Systems</h1>
 				<h2>Asset Management System</h2>
 				<p>Welcome IS Faculty Member!</p>		

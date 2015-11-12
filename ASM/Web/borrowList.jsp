@@ -14,19 +14,28 @@
 <style type="text/css">
 		img{width:5em;height:5em;margin:auto;}
 		header{text-align:center;margin:2em 1em; background:#FD8F14;}
-		
+		.a { font-size:100%; }
+		.container-fluid{background-color: #FF9933;}
+		.table{height:100%;width:513px;margin:auto;}
 		body{background-color:#FDDFBD;
 		}
 	</style>
 </head>
 <body>
-	<!-- Insert header here -->
-	<div class="container">
-	<header> <h2>Available Items</h2>
-	</header>
+<!-- Insert header here -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" >Available Items</a>
+    </div>
+    
+  </div>
+</nav>
 	
+	<div class="container">
+	<div class="table">	
       <div class="row" style="align:center;">
-	<table>
+	<table border="3" width="100%" style="margin:0em 0em;">
 		<tr>
 			<th align="center">Item ID</th>
 			<th align="center">Item Name</th>
@@ -48,9 +57,10 @@
 		<% } %>
 	</table>
 	
-	<form role="form" action="inventoryprocess.html"class="col-sm-offset-1 col-sm-11">
+	<form role="form" action="inventoryprocess.html"class="col-sm-offset-5 col-sm-4">
 		<input type="submit" value="Home"class="btn btn-default">	
 	</form>
+	</div>
 	</div>
 	</div>
 </body>

@@ -15,7 +15,10 @@
 <style type="text/css">
 		img{width:5em;height:5em;margin:auto;}
 		header{text-align:center;margin:0em 1em;}
-		form{padding:2em;background:#FD8F14;}
+		form{padding:2em;background:#FFD4AA;}
+		.h2 { font-size:100%; }
+		
+		.container-fluid{background-color: #FF9933;}
 		body{background-color:#FDDFBD;}
 	</style>
 
@@ -23,15 +26,22 @@
 	<%@ page import = "java.text.*" %>
 
 </head>
-
+<!-- Insert header here -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h2 class="navbar-brand" >Borrower's Form: </h2>
+    </div>
+    
+  </div>
+</nav>
 <body>
 <div class="container">
-	<header>
-	<h2>Borrower's Form: </h2></header>
+	
 	<br>
 	<br>
 	 <div class="row">
-	<form role="form" action="processborrowform.html" method="post"class="col-sm-offset-4 col-sm-4">
+	<form role="form" action="processborrowform.html" method="post"class="col-sm-offset-4 col-sm-4"style="top:-30px;">
 		<p><strong>ID Number:</strong> <input type="text" name="idNum" size="10" required="required"placeholder="ID Number" class="form-control"></p>
 		<p><strong>Last Name: </strong><input type="text" name="lastName" size="25" required="required"placeholder="Last name" class="form-control"></p>
 		<p><strong>First Name:</strong> <input type="text" name="firstName" size="25" required="required"placeholder="First name" class="form-control"></p>
@@ -60,7 +70,7 @@
 		<input type="submit" value="Submit" class="btn btn-default">
 	</form>
 	
-	<form action = "listborrowprocess.html" method="post" class="col-sm-offset-4 col-sm-4">
+	<form action = "listborrowprocess.html" method="post" class="col-sm-offset-4 col-sm-4"style="top:-30px;">
 		<input type = "submit" value="cancel" class="btn btn-default" style="margin: 0.3em 0em;">
 	</form>
 	</div>

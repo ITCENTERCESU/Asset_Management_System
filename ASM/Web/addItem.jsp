@@ -11,15 +11,24 @@
 <style type="text/css">
 		img{width:5em;height:5em;margin:auto;}
 		header{text-align:center;margin:3em 1em;}
-		form{padding:2em;background:#FD8F14;}
+		form{padding:2em;background:#FFD4AA;}
+		.h2 { font-size:100%; }
+		.container-fluid{background-color: #FF9933;}
 		body{background-color:#FDDFBD;}
 	</style>
 </head>
+<!-- Insert header here -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h2 class="navbar-brand" >Add New Item</h2>
+    </div>
+    
+  </div>
+</nav>
 <body>
 	<div class="container">
-	<header>
-	<h2>Add New Item</h2>
-	</header>
+	
 	
       <div class="row">
 	<form role="form" action="addprocess.html" method="post"class="col-sm-offset-4 col-sm-4">
