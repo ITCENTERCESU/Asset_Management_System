@@ -44,7 +44,6 @@ header p {
 	font-variant: small-caps;
 	font-size: 2em;
 }
-/* form .form-group{background:#DA3203;margin:0;padding:5em;box-shadow:.5em .5em .3em gray;} */
 form #form-button {
 	margin-top: 2em;
 }
