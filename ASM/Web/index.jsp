@@ -21,7 +21,7 @@
 	<div class="container">
 		<header>
 			<div class="row">
-				<img alt="UST Logo" src="./images/ust-logo">
+				<img alt="UST Logo" src="./images/ust-logo.png">
 				<img alt="UST IICS Logo" src="images/ust-iics-logo.png">				
 				<h1>Information Systems</h1>
 				<h2>Asset Management System</h2>
