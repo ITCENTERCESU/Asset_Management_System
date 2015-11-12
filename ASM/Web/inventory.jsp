@@ -62,7 +62,7 @@ body {
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand">Inventory</a>
+				<a href="inventory.jsp" class="navbar-brand">Asset Management System</a>
 			</div>
 
 		</div>
