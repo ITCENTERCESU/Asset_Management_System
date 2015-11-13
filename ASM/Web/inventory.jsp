@@ -70,7 +70,7 @@ body {
 	
 	<!-- inventory table  -->
 	<div class="table">
-		<table border="2" width="100%" style="margin: 0em 2em;">
+		<table border="2">
 			<caption>Inventory</caption>
 			<tr>
 				<th align="center">Item ID</th>
