@@ -12,77 +12,77 @@
 <title>Asset Management System</title>
 <style type="text/css">
 body {
-	padding-top: 5em;
-}
-nav {
-	background-color: #FD8F14;
-}
-nav .navbar-brand{
-	color: white;}
-nav form .btn {
-	background-color: inherit;
-	border: .1em solid white;
+	padding-top: 10em;
 }
 table {
-	
+	padding: 1em;
+	font-size: 1.5em;
 }
+table caption {
+	 color: black;
+	 font-size: 2em;
+	 font-weight: bold;
+}
+.row button {
+	margin: 1em;}
 </style>
 </head>
 <body>
-	<!--  navigation bar -->
-	<nav class="navbar navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a href="inventory.jsp" class="navbar-brand">Asset Management System</a>
-			</div>
-			<form class="navbar-form navbar-right">
-				<input type="submit" value="Create New Account" formaction="addaccount.html" formmethod="post" class="btn btn-info">
-				<input type="submit" value="Logout" formaction="processlogout.html" formmethod="post" class="btn btn-info">
-			</form>
-		</div>
-	</nav>
+	<%@include file="navbar.html" %>
 	
 	<div class="container">
 		<div class="row">
-			<!-- inventory table  -->
-			<div class="table-responsive col-xs-push-12"> 
-				<table class="table table-striped table-bordered" role="table">
-					<caption>Inventory</caption>
-					<tr>
-						<th>Item ID</th>
-						<th>Item Name</th>
-						<th>Status</th>
-					</tr>
-		
-					<%
-						while (inventory.next()) {
-					%>
-					<tr>
-						<td><%=inventory.getString("itemId")%></td>
-						<td><%=inventory.getString("itemName")%></td>
-						<td id=
-							<%=(inventory.getString("status").equals("available")) ? "success" : "danger"%>>
-							<%=inventory.getString("status")%>
-						</td>
-					</tr>
-					<%
-						}
-					%>
-				</table>
-			</div>
 			<!-- buttons -->
-			<div class="container">
+			<div class="col-xs-12 col-md-3 col-md-push-9">
+				<form method="post">
 					<!-- Add New Item Button -->
-					<input formaction="addItem.jsp" formmethod="post" type="submit" value="Add New Item" class="btn btn-default">
+					<button formaction="addItem.jsp" type="submit" class="btn btn-default">
+						Add New Item
+					</button>
 					
 					<!-- Borrow Item Button -->
-					<input formaction="listborrowprocess.html" formmethod="post" type="submit" value="Borrow Item" class="btn btn-default">
+					<button formaction="listborrowprocess.html" type="submit" class="btn btn-default">
+						Borrow Item
+					</button>
 					
 					<!-- Return Item button -->
-					<input formaction="returnForm.jsp" formmethod="post" type="submit" value="Return Item" class="btn btn-default">
+					<button formaction="returnForm.jsp" type="submit" class="btn btn-default">
+						Return Item
+					</button>
 					
 					<!-- Delete Item button -->
-					<input formaction="deleteprocess.html" formmethod="post" type="submit" value="Delete Item" class="btn btn-default">
+					<button formaction="deleteprocess.html" formmethod="post" type="submit" class="btn btn-default">
+						Delete Item
+					</button>
+				</form>
+			</div>
+			<div class="col-xs-12 col-md-9 col-md-pull-3">
+				<!-- inventory table  -->
+				<div class="table-responsive"> 
+					<table class="table table-striped table-bordered" role="table">
+						<caption>Inventory</caption>
+						<tr>
+							<th>Item ID</th>
+							<th>Item Name</th>
+							<th>Status</th>
+						</tr>
+			
+						<%
+							while (inventory.next()) {
+						%>
+						<tr>
+							<td><%=inventory.getString("itemId")%></td>
+							<td><%=inventory.getString("itemName")%></td>
+							<td class=
+								<%=(inventory.getString("status").equals("available")) ? "success" : "danger"%>>
+								<%=inventory.getString("status")%>
+							</td>
+						</tr>
+						<%
+							}
+						%>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>
