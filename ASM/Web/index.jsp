@@ -7,20 +7,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="./styles/bootstrap.min.css" />
 <link rel="stylesheet" href="./fonts/quicksand/stylesheet.css" />
+<link rel="stylesheet" href="./main.css"/>
 <link rel="icon" type="image/png" href="./images/information-systems-logo.png" />
 <title>Asset Management System</title>
 <style type="text/css">
 body {
-	background: #FD8F14;
-	font-size: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-body * {
-	font-family: 'quicksandregular'
-}
-
+	background-color: #FD8F14;}
 header {
 	text-align: center;
 	margin: 3em 0;
@@ -80,7 +72,7 @@ footer h3 span {
 				class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
 				<div class="form-group">
 					<input type="text" name="username" required="required"
-						placeholder="Username" class="form-control"> <input
+						placeholder="Username" class="form-control" autofocus> <input
 						type="password" name="password" required="required"
 						placeholder="Password" class="form-control"> <input
 						type="submit" value="Login" class="btn btn-primary btn-block"
