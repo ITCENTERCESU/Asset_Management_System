@@ -6,156 +6,87 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="./styles/bootstrap.min.css" />
-<link rel="icon" type="image/png"
-	href="./images/information-systems-logo.png" />
+<link rel="stylesheet" href="./fonts/quicksand/stylesheet.css" />
+<link rel="stylesheet" href="./main.css"/>
+<link rel="icon" type="image/png" href="./images/information-systems-logo.png" />
 <title>Asset Management System</title>
 <style type="text/css">
-img {
-	width: 5em;
-	height: 5em;
-	margin: auto;
-}
-
-header {
-	text-align: center;
-	margin: 2em 10em;
-}
-
-.lalagyan {
-	margin: -520px 590px -150px;
-	background: #FFD4AA;
-	width: 30%;
-	height: 273px;
-	box-shadow: .5em .5em .1em;
-	border-radius: 25px;
-	position: absolute
-}
-
-.lalagyan2 {
-	margin: 220px 40px -260px;
-	width: 40%;
-	height: 80px;
-	position: absolute;
-}
-
-.table {
-	height: 100%;
-	width: 513px;
-	margin-right: auto;
-}
-
 body {
-	background-color: #FDDFBD;
+	padding-top: 5em;
 }
-
-.a {
-	font-size: 250%;
+nav {
+	background-color: #FD8F14;
 }
-
-.container-fluid {
-	background-color: #FF9933;
+nav .navbar-brand{
+	color: white;}
+nav form .btn {
+	background-color: inherit;
+	border: .1em solid white;
+}
+table {
+	
 }
 </style>
 </head>
 <body>
 	<!--  navigation bar -->
-	<nav class="navbar navbar-inverse">
+	<nav class="navbar navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a href="inventory.jsp" class="navbar-brand">Asset Management System</a>
 			</div>
-
+			<form class="navbar-form navbar-right">
+				<input type="submit" value="Create New Account" formaction="addaccount.html" formmethod="post" class="btn btn-info">
+				<input type="submit" value="Logout" formaction="processlogout.html" formmethod="post" class="btn btn-info">
+			</form>
 		</div>
 	</nav>
 	
-	<!-- inventory table  -->
-	<div class="table">
-		<table border="2">
-			<caption>Inventory</caption>
-			<tr>
-				<th align="center">Item ID</th>
-				<th align="center">Item Name</th>
-				<th align="center">Status</th>
-			</tr>
-
-			<%
-				while (inventory.next()) {
-			%>
-			<tr>
-				<td><%=inventory.getString("itemId")%></td>
-				<td><%=inventory.getString("itemName")%></td>
-				<td><%=inventory.getString("status")%></td>
-			</tr>
-			<%
-				}
-			%>
-		</table>
-		<br> <br>
-	</div>
-
 	<div class="container">
-
 		<div class="row">
-			<div class="lalagyan">
-				<!-- Add New Item button may something sa button -->
-				<form action="addItem.jsp" method="post"
-					class="col-sm-offset-4 col-sm-4">
-					<input type="submit" value="Add New Item" class="btn btn-default"
-						style="position: absolute; top: 20px; right: -20px;">
-				</form>
-				<br>
-
-				<!-- Borrow Item Button -->
-				<form action="listborrowprocess.html" method="post"
-					class="col-sm-offset-4 col-sm-4">
-					<input type="submit" value="Borrow Item" class="btn btn-default"
-						style="position: absolute; top: 50px; right: -15px;">
-				</form>
-				<br>
-
-				<!-- Return Item button -->
-				<form action="returnForm.jsp" method="post"
-					class="col-sm-offset-4 col-sm-4">
-					<input type="submit" value="Return Item" class="btn btn-default"
-						style="position: absolute; top: 80px; right: -13px;">
-				</form>
-				<br>
-
-				<!-- Delete Item button -->
-				<form action="deleteprocess.html" method="post"
-					class="col-sm-offset-4 col-sm-4">
-					<input type="submit" value="Delete Item" class="btn btn-default"
-						style="position: absolute; top: 110px; right: -13px;">
-				</form>
-				<br>
+			<!-- inventory table  -->
+			<div class="table-responsive col-xs-push-12"> 
+				<table class="table table-striped table-bordered" role="table">
+					<caption>Inventory</caption>
+					<tr>
+						<th>Item ID</th>
+						<th>Item Name</th>
+						<th>Status</th>
+					</tr>
+		
+					<%
+						while (inventory.next()) {
+					%>
+					<tr>
+						<td><%=inventory.getString("itemId")%></td>
+						<td><%=inventory.getString("itemName")%></td>
+						<td id=
+							<%=(inventory.getString("status").equals("available")) ? "success" : "danger"%>>
+							<%=inventory.getString("status")%>
+						</td>
+					</tr>
+					<%
+						}
+					%>
+				</table>
 			</div>
-			<div class="lalagyan2" class="list-inline">
-
-				<!-- Settings button -->
-				<form action="addaccount.html" method="post"
-					class="col-sm-offset-4 col-sm-4">
-					<input type="submit" value="New Account" class="btn btn-default"
-						style="position: absolute; top: 20px; right: 70px;">
-				</form>
-				<br>
-
-
-				<!-- Logout button -->
-
-
-
-				<form action="processlogout.html" method="post"
-					class="col-sm-offset-4 col-sm-4">
-
-					<input type="submit" value="Logout" class="btn btn-default"
-						style="position: absolute; top: -1px; right: -50px;">
-
-				</form>
-
-
-				<br>
+			<!-- buttons -->
+			<div class="container">
+					<!-- Add New Item Button -->
+					<input formaction="addItem.jsp" formmethod="post" type="submit" value="Add New Item" class="btn btn-default">
+					
+					<!-- Borrow Item Button -->
+					<input formaction="listborrowprocess.html" formmethod="post" type="submit" value="Borrow Item" class="btn btn-default">
+					
+					<!-- Return Item button -->
+					<input formaction="returnForm.jsp" formmethod="post" type="submit" value="Return Item" class="btn btn-default">
+					
+					<!-- Delete Item button -->
+					<input formaction="deleteprocess.html" formmethod="post" type="submit" value="Delete Item" class="btn btn-default">
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="./scripts/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
 </body>
 </html>
