@@ -1,0 +1,27 @@
+<!--  navigation bar -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a href="inventory.jsp" class="navbar-brand">Asset Management System</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hamburger-navigation">
+                   <span class="sr-only">Navigation toggle</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </button>
+		</div>
+		<div class="collapse navbar-collapse" id="hamburger-navigation">
+			<form class="navbar-form navbar-right">
+				<!-- Create New Account Button -->
+				<button type="submit" formaction="addaccount.html" formmethod="post" class="btn btn-info">
+					Create New Account
+				</button>
+				
+				<!-- Logout Button -->
+				<button id="logout" type="submit" formaction="processlogout.html" formmethod="post" class="btn btn-info">
+					Logout
+				</button>
+			</form>
+		</div>
+	</div>
+</nav>

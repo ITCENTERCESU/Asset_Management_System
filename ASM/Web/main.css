@@ -1,0 +1,34 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body * {
+	font-family: 'quicksandregular'
+}
+
+nav .container-fluid {
+	background-color: #FD8F14 !important;
+}
+
+nav .navbar-header .navbar-brand {
+	color: white;
+}
+
+nav .navbar-header .navbar-toggle {
+	border: .1em solid white;
+}
+/* nav .navbar-collapse {
+	text-align: auto;
+} */
+nav form .btn {
+	background-color: inherit;
+	border: .1em solid white;
+}
+
+nav form #logout {
+	background-color: black;
+}
