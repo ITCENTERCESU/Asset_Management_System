@@ -13,8 +13,8 @@
 <style type="text/css">
 		img{width:5em;height:5em;margin:auto;}
 		header{text-align:center;margin:2em 10em;}
-		.lalagyan{margin:-520px 590px -150px;background:#FFD4AA;width:30%;height:273px; box-shadow:.5em .5em .1em;border-radius: 25px;position:absolute}
-		.lalagyan2{margin:220px 40px -260px;width:40%;height:80px; position:absolute;}
+		.lalagyan{margin:-360px 590px -150px;background:#FFD4AA;width:30%;height:273px; box-shadow:.5em .5em .1em;border-radius: 25px;position:absolute}
+		.lalagyan2{margin:-20px 40px -260px;width:40%;height:80px; position:absolute;}
 		.table{height:100%;width:513px;margin-right:auto;}
 		body{background-color:#FDDFBD;}
 		.a { font-size: 250%; }
@@ -65,25 +65,25 @@
 	<div class="lalagyan">
 	<!-- Add New Item button may something sa button -->
 	<form action="addItem.jsp" method="post"class="col-sm-offset-4 col-sm-4">
-		<input type="submit" value="Add New Item" class="btn btn-default" style="position:absolute; top: 20px;right:-20px;">
+		<input type="submit" value="Add New Item" class="btn btn-default" style="position:absolute; top: 20px;right:-10px;">
 	</form>
 	<br> 
 	
 	<!-- Borrow Item Button -->
 	<form action="listborrowprocess.html" method="post"class="col-sm-offset-4 col-sm-4">
-		<input type="submit" value="Borrow Item" class="btn btn-default"style="position:absolute; top: 50px;right:-15px;">
+		<input type="submit" value="Borrow Item" class="btn btn-default"style="position:absolute; top: 50px;right:-5px;">
 	</form>
 	<br>
 	
 	<!-- Return Item button -->
 	<form action="returnForm.jsp" method="post"class="col-sm-offset-4 col-sm-4">
-		<input type="submit" value="Return Item"class="btn btn-default"style="position:absolute; top: 80px;right:-13px;">
+		<input type="submit" value="Return Item"class="btn btn-default"style="position:absolute; top: 80px;right:-3px;">
 	</form>
 	<br>
 	
 	<!-- Delete Item button -->
 	<form action="deleteprocess.html" method="post"class="col-sm-offset-4 col-sm-4">
-		<input type="submit" value="Delete Item"class="btn btn-default"style="position:absolute; top:110px;right:-13px;">
+		<input type="submit" value="Delete Item"class="btn btn-default"style="position:absolute; top:110px;right:-2px;">
 	</form>
 	<br> 
 	</div>
@@ -91,7 +91,7 @@
 	
 	<!-- Settings button -->
 	<form action="addaccount.html" method="post"class="col-sm-offset-4 col-sm-4">
-		<input type="submit" value="New Account"class="btn btn-default"style="position:absolute; top: 20px; right:70px;">
+		<input type="submit" value="Accounts"class="btn btn-default"style="position:absolute; top: 20px; right:70px;">
 	</form>
 	<br> 
 	
