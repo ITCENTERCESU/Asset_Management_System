@@ -20,7 +20,7 @@ nav .navbar-brand {
 nav .navbar-brand .acronym {
 	font-size: 3em;
 	font-weight: bold;
-	vertical-align: middle;
+	vertical-align: baseline;
 }
 
 nav .navbar-brand #A {
