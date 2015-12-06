@@ -13,22 +13,21 @@
 <link rel="icon" type="image/png" href="./images/ust-iics-is-logo.png" />
 <title>Asset Management System</title>
 <style type="text/css">
-#borrow-button {
+table #borrow-img {
 	height: 3em;
 	width: 3em;
 }
-		/* img{width:5em;height:5em;margin:auto;}
-		header{text-align:center;margin:2em 1em; background:#FD8F14;}
-		.a { font-size:100%; }
-		.container-fluid{background-color: #FF9933;}
-		.table{height:100%;width:513px;margin:auto;}
-		body{background-color:#FDDFBD;
-		} */
+table .action-borrow-col {
+	width: 10em;
+	text-align: center;
+}
 </style>
 </head>
 <body>
-	<%@include file="navbar.html" %>  
-
+	<%@include file="navbar.html" %>
+	  
+	<!-- Add some breadcrumbs here -->
+	
 	<div class="container">
 		<div class="table-responsive">	
 			<table class="table table-striped table-bordered" role="table">
@@ -36,22 +35,22 @@
 				<tr>
 					<th>Item ID</th>
 					<th>Item Name</th>
-					<th>Status</th>
-					<th>Action-Borrow</th>
+					<th class="action-borrow-col">Action-Borrow</th>
 				</tr>
 				
-				<tr>
 				<% while(borrowed.next()) {	%>
+				<tr>
 					<td><%=borrowed.getString("itemId")%></td>
 					<td><%=borrowed.getString("itemName")%></td>
-					<td>
+					<td class="action-borrow-col">
 					  <a href="assetmaintenance.html?itemId=<%=borrowed.getString("itemId")%>&action=borrow">
-					  	<img id="borrow-button" src="images/borrow.png"/>
+					  	<img id="borrow-img" src="images/borrow.png"/>
 					  </a>
 					</td>
 				</tr>			
 				<% } %>
 			</table>
+
 		</div>
 	</div>
 </body>
