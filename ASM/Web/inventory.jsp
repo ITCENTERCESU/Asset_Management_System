@@ -50,14 +50,8 @@ body {
 #buttons #return-button {
 	background-image: url("./images/return.png");
 }
-
-table {
-
-	font-size: 1.25em;
-}
-
-table caption {
-	color: black;
+table .status {
+	text-align: center;
 }
 </style>
 </head>
@@ -92,7 +86,7 @@ table caption {
 						<tr>
 							<th>Item ID</th>
 							<th>Item Name</th>
-							<th>Status</th>
+							<th class="status">Status</th>
 						</tr>
 						<%
 							while (inventory.next()) {
@@ -100,7 +94,7 @@ table caption {
 						<tr class=<%=(inventory.getString("status").equals("available")) ? "success" : "danger"%>>
 							<td><%=inventory.getString("itemId")%></td>
 							<td><%=inventory.getString("itemName")%></td>
-							<td><%=inventory.getString("status").toUpperCase()%></td>
+							<td class="status"><%=inventory.getString("status").toUpperCase()%></td>
 						</tr>
 						<%
 							}

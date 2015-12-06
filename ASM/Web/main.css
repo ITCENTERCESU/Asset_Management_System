@@ -52,3 +52,11 @@ nav form .btn {
 nav form #logout {
 	background-color: gray;
 }
+
+table {
+	font-size: 1.25em;
+}
+
+table caption {
+	color: black;
+}
