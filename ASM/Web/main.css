@@ -6,10 +6,6 @@ body {
 	padding: 0;
 }
 
-body * {
-	font-family: 'quicksandregular'
-}
-
 nav .container-fluid {
 	background-color: #FD8F14 !important;
 }
