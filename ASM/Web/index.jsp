@@ -28,7 +28,6 @@ header #title {
 }
 
 header #title .acronym {
-	/* text-shadow: .05em .05em 0 white; */
 	font-size: 6em;
 	font-weight: bold;
 	vertical-align: middle;
