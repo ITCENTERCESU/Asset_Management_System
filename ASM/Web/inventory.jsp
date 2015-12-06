@@ -11,39 +11,21 @@
 <link rel="icon" type="image/png" href="./images/information-systems-logo.png" />
 <title>Asset Management System</title>
 <style type="text/css">
-		img{width:5em;height:5em;margin:auto;}
+	body {
+		padding-top: 8em;
+	}
+		/* img{width:5em;height:5em;margin:auto;}
 		header{text-align:center;margin:2em 10em;}
 		.lalagyan{margin:-360px 590px -150px;background:#FFD4AA;width:30%;height:273px; box-shadow:.5em .5em .1em;border-radius: 25px;position:absolute}
 		.lalagyan2{margin:-20px 40px -260px;width:40%;height:80px; position:absolute;}
 		.table{height:100%;width:513px;margin-right:auto;}
 		body{background-color:#FDDFBD;}
 		.a { font-size: 250%; }
-		.container-fluid{background-color: #FF9933;}
+		.container-fluid{background-color: #FF9933;} */
 	</style>
-
-body {
-	padding-top: 10em;
-}
-table {
-	padding: 1em;
-	font-size: 1.5em;
-}
-table caption {
-	 color: black;
-	 font-size: 2em;
-	 font-weight: bold;
-}
-.row button {
-	margin: 1em;}
-</style>
-
 </head>
 <body>
 	<%@include file="navbar.html" %>
-	<br>
-	<br>
-	<br>
-	<br>
 	<div class="container">
 		<div class="row">
 			<!-- buttons -->
