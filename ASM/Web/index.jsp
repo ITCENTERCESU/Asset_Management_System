@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="./styles/bootstrap.min.css" />
 <link rel="stylesheet" href="./fonts/quicksand/stylesheet.css" />
 <link rel="stylesheet" href="./main.css"/>
-<link rel="icon" type="image/png" href="./images/information-systems-logo.png" />
+<link rel="icon" type="image/png" href="./images/ust-iics-is-logo.png" />
 <title>Asset Management System</title>
 <style type="text/css">
 body {
