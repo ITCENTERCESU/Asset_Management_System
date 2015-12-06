@@ -87,7 +87,7 @@ table caption {
 			<div class="col-xs-12 col-md-9 col-md-pull-3">
 				<!-- inventory table  -->
 				<div class="table-responsive"> 
-					<table class="table table-striped table-bordered" role="table">
+					<table class="table table-bordered" role="table">
 						<caption>List of all assets.</caption>
 						<tr>
 							<th>Item ID</th>
