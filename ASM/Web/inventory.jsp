@@ -6,7 +6,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="./styles/bootstrap.min.css" />
-<link rel="stylesheet" href="./fonts/quicksand/stylesheet.css" />
 <link rel="stylesheet" href="./main.css"/>
 <link rel="icon" type="image/png" href="./images/ust-iics-is-logo.png" />
 <title>Asset Management System</title>
@@ -60,16 +59,7 @@ table {
 table caption {
 	color: black;
 }
-	
-		/* img{width:5em;height:5em;margin:auto;}
-		header{text-align:center;margin:2em 10em;}
-		.lalagyan{margin:-360px 590px -150px;background:#FFD4AA;width:30%;height:273px; box-shadow:.5em .5em .1em;border-radius: 25px;position:absolute}
-		.lalagyan2{margin:-20px 40px -260px;width:40%;height:80px; position:absolute;}
-		.table{height:100%;width:513px;margin-right:auto;}
-		body{background-color:#FDDFBD;}
-		.a { font-size: 250%; }
-		.container-fluid{background-color: #FF9933;} */
-	</style>
+</style>
 </head>
 <body>
 	<%@include file="navbar.html" %>

@@ -6,7 +6,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="./styles/bootstrap.min.css" />
-<link rel="stylesheet" href="./fonts/quicksand/stylesheet.css" />
 <link rel="stylesheet" href="./main.css"/>
 <link rel="icon" type="image/png" href="./images/ust-iics-is-logo.png" />
 <title>Asset Management System</title>
