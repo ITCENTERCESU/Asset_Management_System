@@ -132,7 +132,7 @@ footer #ust-iics-logo {
 				<img class="logo" id="ust-logo" 
 					alt="University of Santo Tomas Logo" src="./images/ust-logo.png" >
 				<img class="logo" id="ust-iics-is-logo" 
-					alt="Institute of Information and Computing Sciences Logo" src="./images/information-systems-logo.png">
+					alt="Institute of Information and Computing Sciences Logo" src="./images/ust-iics-is-logo.png">
 				<img class="logo" id="ust-iics-logo" 
 					alt="Information Systems Logo" src="./images/ust-iics-logo.png">
 			</div>
