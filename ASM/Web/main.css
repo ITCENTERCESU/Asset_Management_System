@@ -6,25 +6,49 @@ body {
 	padding: 0;
 }
 
-nav .container-fluid {
-	background-color: #FD8F14 !important;
-}
-
-nav .navbar-header .navbar-brand {
+nav {
 	color: white;
 }
 
-nav .navbar-header .navbar-toggle {
-	border: .1em solid white;
+nav .container-fluid {
+	background-color: #ff7f00 !important;
 }
-/* nav .navbar-collapse {
-	text-align: auto;
-} */
-nav form .btn {
-	background-color: inherit;
+
+nav .navbar-brand {
+	font-size: 1.5em;
+}
+nav .navbar-brand .acronym {
+	font-size: 3em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+nav .navbar-brand #A {
+	color: white;
+}
+
+nav .navbar-brand #M {
+	color: gray;
+}
+
+nav .navbar-brand #S {
+	color: black;
+}
+
+nav .navbar-nav .navbar-brand {
+	color: white;
+}
+
+nav .navbar-nav .navbar-toggle {
 	border: .1em solid white;
 }
 
+nav form .btn {
+	background-color: inherit;
+	border: .1em solid white;
+	margin: .3em;
+}
+
 nav form #logout {
-	background-color: black;
+	background-color: gray;
 }
