@@ -69,6 +69,12 @@ form .btn {
 	margin-right: .5em;
 }
 
+
+form #buttons .form-group {
+	display: inline;
+}
+
+
 form input {
 	text-transform: capitalize;
 }
