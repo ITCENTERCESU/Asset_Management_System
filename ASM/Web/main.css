@@ -60,19 +60,20 @@ table caption {
 	color: black;
 }
 
-/* form fieldset {
-	margin: 1em auto;
-} */
-
 form fieldset label {
 	font-weight: bold;
 	font-size: 1.5em;
 }
 
 form .btn {
-	margin: 3em auto;
 	margin-right: .5em;
 }
+
+
+form #buttons .form-group {
+	display: inline;
+}
+
 
 form input {
 	text-transform: capitalize;
