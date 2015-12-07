@@ -21,14 +21,13 @@ header {
 
 header #title {
 	color: white;
-	font-size: 1.5em;
+	font-size: 1em;
 	margin: 1em 0;
 }
 
 header #title .acronym {
-	font-size: 6em;
+	font-size: 6.5em;
 	font-weight: bold;
-	vertical-align: baseline;
 }
 
 header #title #A {
@@ -44,13 +43,13 @@ header #title #S {
 }
 
 header #welcome {
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: bolder;
 }
 
 form {
 	padding: 2em;
-	margin: 2em auto;
+	margin-top: 1em;
 	background-color: #fdfdfd;
 	box-shadow: .3em .3em .1em gray;
 }
@@ -72,25 +71,25 @@ footer #for-IS {
 }
 
 footer #for-IS span {
-	font-size: 1.75em;
-}
-
-footer #made-with {
 	font-size: 1.25em;
 }
 
+footer #made-with {
+	font-size: 1em;
+}
+
 footer #logos {
-	margin: 2em auto;	
+	margin: 1em auto;	
 }
 
 footer .logo {
-	height: 5em;
-	width: 5em;
+	height: 3em;
+	width: 3em;
 	margin: .5em;
 }
 
 footer #ust-iics-logo {
-	width: 4.5em;
+	width: 3.5em;
 }
 </style>
 </head>
