@@ -9,14 +9,6 @@
 <link rel="stylesheet" href="./main.css"/>
 <link rel="icon" type="image/png" href="./images/ust-iics-is-logo.png" />
 <title>Asset Management System</title>
-<style type="text/css">
-	/* img{width:5em;height:5em;margin:auto;}
-	header{text-align:center;margin:3em 1em;}
-	form{padding:2em;background:#FFD4AA;}
-	.h2 { font-size:100%; }
-	.container-fluid{background-color: #FF9933;}
-	body{background-color:#FDDFBD;} */
-</style>
 </head>
 <%@include file="navbar.html" %>
 <body>
