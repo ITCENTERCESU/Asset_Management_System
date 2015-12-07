@@ -5,7 +5,7 @@ public interface SQLCommands {
 	String INSERT_ASSET = "INSERT INTO Inventory(itemId, itemName, status) VALUES(?,?,?)";
 	String GET_ALL_ASSET = "SELECT * FROM Inventory";
 
-	String GET_BORROWED_LIST = "SELECT itemId, itemName, status FROM Inventory WHERE status='available'" ;
+	String GET_AVAILABLE_LIST = "SELECT itemId, itemName, status FROM Inventory WHERE status='available'" ;
 	
 	String SEARCH_ASSET = "SELECT * FROM Inventory WHERE itemId=? AND status='available'";
 	

@@ -14,12 +14,13 @@ import javax.servlet.http.HttpSession;
 
 import com.ust.utility.sql.SQLOperations;
 
-@WebServlet("/listborrowprocess.html")
-public class ListBorrowProcessServlet extends HttpServlet {
+
+@WebServlet("/deleteprocess.html")
+public class DeleteProcessServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private Connection connection;
-
+	
 	public void init() throws ServletException {
 		connection = (Connection) 
 				getServletContext().getAttribute("dbConnection");
@@ -35,8 +36,8 @@ public class ListBorrowProcessServlet extends HttpServlet {
 		if(session!=null){
 			RequestDispatcher dispatcher = null; 
 			ResultSet rs = SQLOperations.getAvailableList(connection);
-			request.setAttribute("borrowed", rs);
-			dispatcher = getServletContext().getRequestDispatcher("/borrowList.jsp");	
+			request.setAttribute("delete", rs);
+			dispatcher = getServletContext().getRequestDispatcher("/deleteList.jsp");	
 			dispatcher.forward(request, response);
 		}
 		else {

@@ -26,7 +26,6 @@ table .action-borrow-col {
 <body>
 	<%@include file="navbar.html" %>
 	  
-	<!-- Add some breadcrumbs here -->
 	
 	<div class="container">
 		<div class="table-responsive">	
