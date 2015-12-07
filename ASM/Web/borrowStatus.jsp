@@ -73,17 +73,7 @@
 	<% } else { %>
 		<h1>Adding failed</h1></header>	
 	<% } %> 
-	</div>
-	
-	<br/>
-	
-	<form role="form" action="inventoryprocess.html"class="col-sm-offset-1 col-sm-11">
-		<input type="submit" value="HOME"class="btn btn-default">	
-	</form>
-	
-	
-	
-	
+	</div>	
 	
 </body>
 </html>
