@@ -109,11 +109,16 @@ footer #ust-iics-logo {
 				<h6>The username or password you entered is incorrect.</h6>
 			</div> -->
 			<form role="form" action="processlogin.html" method="post"
-				class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
-				<input type="text" name="username" required="required"
-					placeholder="Username" class="form-control" autofocus> 
-				<input type="password" name="password" required="required"
-					placeholder="Password" class="form-control"> 
+				class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4" >
+				
+				<div class="form-group">
+					<input type="text" name="username" placeholder="Username" class="form-control" required autofocus> 
+				</div>
+				
+				<div class="form-group">
+					<input type="password" name="password" placeholder="Password" class="form-control" required> 
+				</div>
+				
 				<input type="submit" value="Login" class="btn btn-primary btn-block"
 					id="form-button">
 			</form>
