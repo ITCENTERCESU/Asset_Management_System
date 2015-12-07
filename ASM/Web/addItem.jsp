@@ -20,12 +20,12 @@
 				
 				<div class="form-group">
 					<label for="item-id">Item ID</label>
-					<input id="item-id" type="text" name="itemId" size="25" required="required" class="form-control" autofocus="autofocus">
+					<input id="item-id" type="text" name="itemId" required="required" class="form-control" autofocus="autofocus">
 				</div>
 				
 				<div class="form-group">
 					<label for="item-name">Item Name</label>
-					<input id="item-name" type="text" name="itemName" size="25" required="required" class="form-control">
+					<input id="item-name" type="text" name="itemName" required="required" class="form-control">
 				</div>				
 			</fieldset>
 			<input type="submit" value="Add new item"class="btn btn-primary">

@@ -55,6 +55,9 @@ nav form #logout {
 
 table {
 	font-size: 1.25em;
+}
+
+table tr {
 	text-transform: capitalize;
 }
 

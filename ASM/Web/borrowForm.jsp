@@ -40,8 +40,8 @@ form #about-item input {
 			<p>Kindly fill up all fields on this section.</p>
 			
 			<div class="form-group">
-				<label for="id-number">ID Number</label> 
-				<input id="id-number" type="text" name="idNum" maxlength="10" required="required" class="form-control" autofocus="autofocus">
+				<label for="id-number">Borrower ID</label> 
+				<input id="id-number" placeholder="ex. 2015123456" type="text" name="idNum" maxlength="10" required="required" class="form-control" autofocus="autofocus">
 			</div>
 			
 			<div class="form-group">
