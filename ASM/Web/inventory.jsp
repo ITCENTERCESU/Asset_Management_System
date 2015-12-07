@@ -24,19 +24,20 @@ body {
 }
 
 #buttons .btn {
+	text-transform: uppercase;
 	font-size: 1.2em;
 	border: none;
 	margin: .5em;
 	width: 9.5em;
 	height: 9.5em;
-	background-size: 7em;
+	background-size: 8.5em;
 	background-position: top;
 	background-repeat: no-repeat;
-	padding-top: 5em;
+	padding-top: 6.5em;
 } 
 
 #buttons #add-new-button {
-	background-image: url("./images/add-new.png");
+	background-image: url("./images/new.png");
 }
 
 #buttons #delete-button {
@@ -63,19 +64,19 @@ table .status {
 			<div id="buttons" class="col-xs-12 col-md-3 col-md-push-9">
 				<!-- Borrow Item Button -->
 				<form action="listborrowprocess.html" method="post">
-					<input id="borrow-button" type="submit" value="Borrow Item" class="btn btn-default">
+					<input id="borrow-button" type="submit" value="Borrow" class="btn btn-default">
 				</form>
 				<!-- Return Item button -->
 				<form action="returnForm.jsp" method="post">
-					<input id="return-button" type="submit" value="Return Item" class="btn btn-default">
+					<input id="return-button" type="submit" value="Return" class="btn btn-default">
 				</form>
 				<!-- Add New Item Button -->
 				<form  action="addItem.jsp" method="post">
-					<input id="add-new-button" type="submit" value="Add New Item" class="btn btn-default">
+					<input id="add-new-button" type="submit" value="New" class="btn btn-default">
 				</form>
 				<!-- Delete Item button -->
 				<form action="deleteprocess.html" method="post">
-					<input id="delete-button" type="submit" value="Delete Item" class="btn btn-default">
+					<input id="delete-button" type="submit" value="Delete" class="btn btn-default">
 				</form>
 			</div>
 			<div class="col-xs-12 col-md-9 col-md-pull-3">
