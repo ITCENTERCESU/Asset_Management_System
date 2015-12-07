@@ -60,9 +60,9 @@ table caption {
 	color: black;
 }
 
-form fieldset {
+/* form fieldset {
 	margin: 1em auto;
-}
+} */
 
 form fieldset label {
 	font-weight: bold;

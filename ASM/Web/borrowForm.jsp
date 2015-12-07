@@ -16,8 +16,8 @@ form #about-item, form #about-borrower {
 
 form #about-item {
 	background-color: #f2f2f2;
-	box-shadow: .3em .3em 1em #ccc;
-	border-radius: 15px;
+	box-shadow: .1em .1em .1em #ccc;
+	border-radius: 10px;
 }
 
 form #about-item label {
@@ -34,24 +34,25 @@ form #about-item input {
 <body>
 	<%@include file="navbar.html" %>
 <div class="container">
-	<form class="row" role="form" action="processborrowform.html" method="post">
+	<form data-toggle="validator" class="row" role="form" action="processborrowform.html" method="post">
 		<fieldset id="about-borrower" class="col-xs-12 col-sm-7">
 			<legend>About the borrower</legend>
 			<p>Kindly fill up all fields on this section.</p>
 			
 			<div class="form-group">
 				<label for="id-number">Borrower ID</label> 
-				<input id="id-number" placeholder="ex. 2015123456" type="text" name="idNum" maxlength="10" required="required" class="form-control" autofocus="autofocus">
+				<input id="id-number" placeholder="ex. 2015123456" pattern="[0-9]{10}" name="idNum" data-maxlength="10" required="required" class="form-control" autofocus="autofocus">
+				<span class="help-block">Minimum of 10 digits</span>
 			</div>
 			
 			<div class="form-group">
 				<label for="last-name">Last Name</label>
-				<input id="last-name" type="text" name="lastName" required="required" class="form-control">
+				<input id="last-name" placeholder="ex. Santos" type="text" name="lastName" required="required" class="form-control">
 			</div>
 			
 			<div class="form-group">
 				<label for="first-name">First Name</label> 
-				<input id="first-name" type="text" name="firstName"  required="required" class="form-control">
+				<input id="first-name" placeholder="ex. Jose" type="text" name="firstName"  required="required" class="form-control">
 			</div>				
 			
 		</fieldset>
@@ -105,6 +106,9 @@ form #about-item input {
 			<input type="submit" value="Cancel" class="btn btn-default" formaction="listborrowprocess.html" formmethod="post" formnovalidate="formnovalidate"> 
 		</div>
 	</form>
+	<script type="text/javascript" src="./scripts/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./scripts/validator.min.js"></script>
 </div>
 </body>
 </html>
