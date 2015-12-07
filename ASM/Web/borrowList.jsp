@@ -42,7 +42,7 @@ table .action-borrow-col {
 					<td><%=borrowed.getString("itemId")%></td>
 					<td><%=borrowed.getString("itemName")%></td>
 					<td class="action-borrow-col">
-					  <a href="assetmaintenance.html?itemId=<%=borrowed.getString("itemId")%>&action=borrow">
+					  <a href="borrowspecificitem.html?itemId=<%=borrowed.getString("itemId")%>&action=borrow">
 					  	<img id="borrow-img" src="images/borrow-black.png"/>
 					  </a>
 					</td>
