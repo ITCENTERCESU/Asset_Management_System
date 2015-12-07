@@ -31,6 +31,7 @@ table .action-borrow-col {
 		<div class="table-responsive">	
 			<table class="table table-striped table-bordered" role="table">
 				<caption>Select the Item to be deleted.</caption>
+				<i>Note: Currently borrowed items cannot be deleted. </i>
 				<tr>
 					<th>Item ID</th>
 					<th>Item Name</th>
@@ -42,7 +43,7 @@ table .action-borrow-col {
 					<td><%=delete.getString("itemId")%></td>
 					<td><%=delete.getString("itemName")%></td>
 					<td class="action-borrow-col">
-					  <a href="assetmaintenance.html?itemId=<%=delete.getString("itemId")%>&action=borrow">
+					  <a href="deletespecificitem.html?itemId=<%=delete.getString("itemId")%>&action=delete">
 					  	<img id="borrow-img" src="images/borrow-black.png"/>
 					  </a>
 					</td>
