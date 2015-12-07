@@ -1,6 +1,6 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@ page session="false" %>
+    pageEncoding="ISO-8859-1" session="false" import="java.util.*, java.text.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,15 +17,24 @@
 	</style>
 </head>
 <body>
-	<form action="inventoryprocess.html" method="post"class="col-sm-offset-4 col-sm-4">
-		<h2>Item has been returned successfully!</h2>
-		<br>
-		<p>Date returned: _________</p> <!-- returnDate //variable to be used -->
-		<br>
-		<p><b>Thank You!</b></p>
-
-		<br>
-		<input type="submit" value="Home"class="btn btn-default">
+	<%if (request.getParameter("success").equals("true")) { %>
+		<form action="inventoryprocess.html" method="post"class="col-sm-offset-4 col-sm-4">
+			<h2>Item has been returned successfully!</h2>
+			<br>
+			<%
+							Date borrowedDateDD = new Date();
+							SimpleDateFormat ft = new SimpleDateFormat ("yyyy-MM-dd");
+							String borrowedDateD = ft.format(borrowedDateDD);
+			%>
+			<p>Date returned: <b><%out.println(borrowedDateD);%></b></p> 
+			<br>
+			<p><b>Thank You!</b></p>
+	
+			<br>
+			<input type="submit" value="Home"class="btn btn-default">
+	<% } else { %>
+		<h1>Adding failed</h1>
+	<% } %> 
 	</form>
 </body>
 </html>

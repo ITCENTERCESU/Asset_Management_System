@@ -17,10 +17,12 @@ public interface SQLCommands {
 			+ "WHERE Inventory.itemId = Borrowed.itemId;";
 	
 	
-	String RETURN_BORROWED = "UPDATE Inventory SET status='available' "
-			+ "FROM Inventory, Borrowed "
-			+ "WHERE itemId=? AND idNum=?";
-	
+	String RETURN_BORROWED = "UPDATE Borrowed SET status='available' FROM Borrowed "
+			+ "WHERE itemId=? AND idNum=?;" 
+			+ ""
+			+ "DELETE FROM Borrowed WHERE status='available';"
+			+ ""
+			+ "UPDATE Inventory SET status= 'available' FROM Inventory WHERE itemId=?";
 
 	String SELECT_USERPW = "SELECT password FROM Users WHERE username=?";
 	

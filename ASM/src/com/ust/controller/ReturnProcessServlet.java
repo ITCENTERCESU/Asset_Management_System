@@ -45,16 +45,16 @@ public class ReturnProcessServlet extends HttpServlet {
 			BorrowedBean returned = ReturnFactory.getFactoryBean(itemId, idNum);
 
 			if (connection != null) {
-				if (SQLOperations.addBorrowed(returned, connection)){
-					System.out.println("successful insert");
+				if (SQLOperations.returnBorrowed(returned, connection)){
+					System.out.println("successful return");
 
 					request.setAttribute("returned", returned);
-					getServletContext().getRequestDispatcher("/borrowStatus.jsp?success=true").forward(request, response);
+					getServletContext().getRequestDispatcher("/returnStatus.jsp?success=true").forward(request, response);
 				} 
 				else 
 				{
-					System.out.println("failed insert");
-					getServletContext().getRequestDispatcher("/borrowStatus.jsp?success=false").forward(request, response);
+					System.out.println("return failed");
+					getServletContext().getRequestDispatcher("/returnStatus.jsp?success=false").forward(request, response);
 				}
 			} 
 			else 

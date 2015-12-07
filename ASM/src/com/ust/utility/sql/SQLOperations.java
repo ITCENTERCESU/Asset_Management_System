@@ -135,13 +135,12 @@ public class SQLOperations implements SQLCommands {
 			try {
 		        PreparedStatement pstmt = connection.prepareStatement(RETURN_BORROWED);
 		        pstmt.setString(1, returned.getItemId()); 
-		       
-		        pstmt.setInt(3, returned.getIdNum()); 
-		      
+		        pstmt.setInt(2, returned.getIdNum());
+		        pstmt.setString(3, returned.getItemId());
 		        
 		        pstmt.executeUpdate(); // execute insert statement  
 			} catch (SQLException sqle) {
-				System.out.println("SQLException - addBorrowed: " + sqle.getMessage());
+				System.out.println("SQLException - returnBorrowed: " + sqle.getMessage());
 				return false; 
 			}	
 			return true;
