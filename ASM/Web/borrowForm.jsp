@@ -10,15 +10,6 @@
 <link rel="icon" type="image/png" href="./images/ust-iics-is-logo.png" />
 <title>Asset Management System</title>
 <style type="text/css">
-form fieldset {
-	margin: 1em auto;
-}
-
-form fieldset label {
-	font-weight: bold;
-	font-size: 1.5em;
-}
-
 form #about-item, form #about-borrower {
 	padding: 3em;
 }
@@ -36,10 +27,6 @@ form #about-item label {
 
 form #about-item input {
 	font-weight: bold;
-}
-form .btn {
-	margin: 3em auto;
-	margin-right: .5em;
 }
 </style>
 </head>
@@ -115,7 +102,7 @@ form .btn {
 		</fieldset>
 		<div class="col-sm-12">
 			<input type="submit" value="Borrow this item" class="btn btn-primary">
-			<input type="Submit" value="Cancel" class="btn btn-default" formaction="listborrowprocess.html" formmethod="post" formnovalidate="formnovalidate"> 
+			<input type="submit" value="Cancel" class="btn btn-default" formaction="listborrowprocess.html" formmethod="post" formnovalidate="formnovalidate"> 
 		</div>
 	</form>
 </div>
