@@ -28,5 +28,6 @@ public interface SQLCommands {
 			+ "FROM Borrowed "
 			+ "WHERE idNum=?";
 	
+	String DELETE_ITEM = "DELETE FROM Inventory WHERE itemId=?";
 	
 }

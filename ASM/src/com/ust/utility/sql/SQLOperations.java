@@ -187,7 +187,28 @@ public class SQLOperations implements SQLCommands {
 		}	
 		return rs;
 	}
-
+	
+	public static synchronized int deleteItem(String itemId, Connection connection) {
+		int updated = 0;
+		
+		try {
+			connection.setAutoCommit(false);
+	        PreparedStatement pstmt = connection.prepareStatement(DELETE_ITEM);
+	        pstmt.setString(1, itemId);             
+	        updated  = pstmt.executeUpdate();
+	        connection.commit();
+		} catch (SQLException sqle) {
+			System.out.println("SQLException - deleteItem: " + sqle.getMessage());
+			
+			try {
+				connection.rollback();
+			} catch (SQLException sql) {
+				System.err.println("Error on Delete Connection Rollback - " + sql.getMessage());
+			}
+			return updated; 
+		}	
+		return updated;
+	}
 
 }
 
