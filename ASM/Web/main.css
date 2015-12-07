@@ -42,10 +42,17 @@ nav .navbar-nav .navbar-toggle {
 	border: .1em solid white;
 }
 
+nav form *{
+	display: inline;	
+}
 nav form .btn {
 	background-color: inherit;
-	border: .1em solid white;
 	margin: .3em;
+}
+
+nav form #logout {
+	border: .1em solid white;
+	
 }
 
 table {
