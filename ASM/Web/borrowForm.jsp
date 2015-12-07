@@ -41,7 +41,7 @@ form #about-item input {
 			
 			<div class="form-group">
 				<label for="id-number">ID Number</label> 
-				<input id="id-number" placeholder="Enter borrower's ID number" type="number" name="idNum" maxlength="10" required="required" class="form-control" autofocus="autofocus">
+				<input id="id-number" placeholder="Enter borrower's ID number" type="text" name="idNum" maxlength="10" required="required" class="form-control" autofocus="autofocus">
 			</div>
 			
 			<div class="form-group">
