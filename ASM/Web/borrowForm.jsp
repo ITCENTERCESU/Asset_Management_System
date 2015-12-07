@@ -41,17 +41,17 @@ form #about-item input {
 			
 			<div class="form-group">
 				<label for="id-number">ID Number</label> 
-				<input id="id-number" placeholder="Enter borrower's ID number" type="text" name="idNum" maxlength="10" required="required" class="form-control" autofocus="autofocus">
+				<input id="id-number" type="text" name="idNum" maxlength="10" required="required" class="form-control" autofocus="autofocus">
 			</div>
 			
 			<div class="form-group">
 				<label for="last-name">Last Name</label>
-				<input id="last-name" placeholder="Enter borrower's lastname" type="text" name="lastName" required="required" class="form-control">
+				<input id="last-name" type="text" name="lastName" required="required" class="form-control">
 			</div>
 			
 			<div class="form-group">
 				<label for="first-name">First Name</label> 
-				<input id="first-name" placeholder="Enter borrower's firstname" type="text" name="firstName"  required="required" class="form-control">
+				<input id="first-name" type="text" name="firstName"  required="required" class="form-control">
 			</div>				
 			
 		</fieldset>

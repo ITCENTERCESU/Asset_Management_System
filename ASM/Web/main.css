@@ -55,6 +55,7 @@ nav form #logout {
 
 table {
 	font-size: 1.25em;
+	text-transform: capitalize;
 }
 
 table caption {
@@ -73,4 +74,8 @@ form fieldset label {
 form .btn {
 	margin: 3em auto;
 	margin-right: .5em;
+}
+
+form input {
+	text-transform: capitalize;
 }
