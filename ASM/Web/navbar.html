@@ -17,9 +17,22 @@
 		<div class="collapse navbar-collapse" id="hamburger-navigation">
 			<form class="navbar-form navbar-right">
 				<!-- Create New Account Button -->
-				<button type="submit" formaction="addaccount.html" formmethod="post" class="btn btn-default">
-					Accounts
-				</button>
+				<!-- <button type="submit" formaction="addaccount.html" formmethod="post" class="btn btn-default">
+					Manage Accounts
+				</button> -->
+				
+				<div class="dropdown">
+				  <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+				  	Manage Accounts
+				  	<span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu dropdown-menu-right">
+				    <li class="divider"><a href="#">View All Accounts</a></li>
+				    <li><a href="#">Edit an Account</a></li>
+				    <li><a href="#">Add New Account</a></li>
+				    <li><a href="addacccount.html">Delete Account</a></li>
+				  </ul>
+				</div>
 				
 				<!-- Logout Button -->
 				<button id="logout" type="submit" formaction="processlogout.html" formmethod="post" class="btn btn-primary">
