@@ -35,7 +35,7 @@
 					
 					<div class="form-group">
 						<label for="item-id">Item ID</label>
-						<input id="item-id" type="text" maxlength="4" name="itemID" required="required" class="form-control">
+						<input id="item-id" type="text" placeholder="ex: 0001" maxlength="4" name="itemID" required="required" class="form-control">
 					</div>				
 				</fieldset>
 				
