@@ -16,8 +16,8 @@ import com.ust.model.AssetBean;
 import com.ust.utility.sql.SQLOperations;
 
 
-@WebServlet("/assetmaintenance.html")
-public class AssetMaintenanceServlet extends HttpServlet {
+@WebServlet("/borrowspecificitem.html")
+public class BorrowSpecificItemServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private Connection connection;

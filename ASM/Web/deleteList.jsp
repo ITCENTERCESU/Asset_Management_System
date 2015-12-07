@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <%@ page session="false" %>
     
-<jsp:useBean id="borrowed" type="java.sql.ResultSet" scope="request"/>
+<jsp:useBean id="delete" type="java.sql.ResultSet" scope="request"/>
     
 <!DOCTYPE html>
 <html>
@@ -30,19 +30,20 @@ table .action-borrow-col {
 	<div class="container">
 		<div class="table-responsive">	
 			<table class="table table-striped table-bordered" role="table">
-				<caption>List of available items for borrowing.</caption>
+				<caption>Select the Item to be deleted.</caption>
+				<i>Note: Currently borrowed items cannot be deleted. </i>
 				<tr>
 					<th>Item ID</th>
 					<th>Item Name</th>
-					<th class="action-borrow-col">Action-Borrow</th>
+					<th class="action-borrow-col">Action-Delete</th>
 				</tr>
 				
-				<% while(borrowed.next()) {	%>
+				<% while(delete.next()) {	%>
 				<tr>
-					<td><%=borrowed.getString("itemId")%></td>
-					<td><%=borrowed.getString("itemName")%></td>
+					<td><%=delete.getString("itemId")%></td>
+					<td><%=delete.getString("itemName")%></td>
 					<td class="action-borrow-col">
-					  <a href="borrowspecificitem.html?itemId=<%=borrowed.getString("itemId")%>&action=borrow">
+					  <a href="deletespecificitem.html?itemId=<%=delete.getString("itemId")%>&action=delete">
 					  	<img id="borrow-img" src="images/borrow-black.png"/>
 					  </a>
 					</td>

@@ -68,11 +68,11 @@ public class SQLOperations implements SQLCommands {
 		return rs;
 	}
 	
-	public static ResultSet getBorrowedList(Connection connection) {
+	public static ResultSet getAvailableList(Connection connection) {
 		ResultSet rs = null;
 		try {
 			Statement stmt = connection.createStatement();
-			rs = stmt.executeQuery(GET_BORROWED_LIST);  
+			rs = stmt.executeQuery(GET_AVAILABLE_LIST);  
 		} catch (SQLException sqle) {
 			System.out.println("SQLException - getBorrowedList: " 
 			  + sqle.getMessage());
@@ -187,6 +187,7 @@ public class SQLOperations implements SQLCommands {
 		}	
 		return rs;
 	}
+
 
 }
 
