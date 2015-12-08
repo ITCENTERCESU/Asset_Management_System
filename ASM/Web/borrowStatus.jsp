@@ -20,6 +20,7 @@
 <style type="text/css">
 section .form-group {
 	font-size: 1.5em;
+	margin: 0;
 }
 
 section .form-group .form-control {
@@ -33,7 +34,10 @@ section .form-group .control-label {
 	font-weight: normal;
 }
 
-.borrower-
+#borrower-name {
+	text-transform: capitalize;
+	font-weight: bold;
+}
 	
 </style>
 </head>
