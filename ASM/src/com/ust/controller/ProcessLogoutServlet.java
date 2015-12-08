@@ -39,8 +39,9 @@ public class ProcessLogoutServlet extends HttpServlet {
 		HttpSession session = request.getSession(false);
 		if (session!=null) {
 			session.invalidate();
-			response.sendRedirect("index.jsp");
 		}
+		
+		response.sendRedirect("index.jsp");
 		
 		/*
 		RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
