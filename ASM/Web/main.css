@@ -75,7 +75,10 @@ form #buttons .form-group {
 	display: inline;
 }
 
-
-form input {
+.form-control {
 	text-transform: capitalize;
+}
+
+#success {
+	color: green;
 }

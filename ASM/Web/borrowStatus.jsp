@@ -19,27 +19,27 @@
 <link rel="icon" type="image/png" href="./images/ust-iics-is-logo.png" />
 <title>Asset Management System</title>
 <style type="text/css">
-		
-p {
-	font-weight : normal;
+section .form-group {
 	font-size: 1.5em;
+	margin: 0;
 }
-label {
+
+section .form-group .form-control {
+	border: none;
+	box-shadow: none;
 	font-weight: bold;
-	font-size: 1.5em;
-}
-row  {
-	margin-right:2em;
+	font-size: 1em;
 }
 
-
-row .form-group {
-	display: inline;
+section .form-group .control-label {
+	font-weight: normal;
 }
 
-.container #borrowing-success {
-	color: green;
-} 
+#borrower-name {
+	text-transform: capitalize;
+	font-weight: bold;
+}
+	
 </style>
 </head>
 <body>
@@ -47,27 +47,56 @@ row .form-group {
 <%if (request.getParameter("success").equals("true")) { %>
 	<div class="container">
 		<div class="row">
-			<h1 id="borrowing-success">Borrowing Successful!</h1>
+			<h1 id="success">Borrowing Successful!</h1>
 		
-			<section id="item-details" class="col-xs-12 col-sm-7">
-				<h2>Item Details</h2>
+			<section id="item-details" class="form-horizontal col-xs-12 col-sm-5">
+				<h2>Item Borrowed</h2>
+				<div class="form-group">
+					<label for="item-id" class="control-label col-sm-4">Item ID</label>
+					<div class="col-sm-8">
+						<p id="item-id" class="form-control">${borrowed.itemId}</p>
+					</div>
+				</div>
 				
-				<label for="item-id">Item ID</label>
-				<p id="item-id">${borrowed.itemId}</p>
+				<div class="form-group">
+					<label for="item-name" class="control-label col-sm-4">Item Name</label>
+					<div class="col-sm-8">
+						<p id="item-name" class="form-control">${borrowed.itemName}</p>
+					</div>
+				</div>
 				
+<<<<<<< HEAD
 				<label for="item-name">Item Name</label>
 				<p id="item-name">${asset.itemName}</p>
 				
 				<label for="category">Category</label>
 				<p id="item-name">${asset.category}</p>
+=======
+				<div class="form-group">
+					<label for="borrowed-date" class="control-label col-sm-4">Borrowed Date</label>
+					<div class="col-sm-8">
+						<p id="borrowed-date" class="form-control"><%= borrowed.getBorrowedDate() %></p>
+					</div>
+				</div>
+>>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
 				
+<<<<<<< HEAD
 				<label for="borrowed-date">Borrowed Date</label>
 				<p id="borrowed-date"><%= borrowed.getBorrowedDate() %></p>
 				
 				<label for="due-date">Due Date</label>
 				<p id="due-date"><%= borrowed.getDueDate() %></p>
+=======
+				<div class="form-group">
+					<label for="due-date" class="control-label col-sm-4">Due Date</label>
+					<div class="col-sm-8">
+						<p id="due-date" class="form-control"><%= borrowed.getDueDate() %></p>
+					</div>
+				</div>
+>>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
 			</section>
 			
+<<<<<<< HEAD
 			<section id="borrower-details" class="col-xs-12 col-sm-5">
 				<h2>Borrower Details</h2>
 				
@@ -84,30 +113,53 @@ row .form-group {
 					<p><b>Please return them on time. </b></p>
 					<br>
 						<table border="1" style="width:100%">
+=======
+			<section id="borrower-details" class="col-xs-12 col-sm-7">
+				<h2>Borrower's History</h2>
+				<% if(!currently.wasNull()) { %>
+					<p>
+						Here is a list of other items currently borrowed by 
+						<span id="borrower-name">${borrowed.firstName} ${borrowed.lastName}</span>
+						<span id="borrower-id">&lt;${borrowed.idNum }&gt;</span>:
+					</p> 
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped" role="table">
+>>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
 						    <tr>
-						    	<td align="center">Item ID</td>
-								<td align="center">Item Name</td>
-								<td align="center">Date Borrowed</td>
-								<td align="center">Due Date</td>
+						    	<th>Item ID</th>
+								<th>Item Name</th>
+								<th>Date Borrowed</th>
+								<th>Due Date</th>
 						    </tr>
 						    
 						
 							<% while(currently.next()) { %>
 								<tr>
+								
+								<!-- will contain ERROR if data type of itemId is changed -->
+	
+								<%if(!currently.getString("itemId").equals(borrowed.getItemId())) { %>
 									<td><%=currently.getString("itemId")%></td>
 									<td><%=currently.getString("itemName")%></td>
 									<td><%=currently.getString("borrowedDate")%></td>
 									<td><%=currently.getString("dueDate")%></td>
+								<%} %>
 								</tr>			
 							<% } %>
 					    </table>
-						<br> 
-						<br>
-						<input type="submit" value="Home"class="btn btn-default">
-						</div>
-				</form>
+					</div>
+				<%} else { %>
+					<p>
+						The borrower 
+						<span id="borrower-name">${borrowed.firstName} ${borrowed.lastName}</span>
+						<span id="borrower-id">&lt;${borrowed.idNum }&gt;</span>
+						has not borrowed other items.
+					</p> 
+				<% } %>
 			</section>
-	
+			<form action="inventoryprocess.html" method="post">
+				<input type="submit" value="OK" class="btn btn-info">
+			</form>
 		</div>
 	</div>
 	<% } else { %>

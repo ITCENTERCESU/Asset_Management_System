@@ -40,6 +40,7 @@ form #about-item input {
 	<%@include file="navbar.html" %>
 <div class="container">
 	<form data-toggle="validator" class="row" role="form" action="processborrowform.html" method="post">
+<<<<<<< HEAD
 		<fieldset id="about-borrower" class="col-xs-12 col-sm-7">
 			<legend>About the borrower</legend>
 			<p>Kindly fill up all fields on this section.</p>
@@ -70,6 +71,8 @@ form #about-item input {
 				<input id="email" placeholder="ex. 2013056531@ust-ics.mygbiz.com" type="text" name="email"  required="required" class="form-control">
 			</div>		
 		</fieldset>
+=======
+>>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
 		
 		<fieldset id="about-item" class="col-xs-12 col-sm-5">
 			<div class="form-horizontal">
@@ -129,14 +132,36 @@ form #about-item input {
 				</div>
 			</div>
 		</fieldset>
-		<div class="col-sm-12" id="buttons">
+		
+		<fieldset id="about-borrower" class="col-xs-12 col-sm-7">
+			<legend>About the borrower</legend>
+			<p>Kindly fill up all fields on this section.</p>
+			
 			<div class="form-group">
-				<input type="submit" value="Borrow this item" class="btn btn-primary">
+				<label for="id-number">Borrower ID</label> 
+				<input id="id-number" maxlength="10" placeholder="ex. 2015123456" pattern="[0-9]{10}" name="idNum" data-maxlength="10" required="required" class="form-control" autofocus="autofocus">
+				<span class="help-block">Minimum of 10 digits</span>
 			</div>
+			
 			<div class="form-group">
-				<input type="submit" value="Cancel" class="btn btn-default" formaction="listborrowprocess.html" formmethod="post" formnovalidate="formnovalidate"> 
+				<label for="last-name">Last Name</label>
+				<input id="last-name" placeholder="ex. Santos" type="text" name="lastName" required="required" class="form-control">
 			</div>
-		</div>
+			
+			<div class="form-group">
+				<label for="first-name">First Name</label> 
+				<input id="first-name" placeholder="ex. Jose" type="text" name="firstName"  required="required" class="form-control">
+			</div>				
+			
+			<div id="buttons">
+				<div class="form-group">
+					<input type="submit" value="Borrow this item" class="btn btn-primary">
+				</div>
+				<div class="form-group">
+					<input type="submit" value="Cancel" class="btn btn-default" formaction="listborrowprocess.html" formmethod="post" formnovalidate="formnovalidate"> 
+				</div>
+			</div>
+		</fieldset>
 	</form>
 	<script type="text/javascript" src="./scripts/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
