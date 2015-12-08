@@ -41,7 +41,7 @@ form #about-item input {
 <div class="container">
 	<form data-toggle="validator" class="row" role="form" action="processborrowform.html" method="post">
 		
-		<fieldset id="about-item" class="col-xs-12 col-xs-push-12 col-sm-5">
+		<fieldset id="about-item" class="col-xs-12 col-sm-5">
 			<div class="form-horizontal">
 				<p>Please check if this is really the item you want to borrow.</p>
 				
@@ -86,7 +86,7 @@ form #about-item input {
 			</div>
 		</fieldset>
 		
-		<fieldset id="about-borrower" class="col-xs-12 col-xs-pull-12 col-sm-7">
+		<fieldset id="about-borrower" class="col-xs-12 col-sm-7">
 			<legend>About the borrower</legend>
 			<p>Kindly fill up all fields on this section.</p>
 			
