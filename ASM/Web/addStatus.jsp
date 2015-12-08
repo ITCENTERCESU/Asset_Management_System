@@ -1,6 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<<<<<<< HEAD
+    pageEncoding="ISO-8859-1"%>
+<%@ page session="false" %>
+<% if (request.getSession(false)==null) {
+	response.sendRedirect("index.jsp");
+	return;} %>
+
+=======
 	pageEncoding="ISO-8859-1"%>
 <%@ page session="false"%>
+>>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
 <!DOCTYPE html>
 <html>
 <head>

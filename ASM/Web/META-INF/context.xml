@@ -3,7 +3,7 @@
 <Context>
   <Resource name="jdbc/UST-3CSC-DS" auth="Container"
 
-            type="javax.sql.DataSource" username="ics114-user3csc" password="ics114-user3csc"
+            type="javax.sql.DataSource" username="sanchez-ics114" password="sanchez-ics114"
 
             
             driverClassName="net.sourceforge.jtds.jdbc.Driver" 

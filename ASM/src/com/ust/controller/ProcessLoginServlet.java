@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.sql.Connection;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,7 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.ust.model.UserBean;
 import com.ust.utility.sql.SQLOperations;
+import com.ust.utility.BeanFactory;
 import com.ust.utility.Security;
 
 @WebServlet("/processlogin.html")
@@ -38,50 +39,44 @@ public class ProcessLoginServlet extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		String username, password;
-		username = request.getParameter("username");
-		password = request.getParameter("password");
-		HttpSession session=request.getSession();
-		session.setAttribute("name",username); 
-		//session.invalidate();
-		RequestDispatcher rd = request.getRequestDispatcher("/inventoryprocess.html");
-		rd.forward(request,  response);
 		
-		/*
 		try {
 			username = request.getParameter("username");
 			password = request.getParameter("password");
+			
+			UserBean user = 
+					BeanFactory.getFactoryBean(username, password);
 				
-				if( Security.decrypt(SQLOperations.selectUserPassword(username, connection)).equals(password) ) {
+				if (true) {//Security.decrypt(SQLOperations.selectUserPassword(user.getUsername(), connection)).equals(password)) {
 					System.out.println("Request Param:" + username);
 					System.out.println("Request Param:" + password);
-					System.out.println("Encrypted password: " + Security.encrypt(password) );
+					//System.out.println("Encrypted password: " + Security.encrypt(password) );
 					
 					HttpSession session=request.getSession();
-					session.setAttribute("name",username); 
+					session.setAttribute("user", user); 
 					
 					RequestDispatcher rd = request.getRequestDispatcher("/inventoryprocess.html");
 					rd.forward(request,  response);
 				}
-			/*
-			System.out.println("Request Param:" + username);
-			System.out.println("Request Param:" + password);
+				else {
+					RequestDispatcher rd = request.getRequestDispatcher("invalidsession.jsp");
+					rd.forward(request, response);
+				}
 			
-			HttpSession session=request.getSession();
-			session.setAttribute("name",username);
-			*/
-				
 		}
 		//generalized exception 'to. so, kulang pa ng catch blocks 'to.
 			//necessary yung mga kulang na catch block kasi
 				//yun yung mga magpprompt sa user kung bakit nagka-error
 				//pero pwede naman masettle yung prompting in a different way..
 					//nakakita ka na ng ganung code dati, i'm sure :)
-	/*	catch(Exception e) {
-			RequestDispatcher rd = request.getRequestDispatcher("errorLogin.jsp");
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+			RequestDispatcher rd = request.getRequestDispatcher("invalidsession.jsp");
 			rd.forward(request, response);
 		}
 		
-	}*/
+	}
 		
 }
