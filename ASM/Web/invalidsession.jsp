@@ -8,16 +8,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-
-<link rel="stylesheet" href="./styles/bootstrap.min.css"/>
-	<link rel="icon" type="image/png" href="./images/information-systems-logo.png"/>
-	<title>Asset Management System</title>
-	<style type="text/css">
-		img{width:5em;height:5em;margin:auto;}
-		header{text-align:center;margin:2em 1em;}
-		body{background-color:#FD8F14}
-	</style>
-
 <link rel="stylesheet" href="./styles/bootstrap.min.css" />
 <link rel="icon" type="image/png" href="./images/ust-iics-is-logo.png" />
 <link rel="stylesheet" href="./main.css"/>
@@ -39,17 +29,6 @@ p {
 
 </head>
 <body>
-
-	<!-- Header -->
-	<div class="container">
-		<header>
-	<h2>Invalid credentials. Please try again.</h2>
-	</header>
-	<div class="row">
-	<form action="index.jsp" class="col-sm-offset-5 col-sm-4">
-		<input type="submit" value="GO BACK"class="btn btn-default">
-	</form>
-	</div>
 	
 	<%@include file="navbar_simplified.html"%>
 	<div class="row">
