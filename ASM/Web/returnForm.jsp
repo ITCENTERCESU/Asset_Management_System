@@ -30,12 +30,14 @@
 					
 					<div class="form-group">
 						<label for="borrower-id">Borrower ID</label>
-						<input id="borrower-id" placeholder="ex. 2015123456" type="text" maxlength="10" name="idNum" required="required" class="form-control" autofocus="autofocus">
+						<input id="id-number" placeholder="ex. 2015123456" pattern="[0-9]{10}" name="idNum" data-maxlength="10" required="required" class="form-control" autofocus="autofocus">
+						<span class="help-block">Minimum of 10 digits</span>
 					</div>
 					
 					<div class="form-group">
 						<label for="item-id">Item ID</label>
-						<input id="item-id" type="text" placeholder="ex: 0001" maxlength="4" name="itemID" required="required" class="form-control">
+						<input id="item-id" placeholder="ex. 0001" pattern="[0-9]{4}" type="text" name="itemId" required="required" class="form-control" autofocus="autofocus">
+						<span class="help-block">Minimum of 4 digits</span>
 					</div>				
 				</fieldset>
 				
