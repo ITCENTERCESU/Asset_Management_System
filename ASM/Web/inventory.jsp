@@ -83,7 +83,7 @@ table .status {
 				<!-- inventory table  -->
 				<div class="table-responsive"> 
 					<table class="table table-bordered" role="table">
-						<caption>List of all assets.</caption>
+						<caption>Here is a list of all assets.</caption>
 						<tr>
 							<th>Item ID</th>
 							<th>Item Name</th>
