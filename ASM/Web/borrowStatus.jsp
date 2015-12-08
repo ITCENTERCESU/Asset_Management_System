@@ -84,7 +84,7 @@ section .form-group .control-label {
 				<form role="form"action="inventoryprocess.html" method="post">
 					<div class="form-group">
 					<p>
-						Here is a list of items currently borrowed by 
+						Here is a list of other items currently borrowed by 
 						<span id="borrower-name">${borrowed.firstName} ${borrowed.lastName}</span>
 						<span id="borrower-id">&lt;${borrowed.idNum }&gt;</span>:
 					</p> 
@@ -100,10 +100,12 @@ section .form-group .control-label {
 						
 							<% while(currently.next()) { %>
 								<tr>
+								<%if(!currently.getString("itemId").equals(borrowed.getItemId())) { %>
 									<td><%=currently.getString("itemId")%></td>
 									<td><%=currently.getString("itemName")%></td>
 									<td><%=currently.getString("borrowedDate")%></td>
 									<td><%=currently.getString("dueDate")%></td>
+								<%} %>
 								</tr>			
 							<% } %>
 					    </table>
