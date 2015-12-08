@@ -98,7 +98,7 @@ table .status {
 						<%
 							while (inventory.next()) {
 						%>
-						<tr class=<%=(inventory.getString("status").toUpperCase().equals("AVAILABLE")) ? "success" : "danger"%>>
+						<tr class=<%=(inventory.getString("status").toUpperCase().equalsIgnoreCase("AVAILABLE")) ? "success" : "danger"%>>
 							
 							<%-- <td><%=String.format("%04d", inventory.getInt("itemId"))%></td> --%>
 					
