@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<<<<<<< HEAD
     pageEncoding="ISO-8859-1"%>
 <%@ page session="false" %>
 <% if (request.getSession(false)==null) {
@@ -6,23 +7,67 @@
 	return;} %>
     
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+=======
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+>>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="./styles/bootstrap.min.css" />
+<link rel="stylesheet" href="./main.css" />
+<link rel="icon" type="image/png" href="./images/ust-iics-is-logo.png" />
 <title>ASM</title>
+<style type="text/css">
+form #delete-item {
+	padding: 3em;
+}
+
+p {
+	font-weight: normal;
+	font-size: 1.5em;
+}
+
+label {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+</style>
 </head>
 <body>
-	<form action="processdeleteconfirm.html" method="post" >
-		<h1>Confirm delete for this item:</h1>
-		
-		<p>Item Id: <input id="item-id" type="text" name="itemId" value="${deleteForm.itemId}" readonly/></p>
-		
-		<p>Item Name:<input id="item-name" type="text" name="itemName" value="${deleteForm.itemName}" readonly/></p>
-		
-			
-		<input type="submit" value="Delete Item">
-	</form>
-	
-	<input type="submit" value="Cancel" class="btn btn-default" formaction="listdeleteprocess.html" formmethod="post" formnovalidate="formnovalidate"> 
+	<%@include file="navbar.html"%>
+	<div class="container">
+		<form action="processdeleteconfirm.html" method="post">
+			<fieldset id="delete-item" class="col-xs-12 col-sm-7">
+				<legend>Confirm delete for this item:</legend>
+				<div class="form-group">
+					<label for="item-id">Item Id: <input id="item-id"
+						type="text" name="itemId" value="${deleteForm.itemId}" readonly class="form-control" /></label>
+				</div>
+
+				<div class="form-group">
+					<label for="item-name">Item Name:<input id="item-name"
+						type="text" name="itemName" value="${deleteForm.itemName}"
+						readonly class="form-control"/></label>
+				</div>
+
+
+
+				<div class="col-sm-12" id="buttons">
+					<div class="form-group">
+						<input type="submit" value="Delete Item" class="btn btn-primary">
+					</div>
+
+
+
+					<div class="form-group">
+						<input type="submit" value="Cancel" class="btn btn-default"
+							formaction="listdeleteprocess.html" formmethod="post"
+							formnovalidate="formnovalidate">
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
 </body>
 </html>

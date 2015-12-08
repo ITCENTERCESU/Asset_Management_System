@@ -46,7 +46,7 @@ form #about-item input {
 			
 			<div class="form-group">
 				<label for="id-number">Borrower ID</label> 
-				<input id="id-number" placeholder="ex. 2015123456" pattern="[0-9]{10}" name="idNum" data-maxlength="10" required="required" class="form-control" autofocus="autofocus">
+				<input id="id-number" maxlength="10" placeholder="ex. 2015123456" pattern="[0-9]{10}" name="idNum" data-maxlength="10" required="required" class="form-control" autofocus="autofocus">
 				<span class="help-block">Minimum of 10 digits</span>
 			</div>
 			

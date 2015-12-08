@@ -11,10 +11,6 @@ nav {
 	color: white;
 }
 
-nav .navbar {
-	padding: 1em 0;
-}
-
 nav .navbar-brand {
 	font-size: 1.25em;
 }
@@ -35,12 +31,21 @@ nav .navbar-brand #S {
 	color: black;
 }
 
+
 nav #manage-accounts {
-	font-size: 1.25em;
+	font-size: 1.3em;
 }
-nav .navbar-collapse #home {
+nav .navbar-collapse #home, 
+nav .navbar-collapse #logout {
 	text-align: center;
-	font-size: 1.75em;
+}
+
+nav .navbar-form input {
+	margin: 0;
+}
+
+nav .navbar-collapse #home {
+	font-size: 1.70em;
 }
 
 table {
@@ -61,6 +66,7 @@ form fieldset label {
 }
 
 form .btn {
+	margin: 1em 0;
 	margin-right: .5em;
 }
 

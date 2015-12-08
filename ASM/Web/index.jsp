@@ -53,9 +53,6 @@ form {
 	background-color: #fdfdfd;
 	box-shadow: .3em .3em .1em gray;
 }
-form .form-control, form #form-button {
-	margin: 0;
-}
 
 form #form-button {
 	margin-top: 2em;
