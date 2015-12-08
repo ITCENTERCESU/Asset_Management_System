@@ -79,3 +79,7 @@ form #buttons .form-group {
 form input {
 	text-transform: capitalize;
 }
+
+#success {
+	color: green;
+}
