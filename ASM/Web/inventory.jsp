@@ -93,6 +93,7 @@ table .status {
 						<tr>
 							<th>Item ID</th>
 							<th>Item Name</th>
+							<th>Category </th>
 							<th class="status">Status</th>
 						</tr>
 						<%
@@ -104,6 +105,7 @@ table .status {
 					
 							<td><%=inventory.getString("itemId") %>
 							<td><%=inventory.getString("itemName")%></td>
+							<td><%=inventory.getString("category")%></td>
 							<td class="status"><%=inventory.getString("status").toUpperCase()%></td>
 						</tr>
 						<%

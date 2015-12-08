@@ -14,8 +14,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.ust.model.AssetBean;
 import com.ust.model.BorrowedBean;
+import com.ust.model.BorrowersBean;
+import com.ust.utility.AssetBeanFactory;
 import com.ust.utility.BorrowedBeanFactory;
+import com.ust.utility.BorrowersBeanFactory;
 import com.ust.utility.sql.SQLOperations;
 
 @WebServlet("/processborrowform.html")
@@ -45,31 +49,39 @@ public class BorrowProcessServlet extends HttpServlet {
 		HttpSession session=request.getSession(false);
 		if(session!=null){
 			//itemId, itemName,idNum, lastName, firstName, borrowedDate,dueDate, status
-			String itemId = request.getParameter("itemId");
+			int  itemId = Integer.parseInt(request.getParameter("itemId"));
 			String itemName = request.getParameter("itemName");
 			int idNum = Integer.parseInt(request.getParameter("idNum"));
 			String lastName = request.getParameter("lastName");
 			String firstName = request.getParameter("firstName");
+			String category = request.getParameter("category");
+			String status = request.getParameter("status");
 			String borrowedDate = request.getParameter("borrowedDate");
 			String dueDate = request.getParameter("dueDate");
-			String status = request.getParameter("status");
+			String contactNumber = request.getParameter("contactNumber");
+			String email = request.getParameter("email");
 
 
+			AssetBean asset = 
+					AssetBeanFactory.getFactoryBean(itemName, category);
+			
+			
 			BorrowedBean borrowed = 
-					BorrowedBeanFactory.getFactoryBean(itemId, itemName,idNum, 
-							lastName, firstName, borrowedDate,dueDate, status);
+				BorrowedBeanFactory.getFactoryBean(itemId, itemName,borrowedDate,dueDate);
+			
+			BorrowersBean borrowers = 
+					BorrowersBeanFactory.getFactoryBean(idNum, lastName, firstName, contactNumber, email);
 
 
-	
-		
 		if (connection != null) {
-			if (SQLOperations.addBorrowed(borrowed, connection)){
+			if (SQLOperations.addBorrowed(borrowed, borrowers, connection) && SQLOperations.addBorrowers(borrowers, connection) ){
 				System.out.println("successful insert");
 				
+				request.setAttribute("asset", asset);
 				request.setAttribute("borrowed", borrowed);
-				
+				request.setAttribute("borrowers", borrowers);
 			
-				ResultSet rs = SQLOperations.getCurrentlyBorrowing(idNum, borrowed, connection);
+				ResultSet rs = SQLOperations.getCurrentlyBorrowing(idNum,connection);
 				request.setAttribute("currently", rs);
 				
 

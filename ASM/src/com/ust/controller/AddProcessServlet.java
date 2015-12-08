@@ -40,13 +40,14 @@ public class AddProcessServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session=request.getSession(false);
 		if(session!=null){
-			//String name=(String)session.getAttribute("name");
-			String itemId = request.getParameter("itemId");
+			
+			
 			String itemName = request.getParameter("itemName");
+			String category = request.getParameter("category");
 
 
 			AssetBean asset = 
-					AssetBeanFactory.getFactoryBean(itemId, itemName);
+					AssetBeanFactory.getFactoryBean(itemName, category);
 
 			if (connection != null) {
 				if (SQLOperations.addAsset(asset, connection)){

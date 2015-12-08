@@ -37,16 +37,15 @@ table .action-borrow-col {
 				<tr>
 					<th>Item ID</th>
 					<th>Item Name</th>
+					<th>Category </th>
 					<th class="action-borrow-col">Action-Borrow</th>
 				</tr>
 				
 				<% while(borrowed.next()) {	%>
-				<tr>
-				
-					<%-- <td><%=String.format("%04d", borrowed.getInt("itemId"))%></td> --%>
-					
+				<tr>					
 					<td><%=borrowed.getString("itemId") %>
 					<td><%=borrowed.getString("itemName")%></td>
+					<td><%=borrowed.getString("category")%></td>
 					<td class="action-borrow-col">
 					  <a href="borrowspecificitem.html?itemId=<%=borrowed.getString("itemId")%>&action=borrow">
 					  	<img id="borrow-img" src="images/borrow-black.png"/>

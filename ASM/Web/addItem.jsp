@@ -23,14 +23,13 @@
 				<legend>About new item</legend>
 				
 				<div class="form-group">
-					<label for="item-id">Item ID</label>
-					<input id="item-id" maxlength="4" placeholder="ex. 0001" pattern="[0-9]{4}" type="text" name="itemId" required="required" class="form-control" autofocus="autofocus">
-					<span class="help-block">Minimum of 4 digits</span>
-				</div>
-				
-				<div class="form-group">
 					<label for="item-name">Item Name</label>
 					<input id="item-name" placeholder="ex. Database Management System" type="text" name="itemName" required="required" class="form-control">
+				</div>	
+				
+				<div class="form-group">
+					<label for="item-category">Category</label>
+					<input id="category" placeholder="ex. Media" type="text" name="category" required="required" class="form-control">
 				</div>				
 			</fieldset>
 			<input type="submit" value="Add new item"class="btn btn-primary">

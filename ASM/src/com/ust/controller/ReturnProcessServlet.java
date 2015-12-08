@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import com.ust.model.BorrowedBean;
 import com.ust.utility.BorrowedBeanFactory;
-import com.ust.utility.ReturnFactory;
+
 import com.ust.utility.sql.SQLOperations;
 
 
@@ -39,10 +39,10 @@ public class ReturnProcessServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session=request.getSession(false);
 		if(session!=null){
-			String itemId = request.getParameter("itemId");
+			int itemId =Integer.parseInt(request.getParameter("itemId"));
 			int idNum = Integer.parseInt(request.getParameter("idNum"));
 
-			BorrowedBean returned = ReturnFactory.getFactoryBean(itemId, idNum);
+			BorrowedBean returned = new BorrowedBean();
 
 			if (connection != null) {
 				if (SQLOperations.returnBorrowed(returned, connection)){

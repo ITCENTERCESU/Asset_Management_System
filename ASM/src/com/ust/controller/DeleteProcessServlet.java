@@ -46,10 +46,12 @@ public class DeleteProcessServlet extends HttpServlet {
 		RequestDispatcher dispatcher = null; 
 		
 		if (session != null) {
-			String itemId = request.getParameter("itemId");
+			int itemId = Integer.parseInt(request.getParameter("itemId"));
 			String itemName = request.getParameter("itemName");
-			AssetBean asset = AssetBeanFactory.getFactoryBean(itemId,
-					itemName);
+			String category = request.getParameter("category");
+		
+			AssetBean asset = AssetBeanFactory.getFactoryBean(
+					itemName, category);
 
 			if (connection != null) {
 				SQLOperations.deleteItem(itemId, connection);

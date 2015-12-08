@@ -2,22 +2,34 @@ package com.ust.model;
 
 
 public class BorrowedBean {
-	//itemId, itemName,idNum, lastName, firstName, borrowedDate,dueDate, status
 	
-	private String itemId;
-	private String itemName;
-	private int idNum;
-	private String lastName;
-	private String firstName;
-	private String borrowedDate;
-	private String dueDate;
-	private String status;
 	
-	public String getItemId() {
+	public int itemId;
+	public int idNum;
+	public String itemName;
+	public String borrowedDate;
+	public String dueDate;
+	public String returnDate;
+
+	
+	public int getItemId() {
 		return itemId;
 	}
-	public void setItemId(String itemId) {
+	public void setItemId(int itemId) {
 		this.itemId = itemId;
+	}
+	
+	public int getIdNum() {
+		return idNum;
+	}
+	public void setIdNum(int idNum) {
+		this.idNum = idNum;
+	}
+	public String getReturnDate() {
+		return returnDate;
+	}
+	public void setReturnDate(String returnDate) {
+		this.returnDate = returnDate;
 	}
 	public String getItemName() {
 		return itemName;
@@ -25,24 +37,7 @@ public class BorrowedBean {
 	public void setItemName(String itemName) {
 		this.itemName = itemName;
 	}
-	public int getIdNum() {
-		return idNum;
-	}
-	public void setIdNum(int idNum) {
-		this.idNum = idNum;
-	}
-	public String getLastName() {
-		return lastName;
-	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-	public String getFirstName() {
-		return firstName;
-	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+	
 	public String getBorrowedDate() {
 		return borrowedDate;
 	}
@@ -55,12 +50,7 @@ public class BorrowedBean {
 	public void setDueDate(String dueDate) {
 		this.dueDate = dueDate;
 	}
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = "unavailable";
-	}
+	
 	
 	
 	

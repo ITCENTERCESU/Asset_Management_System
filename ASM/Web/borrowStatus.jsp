@@ -7,7 +7,8 @@
 	return;} %>
 
     <jsp:useBean id="borrowed" type="com.ust.model.BorrowedBean" scope="request" /> 
-    
+    <jsp:useBean id="borrowers" type="com.ust.model.BorrowersBean" scope="request" />  
+     <jsp:useBean id="asset" type="com.ust.model.AssetBean" scope="request" /> 
     <jsp:useBean id="currently" type="java.sql.ResultSet" scope="request"/>
 <!DOCTYPE html>
 <html>
@@ -55,12 +56,15 @@ row .form-group {
 				<p id="item-id">${borrowed.itemId}</p>
 				
 				<label for="item-name">Item Name</label>
-				<p id="item-name">${borrowed.itemName}</p>
+				<p id="item-name">${asset.itemName}</p>
+				
+				<label for="category">Category</label>
+				<p id="item-name">${asset.category}</p>
 				
 				<label for="borrowed-date">Borrowed Date</label>
 				<p id="borrowed-date"><%= borrowed.getBorrowedDate() %></p>
 				
-				<label for="due-date"></label>
+				<label for="due-date">Due Date</label>
 				<p id="due-date"><%= borrowed.getDueDate() %></p>
 			</section>
 			
@@ -68,10 +72,10 @@ row .form-group {
 				<h2>Borrower Details</h2>
 				
 				<label for="borrower-id">Borrower ID</label>
-				<p id="borrower-id">${borrowed.idNum}</p>
+				<p id="borrower-id">${borrowers.idNum}</p>
 				
 				<label for="borrower-name">Borrower Name</label>
-				<p id="borrower-name">${borrowed.lastName} ${borrowed.firstName}</p>
+				<p id="borrower-name">${borrowers.lastName} ${borrowers.firstName}</p>
 				
 				<form role="form"action="inventoryprocess.html" method="post">
 					<br>

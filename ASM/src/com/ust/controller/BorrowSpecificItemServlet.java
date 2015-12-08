@@ -38,7 +38,8 @@ public class BorrowSpecificItemServlet extends HttpServlet {
 			try {
 				RequestDispatcher dispatcher = null; 
 				if (request.getParameter("action").equals("borrow")) {
-					String itemId = request.getParameter("itemId");
+					int itemId = Integer.parseInt(request.getParameter("itemId"));
+					
 					AssetBean asset = SQLOperations.searchAsset(itemId, connection);
 					request.setAttribute("borrowForm", asset);
 					dispatcher = getServletContext().getRequestDispatcher("/borrowForm.jsp");

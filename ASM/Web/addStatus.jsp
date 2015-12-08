@@ -1,15 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-<<<<<<< HEAD
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ page session="false" %>
 <% if (request.getSession(false)==null) {
 	response.sendRedirect("index.jsp");
 	return;} %>
 
-=======
-	pageEncoding="ISO-8859-1"%>
-<%@ page session="false"%>
->>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,8 +40,9 @@ p {
 				<h2>The item has been added successfully</h2>
 
 				<br />
-				<p>Item ID: ${asset.itemId}</p>
+
 				<p>Item Name: ${asset.itemName}</p>
+				<p>Category: ${asset.category} </p>
 				<p>Status: ${asset.status}</p>
 			</header>
 		

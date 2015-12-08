@@ -60,6 +60,15 @@ form #about-item input {
 				<input id="first-name" placeholder="ex. Jose" type="text" name="firstName"  required="required" class="form-control">
 			</div>				
 			
+			<div class="form-group">
+				<label for="contactNumber">Contact Number</label> 
+				<input id="contactNumber" placeholder="ex. 09171234567" type="text" name="contactNumber"  required="required" class="form-control">
+			</div>	
+			
+			<div class="form-group">
+				<label for="email">Email Address</label> 
+				<input id="email" placeholder="ex. 2013056531@ust-ics.mygbiz.com" type="text" name="email"  required="required" class="form-control">
+			</div>		
 		</fieldset>
 		
 		<fieldset id="about-item" class="col-xs-12 col-sm-5">
@@ -77,6 +86,20 @@ form #about-item input {
 					<label for="item-name" class="control-label col-sm-4">Item Name</label>
 					<div class="col-sm-8">
 						<input id="item-name" type="text" name="itemName" value="${borrowForm.itemName}" readonly class="form-control">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="category" class="control-label col-sm-4">Category</label>
+					<div class="col-sm-8">
+						<input id="category" type="text" name="category" value="${borrowForm.category}" readonly class="form-control">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="status" class="control-label col-sm-4">Status</label>
+					<div class="col-sm-8">
+						<input id="status" type="text" name="status" value="${borrowForm.status}" readonly class="form-control">
 					</div>
 				</div>
 				

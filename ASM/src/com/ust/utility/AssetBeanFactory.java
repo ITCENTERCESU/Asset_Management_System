@@ -4,11 +4,14 @@ import com.ust.model.AssetBean;
 
 public class AssetBeanFactory {
 	
-	public static AssetBean getFactoryBean(String itemId, String itemName) {
+	public static AssetBean getFactoryBean(String itemName, String category ) {
 		
 		AssetBean asset = new AssetBean();
-		asset.setItemId(itemId);
+		
+		
 		asset.setItemName(itemName);
+		asset.setCategory(category);
+
 		
 		return asset;
 	}

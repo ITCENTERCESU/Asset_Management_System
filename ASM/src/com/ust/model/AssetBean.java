@@ -1,14 +1,16 @@
 package com.ust.model;
 
 public class AssetBean {
-	private String itemId;
-	private String itemName;
-	private String status;
+	public int itemId;
+	public String itemName;
+	public String status;
+	public String category;
 	
-	public String getItemId() {
+	
+	public int getItemId() {
 		return itemId;
 	}
-	public void setItemId(String itemId) {
+	public void setItemId(int itemId) {
 		this.itemId = itemId;
 	}
 	
@@ -19,6 +21,13 @@ public class AssetBean {
 		this.itemName = itemName;
 		
 		setStatus("available");
+	}
+	
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
 	}
 	
 	public void setStatus(String status) {

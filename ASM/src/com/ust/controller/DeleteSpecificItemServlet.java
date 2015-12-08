@@ -36,7 +36,7 @@ public class DeleteSpecificItemServlet extends HttpServlet {
 			try {
 				RequestDispatcher dispatcher = null; 
 				if (request.getParameter("action").equals("delete")) {
-					String itemId = request.getParameter("itemId");
+					int itemId = Integer.parseInt(request.getParameter("itemId"));
 					AssetBean asset = SQLOperations.searchAsset(itemId, connection);
 					request.setAttribute("deleteForm", asset);
 					dispatcher = getServletContext().getRequestDispatcher("/deleteConfirmForm.jsp");
