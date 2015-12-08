@@ -32,13 +32,13 @@ label {
 				<legend>Confirm delete for this item:</legend>
 				<div class="form-group">
 					<label for="item-id">Item Id: <input id="item-id"
-						type="text" name="itemId" value="${deleteForm.itemId}" readonly /></label>
+						type="text" name="itemId" value="${deleteForm.itemId}" readonly class="form-control" /></label>
 				</div>
 
 				<div class="form-group">
 					<label for="item-name">Item Name:<input id="item-name"
 						type="text" name="itemName" value="${deleteForm.itemName}"
-						readonly /></label>
+						readonly class="form-control"/></label>
 				</div>
 
 
