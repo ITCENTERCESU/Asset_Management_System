@@ -39,7 +39,10 @@ table .action-borrow-col {
 				
 				<% while(borrowed.next()) {	%>
 				<tr>
-					<td><%=borrowed.getString("itemId")%></td>
+				
+					<%-- <td><%=String.format("%04d", borrowed.getInt("itemId"))%></td> --%>
+					
+					<td><%=borrowed.getString("itemId") %>
 					<td><%=borrowed.getString("itemName")%></td>
 					<td class="action-borrow-col">
 					  <a href="borrowspecificitem.html?itemId=<%=borrowed.getString("itemId")%>&action=borrow">
