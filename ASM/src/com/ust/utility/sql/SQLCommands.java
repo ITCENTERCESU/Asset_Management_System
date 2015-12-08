@@ -32,4 +32,6 @@ public interface SQLCommands {
 	
 	String DELETE_ITEM = "DELETE FROM Inventory WHERE itemId=?";
 	
+	
+	
 }
