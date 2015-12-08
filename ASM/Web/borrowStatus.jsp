@@ -81,40 +81,36 @@ section .form-group .control-label {
 			
 			<section id="borrower-details" class="col-xs-12 col-sm-7">
 				<h2>Borrower's History</h2>
-				<form role="form"action="inventoryprocess.html" method="post">
-					<div class="form-group">
-					<p>
-						Here is a list of other items currently borrowed by 
-						<span id="borrower-name">${borrowed.firstName} ${borrowed.lastName}</span>
-						<span id="borrower-id">&lt;${borrowed.idNum }&gt;</span>:
-					</p> 
-					<div class="table-responsive">
-						<table class="table table-bordered table-striped" role="table">
-						    <tr>
-						    	<th>Item ID</th>
-								<th>Item Name</th>
-								<th>Date Borrowed</th>
-								<th>Due Date</th>
-						    </tr>
-						    
-						
-							<% while(currently.next()) { %>
-								<tr>
-								
-								<!-- will contain ERROR if data type of itemId is changed -->
+				<p>
+					Here is a list of other items currently borrowed by 
+					<span id="borrower-name">${borrowed.firstName} ${borrowed.lastName}</span>
+					<span id="borrower-id">&lt;${borrowed.idNum }&gt;</span>:
+				</p> 
+				<div class="table-responsive">
+					<table class="table table-bordered table-striped" role="table">
+					    <tr>
+					    	<th>Item ID</th>
+							<th>Item Name</th>
+							<th>Date Borrowed</th>
+							<th>Due Date</th>
+					    </tr>
+					    
+					
+						<% while(currently.next()) { %>
+							<tr>
+							
+							<!-- will contain ERROR if data type of itemId is changed -->
 
-								<%if(!currently.getString("itemId").equals(borrowed.getItemId())) { %>
-									<td><%=currently.getString("itemId")%></td>
-									<td><%=currently.getString("itemName")%></td>
-									<td><%=currently.getString("borrowedDate")%></td>
-									<td><%=currently.getString("dueDate")%></td>
-								<%} %>
-								</tr>			
-							<% } %>
-					    </table>
-					</div>
-					</div>
-				</form>
+							<%if(!currently.getString("itemId").equals(borrowed.getItemId())) { %>
+								<td><%=currently.getString("itemId")%></td>
+								<td><%=currently.getString("itemName")%></td>
+								<td><%=currently.getString("borrowedDate")%></td>
+								<td><%=currently.getString("dueDate")%></td>
+							<%} %>
+							</tr>			
+						<% } %>
+				    </table>
+				</div>
 			</section>
 			<form action="inventoryprocess.html" method="post">
 				<input type="submit" value="OK" class="btn btn-info">
