@@ -20,7 +20,8 @@
 				
 				<div class="form-group">
 					<label for="item-id">Item ID</label>
-					<input id="item-id" placeholder="ex. 0001" type="text" name="itemId" required="required" class="form-control" autofocus="autofocus">
+					<input id="item-id" placeholder="ex. 0001" pattern="[0-9]{4}" type="text" name="itemId" required="required" class="form-control" autofocus="autofocus">
+					<span class="help-block">Minimum of 4 digits</span>
 				</div>
 				
 				<div class="form-group">
