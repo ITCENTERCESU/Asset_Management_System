@@ -24,7 +24,7 @@
 				
 				<div class="form-group">
 					<label for="item-name">Item Name</label>
-					<input id="item-name" placeholder="ex. Database Management System" type="text" name="itemName" required="required" class="form-control">
+					<input id="item-name" placeholder="ex. Database Management System" type="text" name="itemName" required="required" class="form-control" autofocus>
 				</div>	
 				
 				<div class="form-group">
