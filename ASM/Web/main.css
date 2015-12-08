@@ -7,18 +7,19 @@ body {
 }
 
 nav {
+	background-color: #ff7f00 !important;
 	color: white;
 }
 
-nav .container-fluid {
-	background-color: #ff7f00 !important;
+nav .navbar {
+	padding: 1em 0;
 }
 
 nav .navbar-brand {
-	font-size: 1.5em;
+	font-size: 1.25em;
 }
 nav .navbar-brand .acronym {
-	font-size: 3em;
+	font-size: 2em;
 	font-weight: bold;
 }
 
@@ -34,25 +35,12 @@ nav .navbar-brand #S {
 	color: black;
 }
 
-nav .navbar-nav .navbar-brand {
-	color: white;
+nav #manage-accounts {
+	font-size: 1.25em;
 }
-
-nav .navbar-nav .navbar-toggle {
-	border: .1em solid white;
-}
-
-nav form *{
-	display: inline;	
-}
-nav form .btn {
-	background-color: inherit;
-	margin: .3em;
-}
-
-nav form #logout {
-	border: .1em solid white;
-	
+nav .navbar-collapse #home {
+	text-align: center;
+	font-size: 1.75em;
 }
 
 table {

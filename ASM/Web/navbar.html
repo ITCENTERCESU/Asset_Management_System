@@ -2,43 +2,46 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container-fluid">
 		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hamburger-navigation">
+                 <span class="sr-only">Navigation toggle</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+            </button>
 			<a href="inventoryprocess.html" class="navbar-brand">
 				<span class="acronym" id="A">A</span>sset 
 				<span class="acronym" id="M">M</span>anagement 
 				<span class="acronym" id="S">S</span>ystem
 			</a>
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hamburger-navigation">
-                   <span class="sr-only">Navigation toggle</span>
-                   <span class="icon-bar"></span>
-                   <span class="icon-bar"></span>
-                   <span class="icon-bar"></span>
-               </button>
 		</div>
-		<div class="collapse navbar-collapse" id="hamburger-navigation">
-			<form class="navbar-form navbar-right">
-				<!-- Create New Account Button -->
-				<!-- <button type="submit" formaction="addaccount.html" formmethod="post" class="btn btn-default">
-					Manage Accounts
-				</button> -->
+		<div class="navbar-collapse collapse" id="hamburger-navigation">
+			<ul class="nav navbar-nav navbar-right">
+				<li id="home" class="active">
+					<a href="inventoryprocess.html">
+						<span class="glyphicon glyphicon-home"></span>
+					</a>
+				</li>
 				
-				<div class="dropdown">
-				  <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+				<li class="dropdown">
+				  <a id="manage-accounts" href="#" class="dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 				  	Manage Accounts
 				  	<span class="caret"></span>
-				  </button>
-				  <ul class="dropdown-menu dropdown-menu-right">
-				    <li class="divider"><a href="#">View All Accounts</a></li>
+				  </a>
+				  <ul class="dropdown-menu" aria-labelledby="manage-accounts">
+				    <li><a href="#">View All Accounts</a></li>
+				    <li role="separator" class="divider"></li>
 				    <li><a href="#">Edit an Account</a></li>
 				    <li><a href="#">Add New Account</a></li>
-				    <li><a href="addacccount.html">Delete Account</a></li>
+				    <li><a href="addacccount.html">Delete an Account</a></li>
 				  </ul>
-				</div>
+				</li>
 				
-				<!-- Logout Button -->
-				<button id="logout" type="submit" formaction="processlogout.html" formmethod="post" class="btn btn-primary">
-					Logout
-				</button>
-			</form>
+				<li class="navbar-form">
+					<button id="logout" type="submit" formaction="processlogout.html" formmethod="post" class="btn btn-primary">
+						Logout
+					</button>
+				</li>
+			</ul>
 		</div>
 	</div>
 </nav>
