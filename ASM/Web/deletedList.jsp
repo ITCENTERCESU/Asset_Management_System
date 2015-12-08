@@ -5,7 +5,7 @@
 	response.sendRedirect("index.jsp");
 	return;} %>
 
-<jsp:useBean id="delete" type="java.sql.ResultSet" scope="request"/>
+<jsp:useBean id="deleted" type="java.sql.ResultSet" scope="request"/>
     
 <!DOCTYPE html>
 <html>
@@ -32,23 +32,23 @@ table .action-borrow-col {
 	
 	<div class="container">
 		<div class="table-responsive">	
-			<a href="deletedlist.html">View Deleted Items</a>
-		
 			<table class="table table-striped table-bordered" role="table">
-				<caption>Select the Item to be deleted.</caption>
-				<i>Note: Currently borrowed items cannot be deleted. </i>
+				<caption>To restore: click the "Restore" button .</caption>
+			
 				<tr>
 					<th>Item ID</th>
 					<th>Item Name</th>
-					<th class="action-borrow-col">Action-Delete</th>
+					<th>Category </th>
+					<th class="action-borrow-col">Action-Restore</th>
 				</tr>
 				
-				<% while(delete.next()) {	%>
+				<% while(deleted.next()) {	%>
 				<tr>
-					<td><%=delete.getInt("itemId")%></td>
-					<td><%=delete.getString("itemName")%></td>
+					<td><%=deleted.getInt("itemId")%></td>
+					<td><%=deleted.getString("itemName")%></td>
+					<td><%=deleted.getString("category") %></td>
 					<td class="action-borrow-col">
-					  <a href="deletespecificitem.html?itemId=<%=delete.getString("itemId")%>&action=delete">
+					  <a href="restorespecificitem.html?itemId=<%=deleted.getString("itemId")%>&action=restore">
 					  	<img id="borrow-img" src="images/delete-black.png"/>
 					  </a>
 					</td>

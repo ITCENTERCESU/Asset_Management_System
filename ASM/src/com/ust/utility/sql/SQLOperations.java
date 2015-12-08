@@ -109,6 +109,31 @@ public class SQLOperations implements SQLCommands {
 	}
 	
 	
+	public static AssetBean searchDeleted(int itemId, 
+			Connection connection) {
+			
+			AssetBean asset = new AssetBean();
+			 
+			try {
+		        PreparedStatement pstmt = 
+		        	connection.prepareStatement(SEARCH_DELETED);
+		        pstmt.setInt(1, itemId);             
+		        ResultSet rs  = pstmt.executeQuery();
+		        
+		        while (rs.next()) { 
+		        	asset.setItemId(rs.getInt("itemId"));
+		        	asset.setItemName(rs.getString("itemName"));
+		        	asset.setCategory(rs.getString("category"));
+		        	asset.setStatus(rs.getString("status"));
+		        }
+			} catch (SQLException sqle) {
+				System.out.println("SQLException - searchAsset: " 
+						+ sqle.getMessage());
+				return asset; 
+			}	
+			return asset;
+	}
+	
 	public static boolean addBorrowed(BorrowedBean borrowed, BorrowersBean borrowers,
 			Connection connection) {
 			//itemId,idNum, borrowedDate,dueDate, returnDate
@@ -225,7 +250,41 @@ public class SQLOperations implements SQLCommands {
 		}	
 		return updated;
 	}
+	
+	public static ResultSet getDeletedList(Connection connection) {
+		ResultSet rs = null;
+		try {
+			Statement stmt = connection.createStatement();
+			rs = stmt.executeQuery(GET_DELETED_LIST);  
+		} catch (SQLException sqle) {
+			System.out.println("SQLException - getBorrowedList: " 
+			  + sqle.getMessage());
+			return rs; 
+		}	
+		return rs;
+	}
 
+	public static synchronized int restoreItem(int itemId, Connection connection) {
+		int updated = 0;
+		
+		try {
+			connection.setAutoCommit(false);
+	        PreparedStatement pstmt = connection.prepareStatement(RESTORE_ITEM);
+	        pstmt.setInt(1, itemId);             
+	        updated  = pstmt.executeUpdate();
+	        connection.commit();
+		} catch (SQLException sqle) {
+			System.out.println("SQLException - deleteItem: " + sqle.getMessage());
+			
+			try {
+				connection.rollback();
+			} catch (SQLException sql) {
+				System.err.println("Error on Delete Connection Rollback - " + sql.getMessage());
+			}
+			return updated; 
+		}	
+		return updated;
+	}
 }
 
 
