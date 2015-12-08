@@ -81,6 +81,7 @@ section .form-group .control-label {
 			
 			<section id="borrower-details" class="col-xs-12 col-sm-7">
 				<h2>Borrower's History</h2>
+				<%if(currently != null) { %>
 				<p>
 					Here is a list of other items currently borrowed by 
 					<span id="borrower-name">${borrowed.firstName} ${borrowed.lastName}</span>
@@ -111,6 +112,14 @@ section .form-group .control-label {
 						<% } %>
 				    </table>
 				</div>
+				<% } else { %>
+					<p>
+						The borrower 
+						<span id="borrower-name">${borrowed.firstName} ${borrowed.lastName}</span>
+						<span id="borrower-id">&lt;${borrowed.idNum }&gt;</span>
+						has not borrowed other items.
+					</p> 
+				<% } %>
 			</section>
 			<form action="inventoryprocess.html" method="post">
 				<input type="submit" value="OK" class="btn btn-info">
