@@ -32,10 +32,6 @@ section .form-group .form-control {
 section .form-group .control-label {
 	font-weight: normal;
 }
-
-#borrower-details #borrower-name #last {
-	text-transform: capitalize;	
-}
 	
 </style>
 </head>
@@ -79,29 +75,11 @@ section .form-group .control-label {
 			
 			<section id="borrower-details" class="col-xs-12 col-sm-6">
 				<h2>About the borrower</h2>
-				
-				<div class="form-horizontal">
-					<div class="form-group">
-						<label for="borrower-id" class="control-label col-sm-3">Borrower ID</label>
-						<div class="col-sm-9">
-							<p id="borrower-id" class="form-control">${borrowed.idNum}</p>
-						</div>
-					</div>
-					
-					<div class="form-group">
-						<label for="borrower-name" class="control-label col-sm-3">Borrower Name</label>
-						<div class="col-sm-9">
-							<p id="borrower-name" class="form-control">
-								<span id="last">${borrowed.lastName}</span>,
-								<span id="first">${borrowed.firstName}</span>
-							</p>
-						</div>
-					</div>
-				</div>
 				<form role="form"action="inventoryprocess.html" method="post">
 					<div class="form-group">
 					<h3>Borrower's History</h3>
-					<p>Here is a list of all items borrowed by this borrower.</p> 
+					<p>Here is a list of all items borrowed by 
+						${borrowed.firstName} ${borrowed.lastName}.</p> 
 					<div class="table-responsive">
 						<table class="table table-bordered table-striped" role="table">
 						    <tr>
