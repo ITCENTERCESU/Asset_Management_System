@@ -14,27 +14,16 @@
 <link rel="icon" type="image/png" href="./images/ust-iics-is-logo.png" />
 <title>Asset Management System</title>
 <style type="text/css">
-		
-p {
-	font-weight : normal;
+section .form-group {
 	font-size: 1.5em;
-}
-label {
-	font-weight: bold;
-	font-size: 1.5em;
-}
-row  {
-	margin-right:2em;
+	margin: .5em 0;
 }
 
-
-row .form-group {
-	display: inline;
+section .form-group .form-control {
+	border: none;
+	box-shadow: none;
 }
-
-.container #borrowing-success {
-	color: green;
-} 
+	
 </style>
 </head>
 <body>
@@ -42,35 +31,60 @@ row .form-group {
 <%if (request.getParameter("success").equals("true")) { %>
 	<div class="container">
 		<div class="row">
-			<h1 id="borrowing-success">Borrowing Successful!</h1>
+			<h1 id="success">Borrowing Successful!</h1>
 		
-			<section id="item-details" class="col-xs-12 col-sm-7">
+			<section id="item-details" class="form-horizontal col-xs-12 col-sm-6">
 				<h2>Item Details</h2>
+				<div class="form-group">
+					<label for="item-id" class="control-label col-sm-4">Item ID</label>
+					<div class="col-sm-8">
+						<p id="item-id" class="form-control">${borrowed.itemId}</p>
+					</div>
+				</div>
 				
-				<label for="item-id">Item ID</label>
-				<p id="item-id">${borrowed.itemId}</p>
+				<div class="form-group">
+					<label for="item-name" class="control-label col-sm-4">Item Name</label>
+					<div class="col-sm-8">
+						<p id="item-name" class="form-control">${borrowed.itemName}</p>
+					</div>
+				</div>
 				
-				<label for="item-name">Item Name</label>
-				<p id="item-name">${borrowed.itemName}</p>
+				<div class="form-group">
+					<label for="borrowed-date" class="control-label col-sm-4">Borrowed Date</label>
+					<div class="col-sm-8">
+						<p id="borrowed-date" class="form-control"><%= borrowed.getBorrowedDate() %></p>
+					</div>
+				</div>
 				
-				<label for="borrowed-date">Borrowed Date</label>
-				<p id="borrowed-date"><%= borrowed.getBorrowedDate() %></p>
-				
-				<label for="due-date"></label>
-				<p id="due-date"><%= borrowed.getDueDate() %></p>
+				<div class="form-group">
+					<label for="due-date" class="control-label col-sm-4">Due Date</label>
+					<div class="col-sm-8">
+						<p id="due-date" class="form-control"><%= borrowed.getDueDate() %></p>
+					</div>
+				</div>
 			</section>
 			
-			<section id="borrower-details" class="col-xs-12 col-sm-5">
+			<section id="borrower-details" class="form-horizontal col-xs-12 col-sm-6">
 				<h2>Borrower Details</h2>
 				
-				<label for="borrower-id">Borrower ID</label>
-				<p id="borrower-id">${borrowed.idNum}</p>
+				<div class="form-group">
+					<label for="borrower-id" class="control-label col-sm-4">Borrower ID</label>
+					<div class="col-sm-8">
+						<p id="borrower-id" class="form-control">${borrowed.idNum}</p>
+					</div>
+				</div>
 				
-				<label for="borrower-name">Borrower Name</label>
-				<p id="borrower-name">${borrowed.lastName} ${borrowed.firstName}</p>
+				<div class="form-group">
+					<label for="borrower-name" class="control-label col-sm-4">Borrower Name</label>
+					<div class="col-sm-8">
+						<p id="borrower-name" class="form-control">
+							<%= String.format("%s, %s", borrowed.getLastName().toUpperCase(), borrowed.getFirstName()) %>
+						</p>
+					</div>
+				</div>
+				
 				
 				<form role="form"action="inventoryprocess.html" method="post">
-					<br>
 					<div class="form-group">
 					<p><b>Here is a list of all items borrowed by this borrower.</b></p> 
 					<p><b>Please return them on time. </b></p>
@@ -99,7 +113,6 @@ row .form-group {
 						</div>
 				</form>
 			</section>
-	
 		</div>
 	</div>
 	<% } else { %>
