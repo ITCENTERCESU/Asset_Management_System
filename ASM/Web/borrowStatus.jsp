@@ -30,65 +30,81 @@ row  {
 
 row .form-group {
 	display: inline;
-}	
-	</style>
+}
+
+.container #borrowing-success {
+	color: green;
+} 
+</style>
 </head>
 <body>
 <%@include file="navbar.html" %>
-	<%if (request.getParameter("success").equals("true")) { %>
-		<div class="container">
-		<header>
-		<h2>Borrowing Successful!</h2>
-		<br/>
-		<label>ITEM DETAILS: </label>
-		<p>Item ID: ${borrowed.itemId}</p>
-		<p>Item Name: ${borrowed.itemName}</p>
-		<p>Borrowed Date: <%= borrowed.getBorrowedDate() %></p>
-		<p>Due Date: <%= borrowed.getDueDate() %></p>
-		<br>
-		<label>BORROWER'S DETAILS</label>
-		<p>ID Number: ${borrowed.idNum}</p>
-		<p>Last Name: ${borrowed.lastName}</p>
-		<p>First Name: ${borrowed.firstName}</p>
-
-		
-	
-
+<%if (request.getParameter("success").equals("true")) { %>
+	<div class="container">
 		<div class="row">
-		<form role="form"action="inventoryprocess.html" method="post"class="col-sm-offset-4 col-sm-4">
-			<br>
-			<div class="form-group">
-			<p><b>Here is the list of all the things you are currently borrowing.</b></p> 
-			<p><b>Please return them on time. </b></p>
-			<br>
-				<table border="1" style="width:100%">
-				    <tr>
-				    	<td align="center">Item ID</td>
-						<td align="center">Item Name</td>
-						<td align="center">Date Borrowed</td>
-						<td align="center">Due Date</td>
-				    </tr>
-				    
+			<h1 id="borrowing-success">Borrowing Successful!</h1>
+		
+			<section id="item-details" class="col-xs-12 col-sm-7">
+				<h2>Item Details</h2>
 				
-					<% while(currently.next()) { %>
-						<tr>
-							<td><%=currently.getString("itemId")%></td>
-							<td><%=currently.getString("itemName")%></td>
-							<td><%=currently.getString("borrowedDate")%></td>
-							<td><%=currently.getString("dueDate")%></td>
-						</tr>			
-					<% } %>
-			    </table>
-				<br> 
-				<br>
-				<input type="submit" value="Home"class="btn btn-default">
-				</div>
-		</form>
+				<label for="item-id">Item ID</label>
+				<p id="item-id">${borrowed.itemId}</p>
+				
+				<label for="item-name">Item Name</label>
+				<p id="item-name">${borrowed.itemName}</p>
+				
+				<label for="borrowed-date">Borrowed Date</label>
+				<p id="borrowed-date"><%= borrowed.getBorrowedDate() %></p>
+				
+				<label for="due-date"></label>
+				<p id="due-date"><%= borrowed.getDueDate() %></p>
+			</section>
+			
+			<section id="borrower-details" class="col-xs-12 col-sm-5">
+				<h2>Borrower Details</h2>
+				
+				<label for="borrower-id">Borrower ID</label>
+				<p id="borrower-id">${borrowed.idNum}</p>
+				
+				<label for="borrower-name">Borrower Name</label>
+				<p id="borrower-name">${borrowed.lastName} ${borrowed.firstName}</p>
+				
+				<form role="form"action="inventoryprocess.html" method="post">
+					<br>
+					<div class="form-group">
+					<p><b>Here is a list of all items borrowed by this borrower.</b></p> 
+					<p><b>Please return them on time. </b></p>
+					<br>
+						<table border="1" style="width:100%">
+						    <tr>
+						    	<td align="center">Item ID</td>
+								<td align="center">Item Name</td>
+								<td align="center">Date Borrowed</td>
+								<td align="center">Due Date</td>
+						    </tr>
+						    
+						
+							<% while(currently.next()) { %>
+								<tr>
+									<td><%=currently.getString("itemId")%></td>
+									<td><%=currently.getString("itemName")%></td>
+									<td><%=currently.getString("borrowedDate")%></td>
+									<td><%=currently.getString("dueDate")%></td>
+								</tr>			
+							<% } %>
+					    </table>
+						<br> 
+						<br>
+						<input type="submit" value="Home"class="btn btn-default">
+						</div>
+				</form>
+			</section>
+	
+		</div>
 	</div>
 	<% } else { %>
-		<h1>Adding failed</h1></header>	
+		<h1 id="error">Adding failed</h1>
 	<% } %> 
-	</div>	
 	<script type="text/javascript" src="./scripts/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./scripts/validator.min.js"></script>
