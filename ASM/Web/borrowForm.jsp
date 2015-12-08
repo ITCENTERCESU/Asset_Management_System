@@ -106,7 +106,7 @@ form #about-item input {
 				<input id="first-name" placeholder="ex. Jose" type="text" name="firstName"  required="required" class="form-control">
 			</div>				
 			
-			<div class="col-sm-12" id="buttons">
+			<div id="buttons">
 				<div class="form-group">
 					<input type="submit" value="Borrow this item" class="btn btn-primary">
 				</div>
