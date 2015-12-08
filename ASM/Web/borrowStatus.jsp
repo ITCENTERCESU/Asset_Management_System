@@ -48,7 +48,7 @@ section .form-group .control-label {
 		<div class="row">
 			<h1 id="success">Borrowing Successful!</h1>
 		
-			<section id="item-details" class="form-horizontal col-xs-12 col-sm-6">
+			<section id="item-details" class="form-horizontal col-xs-12 col-sm-5">
 				<h2>Item Borrowed</h2>
 				<div class="form-group">
 					<label for="item-id" class="control-label col-sm-3">Item ID</label>
@@ -79,14 +79,14 @@ section .form-group .control-label {
 				</div>
 			</section>
 			
-			<section id="borrower-details" class="col-xs-12 col-sm-6">
+			<section id="borrower-details" class="col-xs-12 col-sm-7">
 				<h2>About the borrower</h2>
 				<form role="form"action="inventoryprocess.html" method="post">
 					<div class="form-group">
-					<h3>Borrower's History</h3>
 					<p>
-						Here is a list of all items borrowed by 
-						<span id="borrower-name">${borrowed.firstName} ${borrowed.lastName}:</span>
+						Here is a list of items currently borrowed by 
+						<span id="borrower-name">${borrowed.firstName} ${borrowed.lastName}</span>
+						<span id="borrower-id">&lt;${borrowed.idNum }&gt;</span>:
 					</p> 
 					<div class="table-responsive">
 						<table class="table table-bordered table-striped" role="table">
