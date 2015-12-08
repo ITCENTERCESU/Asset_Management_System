@@ -1,6 +1,10 @@
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" session="false" import="java.util.*, java.text.*" %>
+<%@ page session="false" %>
+<% if (request.getSession(false)==null) {
+	response.sendRedirect("index.jsp");
+	return;} %>
+
 <!DOCTYPE html>
 <html>
 <head>

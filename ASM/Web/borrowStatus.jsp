@@ -2,6 +2,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ page session="false" %>
+<% if (request.getSession(false)==null) {
+	response.sendRedirect("index.jsp");
+	return;} %>
+
     <jsp:useBean id="borrowed" type="com.ust.model.BorrowedBean" scope="request" /> 
     
     <jsp:useBean id="currently" type="java.sql.ResultSet" scope="request"/>

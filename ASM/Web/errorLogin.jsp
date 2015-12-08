@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ page session="false" %>
+<% if (request.getSession(false)==null) {
+	response.sendRedirect("index.jsp");
+	return;} %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +22,7 @@
 	<!-- Header -->
 	<div class="container">
 		<header>
-	<h2>The username and password is incorrect. Please try again</h2>
+	<h2>Invalid credentials. Please try again.</h2>
 	</header>
 	<div class="row">
 	<form action="index.jsp" class="col-sm-offset-5 col-sm-4">
