@@ -71,22 +71,14 @@ section .form-group .control-label {
 				
 				<label for="category">Category</label>
 				<p id="item-name">${asset.category}</p>
-=======
+
 				<div class="form-group">
 					<label for="borrowed-date" class="control-label col-sm-4">Borrowed Date</label>
 					<div class="col-sm-8">
 						<p id="borrowed-date" class="form-control"><%= borrowed.getBorrowedDate() %></p>
 					</div>
 				</div>
->>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
 				
-<<<<<<< HEAD
-				<label for="borrowed-date">Borrowed Date</label>
-				<p id="borrowed-date"><%= borrowed.getBorrowedDate() %></p>
-				
-				<label for="due-date">Due Date</label>
-				<p id="due-date"><%= borrowed.getDueDate() %></p>
-=======
 				<div class="form-group">
 					<label for="due-date" class="control-label col-sm-4">Due Date</label>
 					<div class="col-sm-8">

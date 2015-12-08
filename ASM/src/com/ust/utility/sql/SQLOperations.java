@@ -188,7 +188,7 @@ public class SQLOperations implements SQLCommands {
 		
 	}
 	
-	public static ResultSet getCurrentlyBorrowing(int idNum, Connection connection) {
+	public static ResultSet getCurrentlyBorrowing(int idNum,  Connection connection) {
 		ResultSet rs = null;
 		try {
 

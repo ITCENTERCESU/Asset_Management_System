@@ -32,6 +32,7 @@ public interface SQLCommands {
 			+ "FROM Borrowed "
 			+ "INNER JOIN Inventory	"
 			+ "ON Borrowed.itemId = Inventory.itemId AND Borrowed.idNum =?;";
+	
 	String DELETE_ITEM = "DELETE FROM Inventory WHERE itemId=?";
 	
 	
