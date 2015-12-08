@@ -75,7 +75,7 @@ table .status {
 					<input id="add-new-button" type="submit" value="New" class="btn btn-default">
 				</form>
 				<!-- Delete Item button -->
-				<form action="deleteprocess.html" method="post">
+				<form action="listdeleteprocess.html" method="post">
 					<input id="delete-button" type="submit" value="Delete" class="btn btn-default">
 				</form>
 			</div>

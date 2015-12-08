@@ -10,9 +10,11 @@
 	<form action="processdeleteconfirm.html" method="post" >
 		<h1>Confirm delete for this item:</h1>
 		
-		<p>Item ID: ${borrowForm.itemId} </p>
-		<p>Item Name: ${borrowForm.itemName} </p>
+		<p>Item Id: <input id="item-id" type="text" name="itemId" value="${deleteForm.itemId}" readonly/></p>
 		
+		<p>Item Name:<input id="item-name" type="text" name="itemName" value="${deleteForm.itemName}" readonly/></p>
+		
+			
 		<input type="submit" value="Delete Item">
 	</form>
 	

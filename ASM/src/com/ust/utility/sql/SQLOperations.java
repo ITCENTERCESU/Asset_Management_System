@@ -135,13 +135,12 @@ public class SQLOperations implements SQLCommands {
 			try {
 		        PreparedStatement pstmt = connection.prepareStatement(RETURN_BORROWED);
 		        pstmt.setString(1, returned.getItemId()); 
-		       
-		        pstmt.setInt(3, returned.getIdNum()); 
-		      
+		        pstmt.setInt(2, returned.getIdNum());
+		        pstmt.setString(3, returned.getItemId());
 		        
 		        pstmt.executeUpdate(); // execute insert statement  
 			} catch (SQLException sqle) {
-				System.out.println("SQLException - addBorrowed: " + sqle.getMessage());
+				System.out.println("SQLException - returnBorrowed: " + sqle.getMessage());
 				return false; 
 			}	
 			return true;
@@ -187,7 +186,28 @@ public class SQLOperations implements SQLCommands {
 		}	
 		return rs;
 	}
-
+	
+	public static synchronized int deleteItem(String itemId, Connection connection) {
+		int updated = 0;
+		
+		try {
+			connection.setAutoCommit(false);
+	        PreparedStatement pstmt = connection.prepareStatement(DELETE_ITEM);
+	        pstmt.setString(1, itemId);             
+	        updated  = pstmt.executeUpdate();
+	        connection.commit();
+		} catch (SQLException sqle) {
+			System.out.println("SQLException - deleteItem: " + sqle.getMessage());
+			
+			try {
+				connection.rollback();
+			} catch (SQLException sql) {
+				System.err.println("Error on Delete Connection Rollback - " + sql.getMessage());
+			}
+			return updated; 
+		}	
+		return updated;
+	}
 
 }
 
