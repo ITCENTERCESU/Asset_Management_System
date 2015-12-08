@@ -40,6 +40,10 @@ nav .navbar-collapse #logout {
 	text-align: center;
 }
 
+nav .navbar-form input {
+	margin: 0;
+}
+
 nav .navbar-collapse #home {
 	font-size: 1.70em;
 }
