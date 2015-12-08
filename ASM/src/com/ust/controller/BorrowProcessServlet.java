@@ -74,8 +74,9 @@ public class BorrowProcessServlet extends HttpServlet {
 
 
 		if (connection != null) {
-			if (SQLOperations.addBorrowed(borrowed, borrowers, connection) && SQLOperations.addBorrowers(borrowers, connection) ){
+			if ((SQLOperations.addBorrowed(borrowed, borrowers, connection ))&& (SQLOperations.addBorrowers(borrowers,connection))){
 				System.out.println("successful insert");
+				
 				
 				request.setAttribute("asset", asset);
 				request.setAttribute("borrowed", borrowed);

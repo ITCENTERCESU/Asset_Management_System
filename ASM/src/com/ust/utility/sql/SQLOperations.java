@@ -128,8 +128,7 @@ public class SQLOperations implements SQLCommands {
 	}
 	
 	
-	public static boolean addBorrowers(BorrowersBean borrowers, 
-			Connection connection) {
+	public static boolean addBorrowers(BorrowersBean borrowers, Connection connection) {
 			//itemId,idNum, borrowedDate,dueDate, returnDate
 			try {
 		        PreparedStatement pstmt = connection.prepareStatement(INSERT_BORROWERS);

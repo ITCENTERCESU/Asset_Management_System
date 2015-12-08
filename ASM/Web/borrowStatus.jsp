@@ -54,23 +54,24 @@ section .form-group .control-label {
 				<div class="form-group">
 					<label for="item-id" class="control-label col-sm-4">Item ID</label>
 					<div class="col-sm-8">
-						<p id="item-id" class="form-control">${borrowed.itemId}</p>
+						<p id="item-id" class="form-control">${asset.itemId}</p>
 					</div>
 				</div>
 				
 				<div class="form-group">
 					<label for="item-name" class="control-label col-sm-4">Item Name</label>
 					<div class="col-sm-8">
-						<p id="item-name" class="form-control">${borrowed.itemName}</p>
+						<p id="item-name" class="form-control">${asset.itemName}</p>
 					</div>
 				</div>
 				
-<<<<<<< HEAD
-				<label for="item-name">Item Name</label>
-				<p id="item-name">${asset.itemName}</p>
-				
-				<label for="category">Category</label>
-				<p id="item-name">${asset.category}</p>
+				<div class="form-group">
+					<label for="category" class="control-label col-sm-4">Category</label>
+					<div class="col-sm-8">
+						<p id="category" class="form-control">${asset.category}</p>
+					</div>
+				</div>
+
 
 				<div class="form-group">
 					<label for="borrowed-date" class="control-label col-sm-4">Borrowed Date</label>
@@ -85,38 +86,20 @@ section .form-group .control-label {
 						<p id="due-date" class="form-control"><%= borrowed.getDueDate() %></p>
 					</div>
 				</div>
->>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
 			</section>
 			
-<<<<<<< HEAD
-			<section id="borrower-details" class="col-xs-12 col-sm-5">
-				<h2>Borrower Details</h2>
-				
-				<label for="borrower-id">Borrower ID</label>
-				<p id="borrower-id">${borrowers.idNum}</p>
-				
-				<label for="borrower-name">Borrower Name</label>
-				<p id="borrower-name">${borrowers.lastName} ${borrowers.firstName}</p>
-				
-				<form role="form"action="inventoryprocess.html" method="post">
-					<br>
-					<div class="form-group">
-					<p><b>Here is a list of all items borrowed by this borrower.</b></p> 
-					<p><b>Please return them on time. </b></p>
-					<br>
-						<table border="1" style="width:100%">
-=======
+
 			<section id="borrower-details" class="col-xs-12 col-sm-7">
 				<h2>Borrower's History</h2>
 				<% if(!currently.wasNull()) { %>
 					<p>
 						Here is a list of other items currently borrowed by 
-						<span id="borrower-name">${borrowed.firstName} ${borrowed.lastName}</span>
-						<span id="borrower-id">&lt;${borrowed.idNum }&gt;</span>:
+						<span id="borrower-name">${borrowers.firstName} ${borrowers.lastName}</span>
+						<span id="borrower-id">&lt;${borrowers.idNum }&gt;</span>:
 					</p> 
 					<div class="table-responsive">
 						<table class="table table-bordered table-striped" role="table">
->>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
+
 						    <tr>
 						    	<th>Item ID</th>
 								<th>Item Name</th>
@@ -143,8 +126,8 @@ section .form-group .control-label {
 				<%} else { %>
 					<p>
 						The borrower 
-						<span id="borrower-name">${borrowed.firstName} ${borrowed.lastName}</span>
-						<span id="borrower-id">&lt;${borrowed.idNum }&gt;</span>
+						<span id="borrower-name">${borrowers.firstName} ${borrowers.lastName}</span>
+						<span id="borrower-id">&lt;${borrowers.idNum }&gt;</span>
 						has not borrowed other items.
 					</p> 
 				<% } %>
