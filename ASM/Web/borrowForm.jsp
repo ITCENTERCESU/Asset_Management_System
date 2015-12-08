@@ -106,15 +106,15 @@ form #about-item input {
 				<input id="first-name" placeholder="ex. Jose" type="text" name="firstName"  required="required" class="form-control">
 			</div>				
 			
+			<div class="col-sm-12" id="buttons">
+				<div class="form-group">
+					<input type="submit" value="Borrow this item" class="btn btn-primary">
+				</div>
+				<div class="form-group">
+					<input type="submit" value="Cancel" class="btn btn-default" formaction="listborrowprocess.html" formmethod="post" formnovalidate="formnovalidate"> 
+				</div>
+			</div>
 		</fieldset>
-		<div class="col-sm-12" id="buttons">
-			<div class="form-group">
-				<input type="submit" value="Borrow this item" class="btn btn-primary">
-			</div>
-			<div class="form-group">
-				<input type="submit" value="Cancel" class="btn btn-default" formaction="listborrowprocess.html" formmethod="post" formnovalidate="formnovalidate"> 
-			</div>
-		</div>
 	</form>
 	<script type="text/javascript" src="./scripts/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
