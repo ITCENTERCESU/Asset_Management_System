@@ -32,6 +32,8 @@ section .form-group .form-control {
 section .form-group .control-label {
 	font-weight: normal;
 }
+
+.borrower-
 	
 </style>
 </head>
@@ -78,8 +80,10 @@ section .form-group .control-label {
 				<form role="form"action="inventoryprocess.html" method="post">
 					<div class="form-group">
 					<h3>Borrower's History</h3>
-					<p>Here is a list of all items borrowed by 
-						${borrowed.firstName} ${borrowed.lastName}.</p> 
+					<p>
+						Here is a list of all items borrowed by 
+						<span id="borrower-name">${borrowed.firstName} ${borrowed.lastName}:</span>
+					</p> 
 					<div class="table-responsive">
 						<table class="table table-bordered table-striped" role="table">
 						    <tr>
