@@ -100,6 +100,9 @@ section .form-group .control-label {
 						
 							<% while(currently.next()) { %>
 								<tr>
+								
+								<!-- will contain ERROR if data type of itemId is changed -->
+
 								<%if(!currently.getString("itemId").equals(borrowed.getItemId())) { %>
 									<td><%=currently.getString("itemId")%></td>
 									<td><%=currently.getString("itemName")%></td>
