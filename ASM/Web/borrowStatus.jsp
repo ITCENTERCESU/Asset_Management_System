@@ -80,7 +80,7 @@ section .form-group .control-label {
 			</section>
 			
 			<section id="borrower-details" class="col-xs-12 col-sm-7">
-				<h2>About the borrower</h2>
+				<h2>Borrower's History</h2>
 				<form role="form"action="inventoryprocess.html" method="post">
 					<div class="form-group">
 					<p>
