@@ -11,10 +11,6 @@ nav {
 	color: white;
 }
 
-nav .navbar {
-	padding: 1em 0;
-}
-
 nav .navbar-brand {
 	font-size: 1.25em;
 }
@@ -36,7 +32,7 @@ nav .navbar-brand #S {
 }
 
 nav #manage-accounts {
-	font-size: 1.25em;
+	font-size: 1.3em;
 }
 nav .navbar-collapse #home {
 	text-align: center;
