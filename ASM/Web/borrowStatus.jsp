@@ -51,29 +51,29 @@ section .form-group .control-label {
 			<section id="item-details" class="form-horizontal col-xs-12 col-sm-5">
 				<h2>Item Borrowed</h2>
 				<div class="form-group">
-					<label for="item-id" class="control-label col-sm-3">Item ID</label>
-					<div class="col-sm-9">
+					<label for="item-id" class="control-label col-sm-4">Item ID</label>
+					<div class="col-sm-8">
 						<p id="item-id" class="form-control">${borrowed.itemId}</p>
 					</div>
 				</div>
 				
 				<div class="form-group">
-					<label for="item-name" class="control-label col-sm-3">Item Name</label>
-					<div class="col-sm-9">
+					<label for="item-name" class="control-label col-sm-8">Item Name</label>
+					<div class="col-sm-4">
 						<p id="item-name" class="form-control">${borrowed.itemName}</p>
 					</div>
 				</div>
 				
 				<div class="form-group">
-					<label for="borrowed-date" class="control-label col-sm-3">Borrowed Date</label>
-					<div class="col-sm-9">
+					<label for="borrowed-date" class="control-label col-sm-8">Borrowed Date</label>
+					<div class="col-sm-4">
 						<p id="borrowed-date" class="form-control"><%= borrowed.getBorrowedDate() %></p>
 					</div>
 				</div>
 				
 				<div class="form-group">
-					<label for="due-date" class="control-label col-sm-3">Due Date</label>
-					<div class="col-sm-9">
+					<label for="due-date" class="control-label col-sm-8">Due Date</label>
+					<div class="col-sm-4">
 						<p id="due-date" class="form-control"><%= borrowed.getDueDate() %></p>
 					</div>
 				</div>
