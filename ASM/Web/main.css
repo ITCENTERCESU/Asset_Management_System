@@ -62,6 +62,7 @@ form fieldset label {
 }
 
 form .btn {
+	margin: 1em 0;
 	margin-right: .5em;
 }
 
