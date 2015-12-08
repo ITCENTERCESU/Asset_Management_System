@@ -40,29 +40,8 @@ form #about-item input {
 	<%@include file="navbar.html" %>
 <div class="container">
 	<form data-toggle="validator" class="row" role="form" action="processborrowform.html" method="post">
-		<fieldset id="about-borrower" class="col-xs-12 col-sm-7">
-			<legend>About the borrower</legend>
-			<p>Kindly fill up all fields on this section.</p>
-			
-			<div class="form-group">
-				<label for="id-number">Borrower ID</label> 
-				<input id="id-number" maxlength="10" placeholder="ex. 2015123456" pattern="[0-9]{10}" name="idNum" data-maxlength="10" required="required" class="form-control" autofocus="autofocus">
-				<span class="help-block">Minimum of 10 digits</span>
-			</div>
-			
-			<div class="form-group">
-				<label for="last-name">Last Name</label>
-				<input id="last-name" placeholder="ex. Santos" type="text" name="lastName" required="required" class="form-control">
-			</div>
-			
-			<div class="form-group">
-				<label for="first-name">First Name</label> 
-				<input id="first-name" placeholder="ex. Jose" type="text" name="firstName"  required="required" class="form-control">
-			</div>				
-			
-		</fieldset>
 		
-		<fieldset id="about-item" class="col-xs-12 col-sm-5">
+		<fieldset id="about-item" class="col-xs-12 col-xs-push-12 col-sm-5">
 			<div class="form-horizontal">
 				<p>Please check if this is really the item you want to borrow.</p>
 				
@@ -105,6 +84,28 @@ form #about-item input {
 					</div>
 				</div>
 			</div>
+		</fieldset>
+		
+		<fieldset id="about-borrower" class="col-xs-12 col-xs-pull-12 col-sm-7">
+			<legend>About the borrower</legend>
+			<p>Kindly fill up all fields on this section.</p>
+			
+			<div class="form-group">
+				<label for="id-number">Borrower ID</label> 
+				<input id="id-number" maxlength="10" placeholder="ex. 2015123456" pattern="[0-9]{10}" name="idNum" data-maxlength="10" required="required" class="form-control" autofocus="autofocus">
+				<span class="help-block">Minimum of 10 digits</span>
+			</div>
+			
+			<div class="form-group">
+				<label for="last-name">Last Name</label>
+				<input id="last-name" placeholder="ex. Santos" type="text" name="lastName" required="required" class="form-control">
+			</div>
+			
+			<div class="form-group">
+				<label for="first-name">First Name</label> 
+				<input id="first-name" placeholder="ex. Jose" type="text" name="firstName"  required="required" class="form-control">
+			</div>				
+			
 		</fieldset>
 		<div class="col-sm-12" id="buttons">
 			<div class="form-group">
