@@ -40,7 +40,6 @@ form #about-item input {
 	<%@include file="navbar.html" %>
 <div class="container">
 	<form data-toggle="validator" class="row" role="form" action="processborrowform.html" method="post">
-<<<<<<< HEAD
 		<fieldset id="about-borrower" class="col-xs-12 col-sm-7">
 			<legend>About the borrower</legend>
 			<p>Kindly fill up all fields on this section.</p>
@@ -71,8 +70,6 @@ form #about-item input {
 				<input id="email" placeholder="ex. 2013056531@ust-ics.mygbiz.com" type="text" name="email"  required="required" class="form-control">
 			</div>		
 		</fieldset>
-=======
->>>>>>> branch 'master' of https://github.com/natsukihanamura/Asset_Management_System.git
 		
 		<fieldset id="about-item" class="col-xs-12 col-sm-5">
 			<div class="form-horizontal">
