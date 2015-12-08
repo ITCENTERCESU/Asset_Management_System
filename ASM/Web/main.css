@@ -31,11 +31,16 @@ nav .navbar-brand #S {
 	color: black;
 }
 
+
 nav #manage-accounts {
 	font-size: 1.3em;
 }
-nav .navbar-collapse #home {
+nav .navbar-collapse #home, 
+nav .navbar-collapse #logout {
 	text-align: center;
+}
+
+nav .navbar-collapse #home {
 	font-size: 1.70em;
 }
 
