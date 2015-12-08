@@ -8,8 +8,9 @@
 
     <jsp:useBean id="borrowed" type="com.ust.model.BorrowedBean" scope="request" /> 
     <jsp:useBean id="borrowers" type="com.ust.model.BorrowersBean" scope="request" />  
-     <jsp:useBean id="asset" type="com.ust.model.AssetBean" scope="request" /> 
+    <jsp:useBean id="asset" type="com.ust.model.AssetBean" scope="request" /> 
     <jsp:useBean id="currently" type="java.sql.ResultSet" scope="request"/>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,7 +55,7 @@ section .form-group .control-label {
 				<div class="form-group">
 					<label for="item-id" class="control-label col-sm-4">Item ID</label>
 					<div class="col-sm-8">
-						<p id="item-id" class="form-control">${asset.itemId}</p>
+						<p id="item-id" class="form-control">${borrowed.itemId}</p>
 					</div>
 				</div>
 				

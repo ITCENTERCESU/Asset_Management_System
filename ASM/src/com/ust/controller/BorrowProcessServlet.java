@@ -48,6 +48,7 @@ public class BorrowProcessServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session=request.getSession(false);
 		if(session!=null){
+			if (connection != null) {
 			//itemId, itemName,idNum, lastName, firstName, borrowedDate,dueDate, status
 			int  itemId = Integer.parseInt(request.getParameter("itemId"));
 			String itemName = request.getParameter("itemName");
@@ -65,22 +66,25 @@ public class BorrowProcessServlet extends HttpServlet {
 			AssetBean asset = 
 					AssetBeanFactory.getFactoryBean(itemName, category);
 			
+			BorrowersBean borrowers = 
+					BorrowersBeanFactory.getFactoryBean(idNum, lastName, firstName, contactNumber, email);
+
 			
 			BorrowedBean borrowed = 
 				BorrowedBeanFactory.getFactoryBean(itemId, itemName,borrowedDate,dueDate);
 			
-			BorrowersBean borrowers = 
-					BorrowersBeanFactory.getFactoryBean(idNum, lastName, firstName, contactNumber, email);
+			
 
-
-		if (connection != null) {
-			if ((SQLOperations.addBorrowed(borrowed, borrowers, connection ))&& (SQLOperations.addBorrowers(borrowers,connection))){
+		
+			if ((SQLOperations.addBorrowers(borrowers,connection))&& 
+					(SQLOperations.addBorrowed(borrowed, borrowers, connection ))){
 				System.out.println("successful insert");
 				
 				
 				request.setAttribute("asset", asset);
-				request.setAttribute("borrowed", borrowed);
 				request.setAttribute("borrowers", borrowers);
+				request.setAttribute("borrowed", borrowed);
+			
 			
 				ResultSet rs = SQLOperations.getCurrentlyBorrowing(idNum,connection);
 				request.setAttribute("currently", rs);
