@@ -1,50 +1,67 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@ page session="false" %>
+	pageEncoding="ISO-8859-1"%>
+<%@ page session="false"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="./styles/bootstrap.min.css"/>
-
+<link rel="stylesheet" href="./styles/bootstrap.min.css" />
+<link rel="stylesheet" href="./main.css" />
+<link rel="icon" type="image/png" href="./images/ust-iics-is-logo.png" />
 <title>Asset Management System</title>
 <style type="text/css">
-		img{width:5em;height:5em;margin:auto;}
-		header{text-align:center;margin:1em 1em;}
-		.row{padding:2em;background:#FFD4AA;margin:3em;border-radius: 25px;border: 2px solid  #FF9933;}
-		form{padding:3em;}
-		body{background-color:#FDDFBD;}
-	</style>
+.row {
+	padding: 2em;
+	margin: 3em;
+	border-radius: 25px;
+	border: 2px solid;
+	text-align: center;
+}
+
+p {
+	font-weight: normal;
+	font-size: 1.5em;
+}
+</style>
 </head>
 <body>
-	<%if (request.getParameter("success").equals("true")) { %>
+	<%@include file="navbar.html"%>
+	<%
+		if (request.getParameter("success").equals("true")) {
+	%>
 	<div class="container">
-	 <div class="row">
-	<header>
-	
-		<h2>The item has been added successfully</h2>
-		
-		<br/>
-		<p>Item ID: ${asset.itemId}</p>
-		<p>Item Name: ${asset.itemName}</p>
-		<p>Status: ${asset.status}</p>
-	</header>
-	</div>
-	
-	<% } else { %>
-	<div class="row">
-	<header>
-		<h1 style="text-align:center">Adding failed</h1>
-		</header></div>	
-	<% } %> 
-	
-	<br/>
-	
-	
-	<form role="form" action="inventoryprocess.html" method="post"class="col-sm-offset-5 col-sm-9"style="top: -93px;">
-	<input type="submit" value="HOME" class="btn btn-default">
-	</form>
+		<div class="row">
+			<header>
 
-</div>
+				<h2>The item has been added successfully</h2>
+
+				<br />
+				<p>Item ID: ${asset.itemId}</p>
+				<p>Item Name: ${asset.itemName}</p>
+				<p>Status: ${asset.status}</p>
+			</header>
+		
+
+		<%
+			} else {
+		%>
+		<div class="row">
+			<header>
+				<h1 style="text-align: center">Adding failed</h1>
+			</header>
+			<%
+				}
+			%>
+
+			<br />
+
+
+			<form role="form" action="inventoryprocess.html" method="post"
+				class="col-sm-offset-4 col-sm-4">
+				<input type="submit" value="HOME" class="btn btn-default">
+			</form>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
