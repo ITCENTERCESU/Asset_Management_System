@@ -70,7 +70,12 @@ form .btn {
 	margin-right: .5em;
 }
 
-.form-group {
+
+form #buttons .form-group {
+	display: inline;
+}
+
+.form-control {
 	text-transform: capitalize;
 }
 
