@@ -58,22 +58,22 @@ section .form-group .control-label {
 				</div>
 				
 				<div class="form-group">
-					<label for="item-name" class="control-label col-sm-8">Item Name</label>
-					<div class="col-sm-4">
+					<label for="item-name" class="control-label col-sm-4">Item Name</label>
+					<div class="col-sm-8">
 						<p id="item-name" class="form-control">${borrowed.itemName}</p>
 					</div>
 				</div>
 				
 				<div class="form-group">
-					<label for="borrowed-date" class="control-label col-sm-8">Borrowed Date</label>
-					<div class="col-sm-4">
+					<label for="borrowed-date" class="control-label col-sm-4">Borrowed Date</label>
+					<div class="col-sm-8">
 						<p id="borrowed-date" class="form-control"><%= borrowed.getBorrowedDate() %></p>
 					</div>
 				</div>
 				
 				<div class="form-group">
-					<label for="due-date" class="control-label col-sm-8">Due Date</label>
-					<div class="col-sm-4">
+					<label for="due-date" class="control-label col-sm-4">Due Date</label>
+					<div class="col-sm-8">
 						<p id="due-date" class="form-control"><%= borrowed.getDueDate() %></p>
 					</div>
 				</div>
