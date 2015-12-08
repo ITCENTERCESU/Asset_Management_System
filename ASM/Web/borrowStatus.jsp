@@ -91,10 +91,10 @@ section .form-group .control-label {
 					<div class="table-responsive">
 						<table class="table table-bordered table-striped" role="table">
 						    <tr>
-						    	<td>Item ID</td>
-								<td>Item Name</td>
-								<td>Date Borrowed</td>
-								<td>Due Date</td>
+						    	<th>Item ID</th>
+								<th>Item Name</th>
+								<th>Date Borrowed</th>
+								<th>Due Date</th>
 						    </tr>
 						    
 						
