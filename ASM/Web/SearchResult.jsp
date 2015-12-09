@@ -1,8 +1,10 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <jsp:useBean id="search" type="java.sql.ResultSet" scope="request" />
+
 
 <html>
 <head>
@@ -31,17 +33,18 @@ table .action-borrow-col {
     <center>
     <h2>List of Activities</h2>
     </center>
-    <div class="col-xs-12 col-md-9 col-md-pull-3">
-    <div class="table-responsive">
-    <table border="1" width="100%" cellpadding="3" cellspacing="3"  class="table table-bordered">
-
-        <tr>
-            <th width="10%" align="center">Item ID</th>
-            <th align="center">Item Name</th>
-            <th align="center">Category</th>
-            <th width="10%" align="center">Status</th>
-            <th width="10%" align="center">Action-Borrow</th>
-        </tr>
+    
+    <div class="container">
+        <div class="table-responsive">    
+            <table class="table table-striped table-bordered" role="table">
+                <caption>List of items found.</caption>
+                <tr>
+                    <th>Item ID</th>
+                    <th>Item Name</th>
+                    <th>Category </th>
+                    <th>Status</th>
+                    <th class="action-borrow-col">Action-Borrow</th>
+                </tr>
 
         <% 
                     while(search.next()) {    
