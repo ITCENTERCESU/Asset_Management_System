@@ -45,7 +45,7 @@ public class ReturnProcessServlet extends HttpServlet {
 			BorrowedBean returned = new BorrowedBean();
 
 			if (connection != null) {
-				if (SQLOperations.returnBorrowed(returned, connection)){
+				if (SQLOperations.returnBorrowed(returned, itemId, connection)){
 					System.out.println("successful return");
 
 					request.setAttribute("returned", returned);

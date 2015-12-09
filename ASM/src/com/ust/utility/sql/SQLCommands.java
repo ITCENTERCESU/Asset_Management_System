@@ -25,12 +25,13 @@ public interface SQLCommands {
 			+ "INNER JOIN Inventory	"
 			+ "ON Borrowed.itemId = Inventory.itemId AND Borrowed.idNum =?;";
 	
-	String RETURN_BORROWED = "UPDATE Borrowed SET status='available' FROM Borrowed "
-			+ "WHERE itemId=? AND idNum=?;" 
-			+ ""
-			+ "DELETE FROM Borrowed WHERE status='available';"
-			+ ""
-			+ "UPDATE Inventory SET status= 'available' FROM Inventory WHERE itemId=?";
+	String RETURN_BORROWED = "UPDATE Inventory SET Inventory.status='available' "
+			+"FROM Inventory, Borrowed " 
+			+"WHERE Inventory.itemId = Borrowed.itemId AND Borrowed.itemId = ?;"
+			+""
+			+"UPDATE Borrowed SET returnDate = GETDATE() "
+			+"FROM Borrowed, Inventory "
+			+"WHERE Inventory.itemId = Borrowed.itemId AND Borrowed.itemId = ?;";
 
 	String DELETE_ITEM = "UPDATE Inventory SET deleted=0 FROM Inventory WHERE itemId=?";
 	

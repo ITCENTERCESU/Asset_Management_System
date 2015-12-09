@@ -171,14 +171,13 @@ public class SQLOperations implements SQLCommands {
 			return true;
 	}
 	
-	public static boolean returnBorrowed(BorrowedBean returned, 
+	public static boolean returnBorrowed(BorrowedBean returned, int itemId,
 			Connection connection) {
 
 			try {
 		        PreparedStatement pstmt = connection.prepareStatement(RETURN_BORROWED);
-		        pstmt.setInt(1, returned.getItemId()); 
-		       
-		        pstmt.setInt(3, returned.getItemId());
+		        pstmt.setInt(1, itemId); 
+		        pstmt.setInt(2, itemId);
 		        
 		        pstmt.executeUpdate(); // execute insert statement  
 			} catch (SQLException sqle) {
