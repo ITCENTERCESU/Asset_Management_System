@@ -293,6 +293,7 @@ public class SQLOperations implements SQLCommands {
 			pstmt.setString(1, "%" + searchWord + "%");
 			pstmt.setString(2, "%" + searchWord + "%");
 			pstmt.setString(3, "%" + searchWord + "%");
+			pstmt.setString(4, "%" + searchWord + "%");
 			rs = pstmt.executeQuery();
 		}
 		catch(SQLException sqle) {

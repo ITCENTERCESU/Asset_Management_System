@@ -45,6 +45,6 @@ public interface SQLCommands {
 	String SEARCH_DELETED = "SELECT * FROM Inventory WHERE itemId=? AND status='available' AND deleted=0";
 	
 	String SEARCH_KEYWORD_STATUS = "SELECT * FROM Inventory "
-			+ "WHERE (itemId LIKE ? OR itemName LIKE ? OR category LIKE ?) AND deleted=1; ";
+			+ "WHERE (itemId LIKE ? OR itemName LIKE ? OR category LIKE ? OR status LIKE ?) AND deleted=1; ";
 	
 }
