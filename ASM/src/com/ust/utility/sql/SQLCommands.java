@@ -16,8 +16,8 @@ public interface SQLCommands {
 			+ "FROM Inventory "
 			+ "WHERE itemId=? AND status='available' AND deleted=1";
 	
-	String INSERT_BORROWED = "INSERT INTO Borrowed(num, itemId,idNum, borrowedDate,dueDate, returnDate) "
-			+ "VALUES ((SELECT ISNULL(MAX(num),0)+1 FROM Borrowed),?,?,?,?,NULL);"
+	String INSERT_BORROWED = "INSERT INTO Borrowed(num, itemId,idNum, borrowedDate,returnDate) "
+			+ "VALUES ((SELECT ISNULL(MAX(num),0)+1 FROM Borrowed),?,?,?,NULL);"
 			+ ""
 			+ "UPDATE Inventory SET status='unavailable' "
 			+ "FROM Inventory, Borrowed "
@@ -30,7 +30,7 @@ public interface SQLCommands {
 	String GET_CURRENTLY_BORROWING ="SELECT Borrowed.itemId, Inventory.itemName, Borrowed.borrowedDate, Borrowed.dueDate "
 			+ "FROM Borrowed "
 			+ "INNER JOIN Inventory	"
-			+ "ON Borrowed.itemId = Inventory.itemId AND Borrowed.idNum =?;";
+			+ "ON Borrowed.itemId = Inventory.itemId AND Borrowed.ReturnDate = 'NULL' AND Borrowed.idNum =?;";
 	
 	String RETURN_BORROWED = "UPDATE Inventory SET Inventory.status='available' "
 			+"FROM Inventory, Borrowed " 
