@@ -64,5 +64,6 @@ public interface SQLCommands {
 	String SEARCH_KEYWORD_STATUS = "SELECT * "
 			+ "FROM Inventory "
 			+ "WHERE (itemId LIKE ? OR itemName LIKE ? OR category LIKE ? OR status LIKE ?) AND deleted=1; ";
-	
+
+	String SELECT_ALL_ACCOUNTS = "SELECT accountId, lastName, firstName FROM Accounts";
 }
