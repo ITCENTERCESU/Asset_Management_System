@@ -47,13 +47,18 @@ public class ProcessLoginServlet extends HttpServlet {
 			password = request.getParameter("password");
 			
 			UserBean user = 
-					BeanFactory.getFactoryBean(username, password);
-				
-				if (true) {//Security.decrypt(SQLOperations.selectUserPassword(user.getUsername(), connection)).equals(password)) {
+					BeanFactory.getFactoryBean(SQLOperations.selectUserLastName(username, connection), SQLOperations.selectUserLastName(username, connection), username, password);
+			
+			String dbpw = Security.decrypt(SQLOperations.selectUserPassword(username, connection));
+				if (dbpw.equals(password)) {
+					/*
 					System.out.println("Request Param:" + username);
 					System.out.println("Request Param:" + password);
-					//System.out.println("Encrypted password: " + Security.encrypt(password) );
-					
+					System.out.println("Encrypted password: " + Security.encrypt(password) );
+					System.out.println(user.getFirstName());
+					System.out.println(user.getLastName());
+					System.out.println(user.getUsername());
+					*/
 					HttpSession session=request.getSession();
 					session.setAttribute("user", user); 
 					

@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 import com.ust.utility.sql.SQLOperations;
 
 @WebServlet("/accountsListProcess.html")
-public class AccountsListProcessServlet extends HttpServlet {
+public class AccountListProcessServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private Connection connection;

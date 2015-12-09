@@ -9,6 +9,7 @@ import javax.naming.NamingException;
 import com.ust.model.AssetBean;
 import com.ust.model.BorrowedBean;
 import com.ust.model.BorrowersBean;
+import com.ust.model.UserBean;
 import com.ust.utility.sql.SQLCommands;
 
 
@@ -420,6 +421,88 @@ public class SQLOperations implements SQLCommands {
 		return rs;
 		
 	}
+	
+	public static boolean addAccount(UserBean user, Connection connection) {
+		try {
+			PreparedStatement pstmt = connection.prepareStatement(INSERT_ACCOUNT);
+	        pstmt.setString(1, user.getLastName()); 
+	        pstmt.setString(2, user.getFirstName());
+	        pstmt.setString(3, user.getUsername());
+	        pstmt.setString(4, user.getPassword());    
+	        pstmt.executeUpdate(); 
+			} catch (SQLException sqle) {
+				System.out.println("SQLException - addAccount: " + sqle.getMessage());
+				return false; 
+			}	
+			return true;
+		}
+	
+	public static String selectUserFirstName(String username, Connection connection) {
+		
+		String fn="";
+		
+		try {
+			PreparedStatement pstmt = connection.prepareStatement(SELECT_USERFN);
+	        pstmt.setString(1, username);
+	        ResultSet rs  = pstmt.executeQuery();
+	        
+	        if (rs.next() ) { 
+	        	fn = rs.getString("firstName");
+	        }
+	        
+	        return fn;
+	        
+		} catch (SQLException sqle) {
+			System.out.println("SQLException - selectUserFN: " + sqle.getMessage() );
+			return fn; 
+		}
+		
+	}
+	
+	public static String selectUserLastName(String username, Connection connection) {
+		
+		String ln="";
+		
+		try {
+			PreparedStatement pstmt = connection.prepareStatement(SELECT_USERLN);
+	        pstmt.setString(1, username);
+	        ResultSet rs  = pstmt.executeQuery();
+	        
+	        if (rs.next() ) { 
+	        	ln = rs.getString("lastName");
+	        }
+	        
+	        return ln;
+	        
+		} catch (SQLException sqle) {
+			System.out.println("SQLException - selectUserLN: " + sqle.getMessage() );
+			return ln; 
+		}
+		
+	}
+	
+	public static synchronized int deleteAccount(String username, Connection connection) {
+		int updated = 0;
+		
+		try {
+			connection.setAutoCommit(false);
+	        PreparedStatement pstmt = connection.prepareStatement(DELETE_ACCOUNT);
+	        pstmt.setString(1, username);             
+	        updated  = pstmt.executeUpdate();
+	        connection.commit();
+		} catch (SQLException sqle) {
+			System.out.println("SQLException - deleteEmployee: " + sqle.getMessage());
+			
+			try {
+				connection.rollback();
+			} catch (SQLException sql) {
+				System.err.println("Error on Delete Connection Rollback - " + sql.getMessage());
+			}
+			return updated; 
+		}	
+		return updated;
+	}
+	
 }
 
 

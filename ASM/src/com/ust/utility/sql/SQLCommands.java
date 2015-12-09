@@ -94,4 +94,12 @@ public interface SQLCommands {
 			+ "WHERE (itemId LIKE ? OR itemName LIKE ? OR category LIKE ? OR status LIKE ?) AND deleted=1; ";
 
 	String SELECT_ALL_ACCOUNTS = "SELECT accountId, lastName, firstName FROM Accounts";
+	
+	String INSERT_ACCOUNT = "INSERT INTO Accounts(lastName, firstName, username, password) VALUES(?,?,?,?)";
+	
+	String SELECT_USERFN = "SELECT firstName FROM Accounts WHERE username=?";
+
+	String SELECT_USERLN = "SELECT lastName FROM Accounts WHERE username=?";
+	
+	String DELETE_ACCOUNT = "DELETE FROM Accounts WHERE username=?";
 }
