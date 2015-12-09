@@ -3,7 +3,7 @@ package com.ust.model;
 
 public class BorrowedBean {
 	
-	
+	public int num;
 	public int itemId;
 	public int idNum;
 	public String itemName;
@@ -12,6 +12,12 @@ public class BorrowedBean {
 	public String returnDate;
 
 	
+	public int getNum() {
+		return num;
+	}
+	public void setNum(int num) {
+		this.num = num;
+	}
 	public int getItemId() {
 		return itemId;
 	}
