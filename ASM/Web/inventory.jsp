@@ -65,6 +65,10 @@ table .status {
 <body>
 	<%@include file="navbar.html" %>
 	<div class="container">
+		<form action="search.html" method="post">
+			<input type="text" name="search" size="20"/>
+			<input type="submit" value="Search" />
+ 		</form>
 		<div class="row">
 			<!-- buttons -->
 			<div id="buttons" class="col-xs-12 col-md-3 col-md-push-9">
