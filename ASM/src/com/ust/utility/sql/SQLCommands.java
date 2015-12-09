@@ -17,7 +17,7 @@ public interface SQLCommands {
 			+ "WHERE itemId=? AND status='available' AND deleted=1";
 	
 	String INSERT_BORROWED = "INSERT INTO Borrowed(num, itemId,idNum, borrowedDate,dueDate, returnDate) "
-			+ "VALUES (?,?,?,?,?,NULL);"
+			+ "VALUES ((SELECT ISNULL(MAX(num),0)+1 FROM Borrowed),?,?,?,?,NULL);"
 			+ ""
 			+ "UPDATE Inventory SET status='unavailable' "
 			+ "FROM Inventory, Borrowed "

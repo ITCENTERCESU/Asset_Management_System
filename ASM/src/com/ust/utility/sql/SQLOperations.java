@@ -139,11 +139,11 @@ public class SQLOperations implements SQLCommands {
 			//itemId,idNum, borrowedDate,dueDate, returnDate
 			try {
 		        PreparedStatement pstmt = connection.prepareStatement(INSERT_BORROWED);
-		        pstmt.setInt(1, borrowed.getNum()+1);
-		        pstmt.setInt(2, borrowed.getItemId()); 
-		        pstmt.setInt(3, borrowers.getIdNum());
-		        pstmt.setString(4, borrowed.getBorrowedDate()); 
-		        pstmt.setString(5, borrowed.getDueDate()); 
+		       
+		        pstmt.setInt(1, borrowed.getItemId()); 
+		        pstmt.setInt(2, borrowers.getIdNum());
+		        pstmt.setString(3, borrowed.getBorrowedDate()); 
+		        pstmt.setString(4, borrowed.getDueDate()); 
 		        
 		        pstmt.executeUpdate(); // execute insert statement  
 			} catch (SQLException sqle) {
@@ -178,7 +178,10 @@ public class SQLOperations implements SQLCommands {
 			try {
 		        PreparedStatement pstmt = connection.prepareStatement(RETURN_BORROWED);
 		        pstmt.setInt(1, itemId); 
-		        pstmt.setInt(2, itemId);
+		        
+		        pstmt.setInt(2, itemId); 
+		       
+		        
 		        
 		        pstmt.executeUpdate(); // execute insert statement  
 			} catch (SQLException sqle) {

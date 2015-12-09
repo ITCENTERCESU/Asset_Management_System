@@ -47,7 +47,7 @@ p {
 			<br>
 			<input type="submit" value="Home"class="btn btn-default">
 	<% } else { %>
-		<h1>Adding failed</h1>
+		<h1>Return Failed. Item ID and ID Number do not match.</h1>
 	<% } %> 
 	</form>
 	</div>
