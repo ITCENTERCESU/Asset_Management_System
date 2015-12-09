@@ -17,13 +17,13 @@ public interface SQLCommands {
 			+ "WHERE itemId=? AND status='available' AND deleted=1";
 	
 	String INSERT_BORROWED = "INSERT INTO Borrowed(num, itemId,idNum, borrowedDate,dueDate, returnDate) "
-			+ "VALUES (?,?,?,?,?,NULL);"
+			+ "VALUES ((SELECT MAX(num)+1 FROM Borrowed),?,?,?,?,NULL);"
 			+ ""
 			+ "UPDATE Inventory SET status='unavailable' "
 			+ "FROM Inventory, Borrowed "
 			+ "WHERE Inventory.itemId = Borrowed.itemId;";
 	
-	String INSERT_BORROWERS ="INSERT INTO Borrowers(idNum, lastName, firstName, contactNumber, email)"
+	String INSERT_BORROWERS ="INSERT INTO Borrowers(idNum, lastName, firstName, contactNumber, email) "
 			+ "VALUES (?,?,?,?,?)";
 	
 	
@@ -33,12 +33,12 @@ public interface SQLCommands {
 			+ "ON Borrowed.itemId = Inventory.itemId AND Borrowed.idNum =?;";
 	
 	String RETURN_BORROWED = "UPDATE Inventory SET Inventory.status='available' "
-			+"FROM Inventory, Borrowed " 
-			+"WHERE Inventory.itemId = Borrowed.itemId AND Borrowed.itemId = ?;"
+			+"FROM Inventory, Borrowed, Borrowers " 
+			+"WHERE Inventory.itemId = Borrowed.itemId AND Borrowed.idNum= Borrowers.idNum AND Borrowed.itemId = ?;"
 			+""
 			+"UPDATE Borrowed SET returnDate = GETDATE() "
-			+"FROM Borrowed, Inventory "
-			+"WHERE Inventory.itemId = Borrowed.itemId AND Borrowed.itemId = ?;";
+			+"FROM Borrowed, Inventory , Borrowers "
+			+"WHERE Inventory.itemId = Borrowed.itemId AND Borrowed.idNum= Borrowers.idNum AND Borrowed.itemId = ?;";
 
 	String DELETE_ITEM = "UPDATE Inventory SET deleted=0 "
 			+ "FROM Inventory "
