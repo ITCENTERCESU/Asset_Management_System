@@ -284,6 +284,25 @@ public class SQLOperations implements SQLCommands {
 		}	
 		return updated;
 	}
+	
+	public static ResultSet searchKeywordStatus(String searchWord, Connection connection) { 
+		ResultSet rs = null;
+		try {
+			PreparedStatement pstmt =
+					connection.prepareStatement(SEARCH_KEYWORD_STATUS);
+			pstmt.setString(1, "%" + searchWord + "%");
+			pstmt.setString(2, "%" + searchWord + "%");
+			pstmt.setString(3, "%" + searchWord + "%");
+			rs = pstmt.executeQuery();
+		}
+		catch(SQLException sqle) {
+			System.out.println("SQLException - searchKeywordActStatus: " 
+					+ sqle.getMessage());
+			
+			return rs;
+		}
+		return rs;
+	}
 }
 
 
