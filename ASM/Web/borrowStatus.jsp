@@ -81,12 +81,6 @@ section .form-group .control-label {
 					</div>
 				</div>
 				
-				<div class="form-group">
-					<label for="due-date" class="control-label col-sm-4">Due Date</label>
-					<div class="col-sm-8">
-						<p id="due-date" class="form-control"><%= borrowed.getDueDate() %></p>
-					</div>
-				</div>
 			</section>
 			
 
@@ -105,7 +99,7 @@ section .form-group .control-label {
 						    	<th>Item ID</th>
 								<th>Item Name</th>
 								<th>Date Borrowed</th>
-								<th>Due Date</th>
+							
 						    </tr>
 						    
 						
@@ -115,10 +109,10 @@ section .form-group .control-label {
 								<!-- will contain ERROR if data type of itemId is changed -->
 	
 								<%if(!currently.getString("itemId").equals(borrowed.getItemId())) { %>
-									<td><%=currently.getString("itemId")%></td>
+									<td><%=currently.getInt("itemId")%></td>
 									<td><%=currently.getString("itemName")%></td>
 									<td><%=currently.getString("borrowedDate")%></td>
-									<td><%=currently.getString("dueDate")%></td>
+									
 								<%} %>
 								</tr>			
 							<% } %>

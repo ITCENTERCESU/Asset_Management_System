@@ -12,25 +12,53 @@ public interface SQLCommands {
 			+ "FROM Inventory "
 			+ "WHERE status='available' AND deleted=1" ;
 	
+	
+	
+	String GET_NOT_AVAILABLE_LIST = "SELECT Borrowed.itemId, Inventory.itemName, Inventory.category, "
+				+ "Borrowers.idNum, Borrowers.lastName, Borrowers.firstName, Borrowers.contactNumber, Borrowers.email "
+			+ "FROM Inventory INNER JOIN Borrowed "
+			+ "ON Borrowed.itemId = Inventory.itemId "
+			+ "INNER JOIN Borrowers "
+			+ "ON Borrowers.idNum = Borrowed.idNum "
+			+ "AND Borrowed.returnDate = 'NULL' "
+			+ "AND status='unavailable' AND deleted=1" ; 
+	
 	String SEARCH_ASSET = "SELECT * "
 			+ "FROM Inventory "
 			+ "WHERE itemId=? AND status='available' AND deleted=1";
 	
+	String SEARCH_BORROWED = "SELECT * "
+			+ "FROM Borrowed "
+			+ "WHERE itemId=? AND returnDate='NULL'";
+	
+	String SEARCH_BORROWERS = "SELECT TOP 1 * "
+			+ "FROM Borrowers "
+			+ "WHERE idNum=? ";
+	
+	
+	String SEARCH_BORROWER_DETAILS = "SELECT TOP 1 Borrowed.itemId, Inventory.itemName, Borrowers.idNum, Borrowers.lastName, Borrowers.firstName, Borrowers.contactNumber, Borrowers.email "
+			+ "FROM Inventory, Borrowed, Borrowers "
+			+ "WHERE Inventory.itemId=? AND Borrowed.idNum=?"
+			+ "AND Inventory.itemId = Borrowed.itemId 	"
+			+ "AND Borrowers.idNum = Borrowed.idNum "
+			+ "AND Inventory.status='unavailable' "
+			+ "AND Inventory.deleted=1;";
+	
+	
 	String INSERT_BORROWED = "INSERT INTO Borrowed(num, itemId,idNum, borrowedDate,returnDate) "
-			+ "VALUES ((SELECT ISNULL(MAX(num),0)+1 FROM Borrowed),?,?,?,NULL);"
+			+ "VALUES ((SELECT ISNULL(MAX(num),0)+1 FROM Borrowed),?,?,?,'NULL');"
 			+ ""
 			+ "UPDATE Inventory SET status='unavailable' "
 			+ "FROM Inventory, Borrowed "
-			+ "WHERE Inventory.itemId = Borrowed.itemId;";
+			+ "WHERE Inventory.itemId = Borrowed.itemId AND Borrowed.itemId=?;";
 	
 	String INSERT_BORROWERS ="INSERT INTO Borrowers(idNum, lastName, firstName, contactNumber, email)"
 			+ "VALUES (?,?,?,?,?)";
 	
 	
-	String GET_CURRENTLY_BORROWING ="SELECT Borrowed.itemId, Inventory.itemName, Borrowed.borrowedDate, Borrowed.dueDate "
-			+ "FROM Borrowed "
-			+ "INNER JOIN Inventory	"
-			+ "ON Borrowed.itemId = Inventory.itemId AND Borrowed.ReturnDate = 'NULL' AND Borrowed.idNum =?;";
+	String GET_CURRENTLY_BORROWING ="SELECT Borrowed.itemId, Inventory.itemName, Borrowed.borrowedDate "
+			+ "FROM Borrowed INNER JOIN Inventory "
+			+ "ON Borrowed.itemId = Inventory.itemId AND Borrowed.idNum = ? AND Borrowed.returnDate='NULL'";
 	
 	String RETURN_BORROWED = "UPDATE Inventory SET Inventory.status='available' "
 			+"FROM Inventory, Borrowed " 

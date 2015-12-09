@@ -30,9 +30,6 @@ table .action-borrow-col {
     <h2>Record does not exist.</h2>
     <%}
     else {%>
-    <center>
-    <h2>List of Activities</h2>
-    </center>
     
     <div class="container">
         <div class="table-responsive">    
@@ -65,5 +62,9 @@ table .action-borrow-col {
      </div>
     <%} %>
     </div>
+    
+     <form action="inventoryprocess.html" method="post" style="float:right;">
+        <input type="submit" value="Go Back" class="btn btn-danger"
+                    id="form-button" /> </form>
 </body>
 </html>

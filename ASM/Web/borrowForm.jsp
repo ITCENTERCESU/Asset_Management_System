@@ -102,10 +102,6 @@ form #about-item input {
 						Date borrowedDateDD = new Date();
 						SimpleDateFormat ft = new SimpleDateFormat ("yyyy-MM-dd");
 						
-						Calendar calendar = Calendar.getInstance();
-						calendar.setTime(borrowedDateDD);
-						calendar.add(Calendar.DATE, 2);
-						String dueDateD = ft.format(calendar.getTime());
 						String borrowedDateD = ft.format(borrowedDateDD);
 					%>
 					
@@ -115,12 +111,7 @@ form #about-item input {
 					</div>
 				</div>
 				
-				<div class="form-group">
-					<label for="due-date" class="control-label col-sm-4">Due Date</label>
-					<div class="col-sm-8">
-						<input id="due-date" type="text" name="dueDate" value="<%out.println(dueDateD); %>"  readonly class="form-control"class="col-sm-offset-4 col-sm-4">
-					</div>
-				</div>
+				
 			</div>
 		</fieldset>
 		

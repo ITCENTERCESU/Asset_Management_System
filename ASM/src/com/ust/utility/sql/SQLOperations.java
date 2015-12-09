@@ -83,6 +83,19 @@ public class SQLOperations implements SQLCommands {
 		return rs;
 	}
 	
+	public static ResultSet getNotAvailableList(Connection connection) {
+		ResultSet rs = null;
+		try {
+			Statement stmt = connection.createStatement();
+			rs = stmt.executeQuery(GET_NOT_AVAILABLE_LIST);  
+		} catch (SQLException sqle) {
+			System.out.println("SQLException - getBorrowedList: " 
+			  + sqle.getMessage());
+			return rs; 
+		}	
+		return rs;
+	}
+	
 	public static AssetBean searchAsset(int itemId, 
 			Connection connection) {
 			
@@ -108,6 +121,88 @@ public class SQLOperations implements SQLCommands {
 			return asset;
 	}
 	
+	public static BorrowedBean searchBorrowed(int itemId, 
+			Connection connection) {
+			
+			BorrowedBean borrowed = new BorrowedBean();
+			 
+			try {
+		        PreparedStatement pstmt = 
+		        	connection.prepareStatement(SEARCH_BORROWED);
+		        pstmt.setInt(1, itemId);             
+		        ResultSet rs  = pstmt.executeQuery();
+		        
+		        while (rs.next()) { 
+		        	borrowed.setNum(rs.getInt("num"));
+		        	borrowed.setItemId(rs.getInt("itemId"));
+		        	borrowed.setIdNum(rs.getInt("idNum"));
+		        	borrowed.setBorrowedDate(rs.getString("borrowedDate"));
+		        	
+		        }
+			} catch (SQLException sqle) {
+				System.out.println("SQLException - searchborrowed: " 
+						+ sqle.getMessage());
+				return borrowed; 
+			}	
+			return borrowed;
+	}
+	
+	
+	public static BorrowersBean searchBorrowers(int idNum, 
+			Connection connection) {
+			
+			BorrowersBean borrowers = new BorrowersBean();
+			 
+			try {
+		        PreparedStatement pstmt = 
+		        	connection.prepareStatement(SEARCH_BORROWERS);
+		        pstmt.setInt(1, idNum);             
+		        ResultSet rs  = pstmt.executeQuery();
+		        
+		        while (rs.next()) { 
+		        	borrowers.setIdNum(rs.getInt("idNum"));
+		        	borrowers.setLastName(rs.getString("lastName"));
+		        	borrowers.setFirstName(rs.getString("firstName"));
+		        	borrowers.setContactNumber(rs.getString("contactNumber"));
+		        	borrowers.setEmail(rs.getString("email"));
+		        	
+		        }
+			} catch (SQLException sqle) {
+				System.out.println("SQLException - searchborrowers: " 
+						+ sqle.getMessage());
+				return borrowers; 
+			}	
+			return borrowers;
+	}
+	
+	public static void searchUnavailable(AssetBean asset, BorrowedBean borrowed, BorrowersBean borrowers,
+			Connection connection) {
+			
+			 
+			try {
+		        PreparedStatement pstmt = 
+		        	connection.prepareStatement(SEARCH_BORROWER_DETAILS);
+		        pstmt.setInt(1, asset.getItemId());  
+		        pstmt.setInt(2, borrowed.getIdNum());
+		        ResultSet rs  = pstmt.executeQuery();
+		        
+		        //Borrowed.itemId, Inventory.itemName
+		        while (rs.next()) { 
+		        	borrowed.setItemId(rs.getInt("itemId"));
+		        	asset.setItemName(rs.getString("itemName"));
+		        	borrowers.setIdNum(rs.getInt("idNum"));
+		        	borrowers.setLastName(rs.getString("lastName"));
+		        	borrowers.setFirstName(rs.getString("firstName"));
+		        	borrowers.setContactNumber(rs.getString("contactNumber"));
+		        	borrowers.setEmail(rs.getString("email"));
+		        }
+			} catch (SQLException sqle) {
+				System.out.println("SQLException - searchBorrower: " 
+						+ sqle.getMessage());
+			
+			}	
+			
+	}
 	
 	public static AssetBean searchDeleted(int itemId, 
 			Connection connection) {
@@ -136,14 +231,16 @@ public class SQLOperations implements SQLCommands {
 	
 	public static boolean addBorrowed(BorrowedBean borrowed, BorrowersBean borrowers,
 			Connection connection) {
-			//itemId,idNum, borrowedDate,dueDate, returnDate
+			
 			try {
 		        PreparedStatement pstmt = connection.prepareStatement(INSERT_BORROWED);
 		       
 		        pstmt.setInt(1, borrowed.getItemId()); 
 		        pstmt.setInt(2, borrowers.getIdNum());
-		        pstmt.setString(3, borrowed.getBorrowedDate()); 
-		        pstmt.setString(4, borrowed.getDueDate()); 
+		        pstmt.setString(3, borrowed.getBorrowedDate());
+		        pstmt.setInt(4, borrowed.getItemId());
+		        
+		      
 		        
 		        pstmt.executeUpdate(); // execute insert statement  
 			} catch (SQLException sqle) {
@@ -155,7 +252,7 @@ public class SQLOperations implements SQLCommands {
 	
 	
 	public static boolean addBorrowers(BorrowersBean borrowers, Connection connection) {
-			//itemId,idNum, borrowedDate,dueDate, returnDate
+		
 			try {
 		        PreparedStatement pstmt = connection.prepareStatement(INSERT_BORROWERS);
 		        pstmt.setInt(1, borrowers.getIdNum()); 

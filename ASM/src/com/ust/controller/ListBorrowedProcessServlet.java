@@ -14,8 +14,9 @@ import javax.servlet.http.HttpSession;
 
 import com.ust.utility.sql.SQLOperations;
 
-@WebServlet("/accountsListProcess.html")
-public class AccountsListProcessServlet extends HttpServlet {
+
+@WebServlet("/listborrowedprocess.html")
+public class ListBorrowedProcessServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private Connection connection;
@@ -34,9 +35,9 @@ public class AccountsListProcessServlet extends HttpServlet {
 		System.out.println(session);
 		if(session!=null){
 			RequestDispatcher dispatcher = null; 
-			ResultSet rs = SQLOperations.selectAllAccounts(connection);
-			request.setAttribute("accountsList", rs);
-			dispatcher = getServletContext().getRequestDispatcher("/accountsList.jsp");	
+			ResultSet rs = SQLOperations.getNotAvailableList(connection);
+			request.setAttribute("borrowed", rs);
+			dispatcher = getServletContext().getRequestDispatcher("/unavailableList.jsp");	
 			dispatcher.forward(request, response);
 		}
 		else {
