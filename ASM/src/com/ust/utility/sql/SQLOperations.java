@@ -308,6 +308,21 @@ public class SQLOperations implements SQLCommands {
 		}
 		return rs;
 	}
+	
+	public static ResultSet selectAllAccounts(Connection connection) {
+		
+		ResultSet rs = null;
+		try {
+			Statement stmt = connection.createStatement();
+			rs = stmt.executeQuery(SELECT_ALL_ACCOUNTS);  
+		} catch (SQLException sqle) {
+			System.out.println("SQLException - selectAllAccounts: " 
+			  + sqle.getMessage());
+			return rs; 
+		}	
+		return rs;
+		
+	}
 }
 
 
