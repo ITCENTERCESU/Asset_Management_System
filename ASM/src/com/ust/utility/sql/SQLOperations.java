@@ -178,7 +178,10 @@ public class SQLOperations implements SQLCommands {
 			try {
 		        PreparedStatement pstmt = connection.prepareStatement(RETURN_BORROWED);
 		        pstmt.setInt(1, itemId); 
-		        pstmt.setInt(2, itemId);
+		        
+		        pstmt.setInt(2, itemId); 
+		       
+		        
 		        
 		        pstmt.executeUpdate(); // execute insert statement  
 			} catch (SQLException sqle) {
