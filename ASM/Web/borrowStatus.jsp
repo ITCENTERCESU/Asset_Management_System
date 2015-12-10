@@ -36,6 +36,10 @@ section .form-group .control-label {
 	font-weight: normal;
 }
 
+section p {
+	font-size: 1.25em;
+}
+
 #borrower-name {
 	text-transform: capitalize;
 	font-weight: bold;
@@ -88,7 +92,7 @@ section .form-group .control-label {
 				<h2>Borrower's History</h2>
 				<% if(!currently.wasNull()) { %>
 					<p>
-						Here is a list of other items currently borrowed by 
+						Here is a list of all items currently borrowed by 
 						<span id="borrower-name">${borrowers.firstName} ${borrowers.lastName}</span>
 						<span id="borrower-id">&lt;${borrowers.idNum }&gt;</span>:
 					</p> 
