@@ -32,9 +32,13 @@ table .action-borrow-col {
     else {%>
     
     <div class="container">
+    	<form action="inventoryprocess.html" method="post" style="text-align:right;">
+	        <input type="submit" value="Go back to inventory" class="btn btn-danger"
+	                    id="form-button" />
+        </form>
         <div class="table-responsive">    
             <table class="table table-striped table-bordered" role="table">
-                <caption>List of items found.</caption>
+                <caption>Search result</caption>
                 <tr>
                     <th>Item ID</th>
                     <th>Item Name</th>
@@ -62,9 +66,5 @@ table .action-borrow-col {
      </div>
     <%} %>
     </div>
-    
-     <form action="inventoryprocess.html" method="post" style="float:right;">
-        <input type="submit" value="Go Back" class="btn btn-danger"
-                    id="form-button" /> </form>
 </body>
 </html>
