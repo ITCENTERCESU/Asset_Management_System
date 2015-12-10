@@ -31,15 +31,10 @@ table .action-borrow-col {
       
     
     <div class="container">
-    <form action="inventoryprocess.html" method="post" style="float:right;">
-        <input type="submit" value="Go Back" class="btn btn-danger"
-                    id="form-button" />
+    	<form action="inventoryprocess.html" method="post" style="text-align:right;">
+	        <input type="submit" value="Go back to inventory" class="btn btn-danger"
+	                    id="form-button" />
         </form>
-    
-    <br>
-    <br>
-    <br>
-    <br>
         <div class="table-responsive">    
             <table class="table table-striped table-bordered" role="table">
                 <caption>List of available items for borrowing.</caption>
