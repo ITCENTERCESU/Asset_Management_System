@@ -29,7 +29,7 @@ form #about-item input {
 	font-weight: bold;
 }
 form #email {
-	text-transform: capitalize;
+	text-transform: none;
 }
 
 </style>
@@ -65,7 +65,7 @@ form #email {
 			
 			<div class="form-group">
 				<label for="email">Email Address</label> 
-				<input id="email" placeholder="ex. 2013056531@ust-ics.mygbiz.com" type="text" name="email"  required="required" class="form-control">
+				<input id="email" placeholder="Ex. 2013056531@ust-ics.mygbiz.com" type="text" name="email"  required="required" class="form-control">
 			</div>		
 		</fieldset>
 		
