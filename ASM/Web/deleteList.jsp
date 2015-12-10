@@ -59,7 +59,7 @@ table .action-borrow-col {
                     <td><%=delete.getString("itemName")%></td>
                     <td class="action-borrow-col">
                       <a href="deletespecificitem.html?itemId=<%=delete.getString("itemId")%>&action=delete">
-                          <img id="borrow-img" src="images/delete-black.png"/>
+                          <img id="borrow-img" src="images/garbage-icon.png"/>
                       </a>
                     </td>
                 </tr>            
