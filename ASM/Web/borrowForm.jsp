@@ -28,6 +28,10 @@ form #about-item label {
 form #about-item input {
 	font-weight: bold;
 }
+form #email {
+	text-transform: capitalize;
+}
+
 </style>
 </head>
 <body>
